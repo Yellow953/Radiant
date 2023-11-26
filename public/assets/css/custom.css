@@ -1,0 +1,8 @@
+.logo-header{
+    width: 150px;
+    height: auto;
+}
+
+.categories ul li a.active{
+    color: #000080!important;
+}

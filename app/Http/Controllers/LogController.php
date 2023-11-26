@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Log;
+
+class LogController extends Controller
+{
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
+
+    public function index()
+    {
+        $logs = Log::filter()->orderBy('created_at', 'desc')->paginate(25);
+        return view('logs.index', compact('logs'));
+    }
+}
