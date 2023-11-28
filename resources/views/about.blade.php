@@ -6,19 +6,19 @@ About Us
 
 @section('content')
 <!-- Page Content -->
-<div class="page-heading about-heading header-text">
+<div class="page-heading about-heading header-text"
+    style="background: url({{ asset('assets/images/image2.png') }}); background-size:cover;">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="text-content">
-                    <h4>about us</h4>
-                    <h2>our company</h2>
+                    <h4>About Us</h4>
+                    <h2 class="text-dark">Get To Know Us</h2>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 <div class="best-features about-features">
     <div class="container">
