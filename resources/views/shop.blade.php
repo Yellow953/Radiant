@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'Shop')
+@section('description', 'Explore Radiant collections. Elevate your wardrobe with stunning T-shirts, hoodies, and hats.
+Or create your own...')
 
 @section('content')
 <!-- Page Content -->

@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
 @section('title', 'Home')
+@section('description', 'Elevate your style with Radiant. Unleash your creativity and make a statement. Your fashion
+journey starts here.')
 
 @section('content')
-
 <!-- Banner Starts Here -->
 <div class="banner header-text">
     <div class="owl-banner owl-carousel">
