@@ -224,7 +224,7 @@ individual expression in fashion.')
                     </div>
 
                     <div class="client-item">
-                        <img src="{{ asset('assets/images/zspecial.png') }}" alt="ZSpecial Logo">
+                        <img src="{{ asset('assets/images/canada.png') }}" alt="Match Me With Canada Logo">
                     </div>
 
                     <div class="client-item">
