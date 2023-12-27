@@ -70,7 +70,7 @@ class ProductController extends Controller
         $text = "Product " . $request->name . " created, datetime: " . now();
         Log::create(['text' => $text]);
 
-        return redirect('/products')->with('success', 'Product was successfully created.');
+        return redirect()->route('products')->with('success', 'Product was successfully created.');
     }
 
     public function edit(Product $product)
@@ -119,7 +119,7 @@ class ProductController extends Controller
         $text = "Product " . $product->name . " updated, datetime: " . now();
         Log::create(['text' => $text]);
 
-        return redirect('/products')->with('success', 'Product was successfully updated.');
+        return redirect()->route('products')->with('success', 'Product was successfully updated.');
     }
 
     public function import(Product $product)
@@ -140,7 +140,7 @@ class ProductController extends Controller
         $text = "User " . auth()->user()->name . " imported " . $request->quantity . " of " . $product->name . ", datetime: " . now();
         Log::create(['text' => $text]);
 
-        return redirect('/products')->with('Product quantity imported successfully...');
+        return redirect()->route('products')->with('Product quantity imported successfully...');
     }
 
     public function destroy(Product $product)
@@ -156,7 +156,7 @@ class ProductController extends Controller
 
         Log::create(['text' => $text]);
 
-        return redirect('/products')->with('danger', 'Product was successfully deleted');
+        return redirect()->back()->with('danger', 'Product was successfully deleted');
     }
 
     public function secondary_images_index(Product $product)

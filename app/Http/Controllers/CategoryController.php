@@ -39,7 +39,7 @@ class CategoryController extends Controller
 
         Log::create(['text' => $text]);
 
-        return redirect('/categories')->with('success', 'Category was successfully created.');
+        return redirect()->route('categories')->with('success', 'Category was successfully created.');
     }
 
     public function edit(Category $category)
@@ -62,7 +62,7 @@ class CategoryController extends Controller
 
         Log::create(['text' => $text]);
 
-        return redirect('/categories')->with('success', 'Category was successfully updated.');
+        return redirect()->back()->with('success', 'Category was successfully updated.');
     }
 
     public function destroy(Category $category)
@@ -73,7 +73,7 @@ class CategoryController extends Controller
 
         Log::create(['text' => $text]);
 
-        return redirect('/categories')->with('danger', 'Category was successfully deleted');
+        return redirect()->back()->with('danger', 'Category was successfully deleted');
     }
 
     public function switch(Category $category)

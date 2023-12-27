@@ -39,7 +39,7 @@ class PromoController extends Controller
 
         Log::create(['text' => $text]);
 
-        return redirect('/promos')->with('success', 'Promo was successfully created.');
+        return redirect()->route('promos')->with('success', 'Promo was successfully created.');
     }
 
     public function edit(Promo $promo)
@@ -62,7 +62,7 @@ class PromoController extends Controller
 
         Log::create(['text' => $text]);
 
-        return redirect('/promos')->with('success', 'Promo was successfully updated.');
+        return redirect()->back()->with('success', 'Promo was successfully updated.');
     }
 
     public function destroy(Promo $promo)
@@ -73,7 +73,7 @@ class PromoController extends Controller
 
         Log::create(['text' => $text]);
 
-        return redirect('/promos')->with('danger', 'Promo was successfully deleted');
+        return redirect()->back()->with('danger', 'Promo was successfully deleted');
     }
 
     public function check(Request $request)

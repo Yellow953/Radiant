@@ -48,7 +48,7 @@ class UserController extends Controller
         Log::create(['text' => $text]);
 
         $user->save();
-        return redirect('/users')->with('success', 'User created successfully');
+        return redirect()->route('users')->with('success', 'User created successfully');
     }
 
     public function edit(User $user)
@@ -70,7 +70,7 @@ class UserController extends Controller
 
         Log::create(['text' => $text]);
 
-        return redirect('/users')->with('warning', 'User updated successfully');
+        return redirect()->back()->with('warning', 'User updated successfully');
     }
 
     public function destroy(User $user)
@@ -81,6 +81,6 @@ class UserController extends Controller
 
         Log::create(['text' => $text]);
 
-        return redirect('/users')->with('danger', "User deleted successfully");
+        return redirect()->back()->with('danger', "User deleted successfully");
     }
 }

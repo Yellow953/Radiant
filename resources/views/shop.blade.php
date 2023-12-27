@@ -27,7 +27,7 @@ Or create your own...')
                 <div class="filters categories">
                     <ul>
                         <li>
-                            <a href="/shop" class="{{ !request()->query('category_id') ? 'active' : ''}}">
+                            <a href="{{ route('shop') }}" class="{{ !request()->query('category_id') ? 'active' : ''}}">
                                 All Products
                             </a>
                         </li>

@@ -117,6 +117,6 @@ class CartController extends Controller
 
         Mail::to(env('MAIL_USERNAME'))->send(new OrderMailer($order));
 
-        return redirect('/cart')->with('success', 'Order Submitted, Thank You For Choosing Us!')->cookie($cookie);
+        return redirect()->route('cart')->with('success', 'Order Submitted, Thank You For Choosing Us!')->cookie($cookie);
     }
 }

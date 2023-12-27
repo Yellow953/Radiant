@@ -39,8 +39,7 @@ class OrderController extends Controller
 
         $this->attach_order($request);
 
-        session()->flash('success', "Order created successfully");
-        return redirect('/orders');
+        return redirect()->route('orders')->with('success', "Order created successfully");
     } //end of create
 
     public function edit(Order $order)
@@ -62,8 +61,7 @@ class OrderController extends Controller
 
         $this->attach_order($request);
 
-        session()->flash('success', "Order updated successfully");
-        return redirect('/orders');
+        return redirect()->back()->with('success', "Order updated successfully");
     } //end of update
 
     public function show(Order $order)
@@ -84,7 +82,7 @@ class OrderController extends Controller
         Log::create(['text' => $text]);
 
         $order->delete();
-        return redirect('/orders')->with('success', 'Order successfully deleted!');
+        return redirect()->back()->with('success', 'Order successfully deleted!');
     } //end of order
 
     public function complete(Order $order)

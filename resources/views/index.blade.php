@@ -36,7 +36,7 @@ journey starts here.')
             <div class="col-md-12">
                 <div class="section-heading">
                     <h2>Latest Products</h2>
-                    <a href="/shop">view all products <i class="fa fa-angle-right"></i></a>
+                    <a href="{{ route('shop') }}">view all products <i class="fa fa-angle-right"></i></a>
                 </div>
             </div>
             <div class="col-md-4">
