@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">
-                <img src="{{ asset('assets/logo/logo.png') }}" alt="" class="logo-header">
+                <img src="{{ asset('assets/logo/logo.png') }}" alt="Radiant Logo" class="logo-header">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

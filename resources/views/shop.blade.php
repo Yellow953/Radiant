@@ -47,7 +47,8 @@ Or create your own...')
                     <div class="row grid">
                         <div class="col-lg-4 col-md-4 all des">
                             <div class="product-item">
-                                <a href="#"><img src="{{ asset('template/assets/images/product_01.jpg') }}" alt=""></a>
+                                <a href="#"><img src="{{ asset('template/assets/images/product_01.jpg') }}"
+                                        alt="Product Image"></a>
                                 <div class="down-content">
                                     <a href="#">
                                         <h4>Tittle goes here</h4>
@@ -67,7 +68,8 @@ Or create your own...')
                         </div>
                         <div class="col-lg-4 col-md-4 all dev">
                             <div class="product-item">
-                                <a href="#"><img src="{{ asset('template/assets/images/product_02.jpg') }}" alt=""></a>
+                                <a href="#"><img src="{{ asset('template/assets/images/product_02.jpg') }}"
+                                        alt="Product Image"></a>
                                 <div class="down-content">
                                     <a href="#">
                                         <h4>Tittle goes here</h4>
@@ -88,7 +90,8 @@ Or create your own...')
                         </div>
                         <div class="col-lg-4 col-md-4 all gra">
                             <div class="product-item">
-                                <a href="#"><img src="{{ asset('template/assets/images/product_03.jpg') }}" alt=""></a>
+                                <a href="#"><img src="{{ asset('template/assets/images/product_03.jpg') }}"
+                                        alt="Product Image"></a>
                                 <div class="down-content">
                                     <a href="#">
                                         <h4>Tittle goes here</h4>
@@ -109,7 +112,8 @@ Or create your own...')
                         </div>
                         <div class="col-lg-4 col-md-4 all gra">
                             <div class="product-item">
-                                <a href="#"><img src="{{ asset('template/assets/images/product_04.jpg') }}" alt=""></a>
+                                <a href="#"><img src="{{ asset('template/assets/images/product_04.jpg') }}"
+                                        alt="Product Image"></a>
                                 <div class="down-content">
                                     <a href="#">
                                         <h4>Tittle goes here</h4>
@@ -130,7 +134,8 @@ Or create your own...')
                         </div>
                         <div class="col-lg-4 col-md-4 all dev">
                             <div class="product-item">
-                                <a href="#"><img src="{{ asset('template/assets/images/product_05.jpg') }}" alt=""></a>
+                                <a href="#"><img src="{{ asset('template/assets/images/product_05.jpg') }}"
+                                        alt="Product Image"></a>
                                 <div class="down-content">
                                     <a href="#">
                                         <h4>Tittle goes here</h4>
@@ -151,7 +156,8 @@ Or create your own...')
                         </div>
                         <div class="col-lg-4 col-md-4 all des">
                             <div class="product-item">
-                                <a href="#"><img src="{{ asset('template/assets/images/product_06.jpg') }}" alt=""></a>
+                                <a href="#"><img src="{{ asset('template/assets/images/product_06.jpg') }}"
+                                        alt="Product Image"></a>
                                 <div class="down-content">
                                     <a href="#">
                                         <h4>Tittle goes here</h4>

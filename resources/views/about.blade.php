@@ -30,7 +30,7 @@ individual expression in fashion.')
             </div>
             <div class="col-md-6">
                 <div class="right-image">
-                    <img src="{{ asset('template/assets/images/feature-image.jpg')}}" alt="">
+                    <img src="{{ asset('template/assets/images/feature-image.jpg')}}" alt="Feature Image 1">
                 </div>
             </div>
             <div class="col-md-6">
@@ -84,7 +84,7 @@ individual expression in fashion.')
             <div class="col-md-4">
                 <div class="team-member">
                     <div class="thumb-container">
-                        <img src="{{ asset('template/assets/images/team_01.jpg')}}" alt="">
+                        <img src="{{ asset('template/assets/images/team_01.jpg')}}" alt="Team 1">
                         <div class="hover-effect">
                             <div class="hover-content">
                                 <ul class="social-icons">
@@ -106,7 +106,7 @@ individual expression in fashion.')
             <div class="col-md-4">
                 <div class="team-member">
                     <div class="thumb-container">
-                        <img src="{{ asset('template/assets/images/team_02.jpg')}}" alt="">
+                        <img src="{{ asset('template/assets/images/team_02.jpg')}}" alt="Team 2">
                         <div class="hover-effect">
                             <div class="hover-content">
                                 <ul class="social-icons">
@@ -128,7 +128,7 @@ individual expression in fashion.')
             <div class="col-md-4">
                 <div class="team-member">
                     <div class="thumb-container">
-                        <img src="{{ asset('template/assets/images/team_03.jpg')}}" alt="">
+                        <img src="{{ asset('template/assets/images/team_03.jpg')}}" alt="Team 3">
                         <div class="hover-effect">
                             <div class="hover-content">
                                 <ul class="social-icons">
