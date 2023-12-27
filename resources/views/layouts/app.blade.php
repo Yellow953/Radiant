@@ -15,7 +15,7 @@
         rel="stylesheet">
 
     {{-- Favicon --}}
-    <link rel="shortcut icon" href="{{ asset('assets/logo/logo-no-background.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/logo/logo.ico') }}" type="image/x-icon">
 
     <title>Radiant | @yield('title')</title>
     <meta name="description" content="@yield('description')">
