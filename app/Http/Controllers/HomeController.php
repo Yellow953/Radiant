@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\File;
 
 class HomeController extends Controller
 {
@@ -22,7 +23,6 @@ class HomeController extends Controller
         $products = Product::filter()->paginate(15);
         return view('index', compact('products'));
     }
-
 
     public function about()
     {
@@ -92,5 +92,23 @@ class HomeController extends Controller
         } else {
             return redirect()->back()->with('danger', "Passwords do not match!");
         }
+    }
+
+    public function test()
+    {
+        return view('test');
+    }
+
+    public function save_design(Request $request)
+    {
+        $designData = $request->input('design');
+        $decodedImage = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $designData));
+
+        $filename = 'design_' . time() . '.png';
+        $path = public_path('/uploads/designs/' . $filename);
+
+        file_put_contents($path, $decodedImage);
+
+        return response()->json(['message' => 'design saved successfully']);
     }
 }
