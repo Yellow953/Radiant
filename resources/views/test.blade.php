@@ -42,15 +42,22 @@
                 <input type="color" id="colorPicker" value="#000000">
 
                 <button id="resetButton" class="btn btn-primary">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </button>
+
+                <button id="deleteTool" class="btn btn-primary">
                     <i class="fa-solid fa-trash"></i>
                 </button>
 
-                <label class="btn btn-primary">
-                    <input type="checkbox" id="eraserCheckbox">
+                <label class="btn btn-primary" id="eraserToggle">
+                    <input type="checkbox" id="eraserCheckbox" style="display: none;">
                     <i class="fa-solid fa-eraser"></i>
                 </label>
 
-                <input type="file" id="imageUpload" accept="image/*">
+                <label class="btn btn-primary" for="imageUpload" id="imageUploadButton">
+                    <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                    <i class="fa-solid fa-image"></i>
+                </label>
 
                 <button id="penTool" class="btn btn-primary">
                     <i class="fa-solid fa-pen"></i>
@@ -95,19 +102,31 @@
         const strokeWidthInput = document.getElementById('strokeWidth');
         const resetButton = document.getElementById('resetButton');
         const eraserCheckbox = document.getElementById('eraserCheckbox');
-        const imageUploadInput = document.getElementById('imageUpload');
+        const eraserToggle = document.getElementById('eraserToggle');
+        const eraserIcon = eraserToggle.querySelector('i');
         const penToolButton = document.getElementById('penTool');
         const imageToolButton = document.getElementById('imageTool');
+        const imageUpload = document.getElementById('imageUpload');
+        const imageUploadButton = document.getElementById('imageUploadButton');
         const textToolButton = document.getElementById('textTool');
         const zoomInButton = document.getElementById('zoomIn');
         const zoomOutButton = document.getElementById('zoomOut');
+        const deleteToolButton = document.getElementById('deleteTool');
 
         let strokeColor = colorPicker.value;
         let strokeWidth = strokeWidthInput.value;
 
         colorPicker.addEventListener('input', function() {
-            strokeColor = colorPicker.value;
-            canvas.freeDrawingBrush.color = strokeColor;
+            const newColor = colorPicker.value;
+
+            canvas.freeDrawingBrush.color = newColor;
+
+            const activeObject = canvas.getActiveObject();
+
+            if (activeObject && activeObject.type === 'i-text') {
+                activeObject.set('fill', newColor);
+                canvas.renderAll();
+            }
         });
 
         strokeWidthInput.addEventListener('input', function() {
@@ -119,7 +138,19 @@
             canvas.clear();
         });
 
+        eraserToggle.addEventListener('click', function() {
+            eraserCheckbox.checked = !eraserCheckbox.checked; 
+
+            const isChecked = eraserCheckbox.checked;
+            const color = isChecked ? 'black' : 'white';
+
+            eraserIcon.style.color = color;
+
+            eraserToggle.style.backgroundColor = isChecked ? 'red' : '#007bff';
+        });
+
         eraserCheckbox.addEventListener('change', function() {
+            
             if (eraserCheckbox.checked) {
                 canvas.isDrawingMode = true;
                 canvas.freeDrawingBrush.color = '#ffffff';
@@ -129,11 +160,24 @@
             }
         });
 
-        imageUploadInput.addEventListener('change', handleImageUpload);
+        imageUpload.addEventListener('mousedown', function(e) {
+            e.preventDefault();
+            imageUpload.click();
+        });
+
+        imageUpload.addEventListener('change', function() {
+            handleImageUpload(this.files[0]);
+        });
+
+        imageUploadButton.addEventListener('click', function() {
+            imageUpload.value = null;
+            imageUpload.click();
+        });
+
 
         penToolButton.addEventListener('click', function() {
             canvas.isDrawingMode = true;
-            imageUploadInput.value = '';
+            imageUpload.value = '';
         });
 
         imageToolButton.addEventListener('click', function() {
@@ -155,6 +199,15 @@
             zoom(0.9); 
         });
 
+        deleteToolButton.addEventListener('click', function() {
+            const activeObject = canvas.getActiveObject();
+
+            if (activeObject) {
+                // Remove the selected object from the canvas
+                canvas.remove(activeObject);
+            }
+        });
+
         function zoom(factor) {
             const container = document.getElementById('whiteboard-container');
             const currentTransform = container.style.transform || 'scale(1)';
@@ -162,9 +215,7 @@
             container.style.transform = newTransform;
         }
 
-        function handleImageUpload(e) {
-            const file = e.target.files[0];
-
+        function handleImageUpload(file) {
             if (file) {
                 const reader = new FileReader();
                 reader.onload = function(event) {
@@ -202,32 +253,24 @@
         const canvas = new fabric.Canvas('whiteboard');
 
         saveButton.addEventListener('click', function() {
-            // Convert canvas to data URL
             const dataURL = canvas.toDataURL();
 
-            // Get the CSRF token
             const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
-            // Send data to the server with the CSRF token
             saveDesign(dataURL, csrfToken);
         });
 
         function saveDesign(dataURL, csrfToken) {
-            // Create a temporary canvas
             const tempCanvas = document.createElement('canvas');
             const tempContext = tempCanvas.getContext('2d');
 
-            // Set the size of the temporary canvas based on the zoomed size
             tempCanvas.width = canvas.width * canvas.getZoom();
             tempCanvas.height = canvas.height * canvas.getZoom();
 
-            // Draw the contents of the original canvas onto the temporary canvas with the applied zoom
             tempContext.drawImage(canvas.lowerCanvasEl, 0, 0, tempCanvas.width, tempCanvas.height);
 
-            // Convert the temporary canvas to a data URL
             const zoomedDataURL = tempCanvas.toDataURL();
 
-            // Send AJAX request to the server with the CSRF token and the zoomed data URL
             const xhr = new XMLHttpRequest();
             xhr.open('POST', '/save-design', true);
             xhr.setRequestHeader('Content-Type', 'application/json');
