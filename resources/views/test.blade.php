@@ -14,6 +14,17 @@
         cursor: crosshair;
         background: transparent;
     }
+
+    .product-custom-img {
+        width: 100px !important;
+        height: 100px !important;
+        cursor: pointer;
+    }
+
+    .product-custom-img img {
+        width: 100% !important;
+        height: 100% !important;
+    }
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"
@@ -80,6 +91,19 @@
                 </button>
             </div>
         </div>
+        <div class="col-md-12 mb-3">
+            <div class="products mt-0 w-100" id="products">
+                <h4 class="my-3">Products</h4>
+                <div class="row w-100 overflow-x-auto">
+                    <div class="card m-1 product-custom-img">
+                        <img src="{{ asset('assets/images/white_hoodie_front.png') }}" alt="">
+                    </div>
+                    <div class="card m-1 product-custom-img">
+                        <img src="{{ asset('assets/images/white_hoodie_back.png') }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="col-md-12">
             <div class="d-flex justify-content-md-end">
                 <button id="saveButton" class="btn btn-primary">Save Design</button>
@@ -90,12 +114,12 @@
 
 <!-- Add this inside the script tag in your HTML -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const canvas = new fabric.Canvas('whiteboard', {
             isDrawingMode: false,
             selection: false,
             state: [],
-            currentStateIndex: -1, 
+            currentStateIndex: -1,
         });
 
         const colorPicker = document.getElementById('colorPicker');
@@ -112,11 +136,12 @@
         const zoomInButton = document.getElementById('zoomIn');
         const zoomOutButton = document.getElementById('zoomOut');
         const deleteToolButton = document.getElementById('deleteTool');
+        const whiteboardContainer = document.getElementById('whiteboard-container');
 
         let strokeColor = colorPicker.value;
         let strokeWidth = strokeWidthInput.value;
 
-        colorPicker.addEventListener('input', function() {
+        colorPicker.addEventListener('input', function () {
             const newColor = colorPicker.value;
 
             canvas.freeDrawingBrush.color = newColor;
@@ -129,17 +154,17 @@
             }
         });
 
-        strokeWidthInput.addEventListener('input', function() {
+        strokeWidthInput.addEventListener('input', function () {
             strokeWidth = strokeWidthInput.value;
             canvas.freeDrawingBrush.width = parseInt(strokeWidth, 10) || 1;
         });
 
-        resetButton.addEventListener('click', function() {
+        resetButton.addEventListener('click', function () {
             canvas.clear();
         });
 
-        eraserToggle.addEventListener('click', function() {
-            eraserCheckbox.checked = !eraserCheckbox.checked; 
+        eraserToggle.addEventListener('click', function () {
+            eraserCheckbox.checked = !eraserCheckbox.checked;
 
             const isChecked = eraserCheckbox.checked;
             const color = isChecked ? 'black' : 'white';
@@ -149,8 +174,8 @@
             eraserToggle.style.backgroundColor = isChecked ? 'red' : '#007bff';
         });
 
-        eraserCheckbox.addEventListener('change', function() {
-            
+        eraserCheckbox.addEventListener('change', function () {
+
             if (eraserCheckbox.checked) {
                 canvas.isDrawingMode = true;
                 canvas.freeDrawingBrush.color = '#ffffff';
@@ -160,52 +185,60 @@
             }
         });
 
-        imageUpload.addEventListener('mousedown', function(e) {
+        imageUpload.addEventListener('mousedown', function (e) {
             e.preventDefault();
             imageUpload.click();
         });
 
-        imageUpload.addEventListener('change', function() {
+        imageUpload.addEventListener('change', function () {
             handleImageUpload(this.files[0]);
         });
 
-        imageUploadButton.addEventListener('click', function() {
+        imageUploadButton.addEventListener('click', function () {
             imageUpload.value = null;
             imageUpload.click();
         });
 
-
-        penToolButton.addEventListener('click', function() {
+        penToolButton.addEventListener('click', function () {
             canvas.isDrawingMode = true;
             imageUpload.value = '';
         });
 
-        imageToolButton.addEventListener('click', function() {
+        imageToolButton.addEventListener('click', function () {
             canvas.isDrawingMode = false;
             eraserCheckbox.checked = false;
         });
 
-        textToolButton.addEventListener('click', function() {
+        textToolButton.addEventListener('click', function () {
             canvas.isDrawingMode = false;
             eraserCheckbox.checked = false;
             addText();
         });
 
-        zoomInButton.addEventListener('click', function() {
+        zoomInButton.addEventListener('click', function () {
             zoom(1.1);
         });
 
-        zoomOutButton.addEventListener('click', function() {
-            zoom(0.9); 
+        zoomOutButton.addEventListener('click', function () {
+            zoom(0.9);
         });
 
-        deleteToolButton.addEventListener('click', function() {
+        deleteToolButton.addEventListener('click', function () {
             const activeObject = canvas.getActiveObject();
 
             if (activeObject) {
                 // Remove the selected object from the canvas
                 canvas.remove(activeObject);
             }
+        });
+
+        // Event listener for product images
+        const productImages = document.querySelectorAll('.product-custom-img img');
+        productImages.forEach(function (productImage) {
+            productImage.addEventListener('click', function () {
+                const imageUrl = productImage.src;
+                whiteboardContainer.style.background = `url(${imageUrl}) center / contain no-repeat`;
+            });
         });
 
         function zoom(factor) {
@@ -218,8 +251,8 @@
         function handleImageUpload(file) {
             if (file) {
                 const reader = new FileReader();
-                reader.onload = function(event) {
-                    fabric.Image.fromURL(event.target.result, function(img) {
+                reader.onload = function (event) {
+                    fabric.Image.fromURL(event.target.result, function (img) {
                         img.set({
                             left: canvas.width / 2 - img.width / 2,
                             top: canvas.height / 2 - img.height / 2,
@@ -245,6 +278,7 @@
         }
     });
 </script>
+
 
 <!-- Add this inside the script tag in your HTML -->
 <script>
