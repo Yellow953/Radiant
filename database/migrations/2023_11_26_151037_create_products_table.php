@@ -12,10 +12,10 @@ return new class extends Migration
             $table->id();
             $table->string("name")->unique();
             $table->double('quantity')->default(0);
-            $table->double('buy_price')->unsigned()->default(0);
-            $table->double('sell_price')->unsigned()->default(0);
+            $table->double('price')->unsigned()->default(0);
             $table->text('description')->nullable();
-            $table->string('image')->default('assets/images/no_img.png');
+            $table->string('image_front')->default('assets/images/no_img.png');
+            $table->string('image_back')->default('assets/images/no_img.png');
 
             $table->bigInteger("category_id")->unsigned();
             $table->timestamps();

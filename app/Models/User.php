@@ -36,6 +36,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Order::class);
     }
 
+    public function designs()
+    {
+        return $this->hasMany(Design::class);
+    }
+
     // Filter
     public function scopeFilter($q)
     {

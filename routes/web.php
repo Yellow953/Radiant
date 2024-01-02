@@ -28,8 +28,8 @@ Route::post('/checkout', [App\Http\Controllers\CartController::class, 'order'])-
 // Profile
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile']);
 Route::post('/profile/save', [App\Http\Controllers\HomeController::class, 'save_profile'])->name('profile.save');
-Route::get('/password/edit', [App\Http\Controllers\HomeController::class, 'EditPassword'])->name('password.edit');
-Route::post('/password/update', [App\Http\Controllers\HomeController::class, 'UpdatePassword'])->name('password.update');
+Route::get('/password/edit', [App\Http\Controllers\HomeController::class, 'edit_password'])->name('password.edit');
+Route::post('/password/update', [App\Http\Controllers\HomeController::class, 'update_password'])->name('password.update');
 
 // Users
 Route::prefix('/users')->group(function () {

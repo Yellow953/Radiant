@@ -28,6 +28,8 @@ images, unique style, fashion statement, Radiant')
     </div>
 </div>
 
+@include('layouts._flash')
+
 <div class="container">
     <div class="row">
         <div class="col-md-9">
@@ -90,18 +92,43 @@ images, unique style, fashion statement, Radiant')
             <div class="products mt-0 w-100" id="products">
                 <h4 class="my-3">Products</h4>
                 <div class="row w-100 overflow-x-auto">
-                    <div class="card m-1 product-custom-img">
-                        <img src="{{ asset('assets/images/white_hoodie_front.png') }}" alt="">
+                    @forelse ($products as $product)
+                    <div class="card m-1 product-custom-img" data-product-id="{{ $product->id }}"
+                        data-direction="front">
+                        <img src="{{ asset($product->image_front) }}" alt="">
                     </div>
-                    <div class="card m-1 product-custom-img">
-                        <img src="{{ asset('assets/images/white_hoodie_back.png') }}" alt="">
+                    <div class="card m-1 product-custom-img" data-product-id="{{ $product->id }}" data-direction="back">
+                        <img src="{{ asset($product->image_back) }}" alt="">
                     </div>
+                    @empty
+                    No Products Yet...
+                    @endforelse
                 </div>
             </div>
         </div>
         <div class="col-md-12">
             <div class="d-flex justify-content-md-end">
                 <button id="saveButton" class="btn btn-primary">Save Design</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="my-4">My Designs</h3>
+            <div class="row w-100 overflow-x-auto">
+                @forelse ($designs as $design)
+                <div class="card m-1 my-design"
+                    style="background-image: url('{{ asset($design->product->image_front) }}');">
+                    <img src="{{ asset($design->image_front) }}" alt="{{ $design->product->name }} Front Design">
+                </div>
+                <div class="card m-1 my-design"
+                    style="background-image: url('{{ asset($design->product->image_back) }}');">
+                    <img src="{{ asset($design->image_back) }}" alt="{{ $design->product->name }} Back Design">
+                </div>
+                @empty
+                No Designs Yet
+                @endforelse
             </div>
         </div>
     </div>

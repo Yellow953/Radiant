@@ -22,6 +22,11 @@ class Product extends Model
         return $this->hasMany(Order::class);
     }
 
+    public function designs()
+    {
+        return $this->hasMany(Design::class);
+    }
+
     public function secondary_images()
     {
         return $this->hasMany(SecondaryImage::class);

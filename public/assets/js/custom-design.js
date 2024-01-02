@@ -21,7 +21,10 @@
         const zoomOutButton = document.getElementById('zoomOut');
         const deleteToolButton = document.getElementById('deleteTool');
         const whiteboardContainer = document.getElementById('whiteboard-container');
-
+        const productImages = document.querySelectorAll('.product-custom-img img');
+        const saveButton = document.getElementById('saveButton');
+        
+        let selectedProductId;
         let strokeColor = colorPicker.value;
         let strokeWidth = strokeWidthInput.value;
 
@@ -111,15 +114,13 @@
             const activeObject = canvas.getActiveObject();
 
             if (activeObject) {
-                // Remove the selected object from the canvas
                 canvas.remove(activeObject);
             }
         });
-
-        // Event listener for product images
-        const productImages = document.querySelectorAll('.product-custom-img img');
+        
         productImages.forEach(function (productImage) {
             productImage.addEventListener('click', function () {
+                selectedProductId = productImage.parentElement.dataset.productId;
                 const imageUrl = productImage.src;
                 whiteboardContainer.style.background = `url(${imageUrl}) center / contain no-repeat`;
             });
@@ -160,21 +161,19 @@
             canvas.setActiveObject(text);
             text.enterEditing();
         }
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const saveButton = document.getElementById('saveButton');
-        const canvas = new fabric.Canvas('whiteboard');
-
-        saveButton.addEventListener('click', function() {
+        
+        saveButton.addEventListener('click', function () {
             const dataURL = canvas.toDataURL();
-
             const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-
-            saveDesign(dataURL, csrfToken);
+    
+            if (selectedProductId) {
+                saveDesign(dataURL, csrfToken, selectedProductId);
+            } else {
+                console.error('No product selected.');
+            }
         });
 
-        function saveDesign(dataURL, csrfToken) {
+        function saveDesign(dataURL, csrfToken, selectedProductId) {
             const tempCanvas = document.createElement('canvas');
             const tempContext = tempCanvas.getContext('2d');
 
@@ -190,7 +189,7 @@
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.setRequestHeader('X-CSRF-TOKEN', csrfToken);
 
-            xhr.onreadystatechange = function() {
+            xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4) {
                     if (xhr.status === 200) {
                         console.log('Design saved successfully!');
@@ -202,6 +201,7 @@
 
             const formData = {
                 design: zoomedDataURL,
+                product_id: selectedProductId,
             };
 
             xhr.send(JSON.stringify(formData));

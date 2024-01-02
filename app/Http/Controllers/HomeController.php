@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Design;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\File;
 
 class HomeController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['auth', 'verified'])->only('profile', 'save_profile', 'EditPassword', 'UpdatePassword');
+        $this->middleware(['auth', 'verified'])->only('custom_logout', 'profile', 'save_profile', 'edit_password', 'update_password', 'custom_design', 'save_design');
     }
 
     public function index()
@@ -72,12 +72,12 @@ class HomeController extends Controller
         return redirect()->back()->with('success', 'Profile updated successfully...');
     }
 
-    public function EditPassword()
+    public function edit_password()
     {
         return view('edit_password');
     }
 
-    public function UpdatePassword(Request $request)
+    public function update_password(Request $request)
     {
         $user = User::find(auth()->user()->id);
 
@@ -96,7 +96,11 @@ class HomeController extends Controller
 
     public function custom_design()
     {
-        return view('custom-design');
+        $products = Product::select('id', 'name', 'image_front', 'image_back')->get();
+        $designs = auth()->user()->designs;
+
+        $data = compact('products', 'designs');
+        return view('custom-design', $data);
     }
 
     public function save_design(Request $request)
@@ -108,6 +112,15 @@ class HomeController extends Controller
         $path = public_path('/uploads/designs/' . $filename);
 
         file_put_contents($path, $decodedImage);
+
+        Design::create([
+            'user_id' => auth()->user()->id,
+            'product_id' => $request->input('product_id'),
+            'image_front' => '/uploads/designs/' . $filename,
+            'image_back' => '/uploads/designs/' . $filename,
+        ]);
+
+        Session::flash('success', 'Design saved successfully');
 
         return response()->json(['message' => 'design saved successfully']);
     }
