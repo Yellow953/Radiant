@@ -94,9 +94,9 @@ class HomeController extends Controller
         }
     }
 
-    public function test()
+    public function custom_design()
     {
-        return view('test');
+        return view('custom-design');
     }
 
     public function save_design(Request $request)

@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @section('title', 'About Us')
+
 @section('description', 'Discover Radiant where passion meets quality. Uncover our commitment to creativity and
 individual expression in fashion.')
+
+@section('keywords', 'about us, Radiant, fashion, quality, creativity, individual expression')
 
 @section('content')
 <!-- Page Content -->

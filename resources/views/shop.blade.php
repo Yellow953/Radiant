@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @section('title', 'Shop')
+
 @section('description', 'Explore Radiant collections. Elevate your wardrobe with stunning T-shirts, hoodies, and hats.
 Or create your own...')
+
+@section('keywords', 'shop, categories, T-shirts, hoodies, pants, hats, fashion, style, Radiant')
 
 @section('content')
 <!-- Page Content -->
@@ -11,14 +14,13 @@ Or create your own...')
         <div class="row">
             <div class="col-md-12">
                 <div class="text-content">
-                    <h4>new arrivals</h4>
-                    <h2>sixteen products</h2>
+                    <h4>Hoodies, Shirts, Pants, Hats, ...</h4>
+                    <h2>Shop</h2>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 <div class="products">
     <div class="container">

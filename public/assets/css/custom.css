@@ -26,3 +26,26 @@
     background: rgba(0, 0, 0, 0.3);
     z-index: 1;
 }
+
+#whiteboard-container {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#whiteboard {
+    cursor: crosshair;
+    background: transparent;
+}
+
+.product-custom-img {
+    width: 100px !important;
+    height: 100px !important;
+    cursor: pointer;
+}
+
+.product-custom-img img {
+    width: 100% !important;
+    height: 100% !important;
+}

@@ -126,6 +126,6 @@ Route::get('/logs', [App\Http\Controllers\LogController::class, 'index'])->name(
 Route::get('/logout', [App\Http\Controllers\HomeController::class, 'custom_logout'])->name('custom_logout');
 
 Route::post('/save-design', [App\Http\Controllers\HomeController::class, 'save_design'])->name('save-design');
-Route::get('/test', [App\Http\Controllers\HomeController::class, 'test'])->name('test');
+Route::get('/custom-design', [App\Http\Controllers\HomeController::class, 'custom_design'])->name('custom-design');
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

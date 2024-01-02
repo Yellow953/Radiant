@@ -27,6 +27,9 @@
                             @endforeach
                         </div>
                     </li>
+                    <li class="nav-item {{ request()->is('custom-design') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('custom-design') }}">Custom Design</a>
+                    </li>
                     <li class="nav-item {{ request()->is('about') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('about') }}">About Us</a>
                     </li>

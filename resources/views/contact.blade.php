@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @section('title', 'Contact Us')
+
 @section('description', 'Connect with Radiant. Questions or ideas? Reach out through email or phone. We re here to make
 your fashion experience seamless.')
+
+@section('keywords', 'contact us, get in touch, Radiant, fashion, customer service')
 
 @section('content')
 <!-- Page Content -->

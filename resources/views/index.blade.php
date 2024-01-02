@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @section('title', 'Home')
+
 @section('description', 'Elevate your style with Radiant. Unleash your creativity and make a statement. Your fashion
 journey starts here.')
+
+@section('keywords', 'premium apparel, fashion, style, custom design, T-shirts, hoodies, pants, hats, Radiant')
 
 @section('content')
 <!-- Banner Starts Here -->
