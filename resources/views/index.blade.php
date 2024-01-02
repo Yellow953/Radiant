@@ -171,7 +171,7 @@ journey starts here.')
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>About Sixteen Clothing</h2>
+                    <h2>About Radiant</h2>
                 </div>
             </div>
             <div class="col-md-6">
@@ -200,6 +200,47 @@ journey starts here.')
     </div>
 </div>
 
+{{-- start why choose us --}}
+<div class="feat bg-gray pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="section-head col-sm-12">
+                <h4><span>Why Choose</span> Radiant?</h4>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item-why"> <span class="icon feature_box_col_one">
+                        <i class="fa-solid fa-ranking-star"></i>
+                    </span>
+                    <h6>Quality Guaranteed</h6>
+                    <p>
+                        Our seasoned professionals excel in diverse technologies, ensuring cutting-edge solutions for
+                        your unique requirements.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item-why"> <span class="icon feature_box_col_two">
+                        <i class="fa-solid fa-fingerprint"></i>
+                    </span>
+                    <h6>Customized Designs</h6>
+                    <p>We don't believe in one-size-fits-all. Every project receives a bespoke touch, aligning perfectly
+                        with your business goals.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="item-why"> <span class="icon feature_box_col_three">
+                        <i class="fa-solid fa-rotate-left"></i>
+                    </span>
+                    <h6>Return Policy</h6>
+                    <p>Beyond delivery, our commitment extends to continuous support, updates, and maintenance, ensuring
+                        your systems run seamlessly</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{-- end why choose us --}}
+
 <div class="call-to-action">
     <div class="container">
         <div class="row">
@@ -207,12 +248,11 @@ journey starts here.')
                 <div class="inner-content">
                     <div class="row">
                         <div class="col-md-8">
-                            <h4>Creative &amp; Unique <em>Sixteen</em> Products</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite
-                                author nulla.</p>
+                            <h4>Creative &amp; Unique <em>Radiant</em> Products</h4>
+                            <p>Explore Radiant's Unique Collection, or Customize your own aparel.</p>
                         </div>
                         <div class="col-md-4">
-                            <a href="#" class="filled-button">Purchase Now</a>
+                            <a href="{{ route('shop') }}" class="filled-button">Explore Now</a>
                         </div>
                     </div>
                 </div>
@@ -220,4 +260,5 @@ journey starts here.')
         </div>
     </div>
 </div>
+
 @endsection

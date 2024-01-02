@@ -400,7 +400,7 @@ header .navbar {
 
 .product-item .down-content h4 {
 	font-size: 17px;
-	color: #1a6692;
+	color: #000080;
 	margin-bottom: 20px;
 }
 
@@ -469,7 +469,7 @@ header .navbar {
 
 .best-features h4 {
 	font-size: 17px;
-	color: #1a6692;
+	color: #000080;
 	margin-bottom: 20px;
 }
 
@@ -530,7 +530,7 @@ header .navbar {
 
 .call-to-action .inner-content h4 {
 	font-size: 17px;
-	color: #1a6692;
+	color: #000080;
 	margin-bottom: 15px;
 }
 
@@ -692,7 +692,7 @@ footer .inner-content p a {
 
 .team-member .down-content h4 {
 	font-size: 17px;
-	color: #1a6692;
+	color: #000080;
 	margin-bottom: 8px;
 }
 
@@ -745,7 +745,7 @@ footer .inner-content p a {
 
 .services .service-item .down-content h4 {
 	font-size: 17px;
-	color: #1a6692;
+	color: #000080;
 	margin-bottom: 20px;
 }
 
@@ -795,7 +795,7 @@ footer .inner-content p a {
 
 .find-us h4 {
 	font-size: 17px;
-	color: #1a6692;
+	color: #000080;
 	margin-bottom: 20px;
 }
 
@@ -871,7 +871,7 @@ footer .inner-content p a {
 .accordion a {
 	cursor: pointer;
 	font-size: 17px;
-	color: #1a6692!important;
+	color: #000080!important;
 	margin-bottom: 20px;
 	transition: all .3s;
 }
