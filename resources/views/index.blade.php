@@ -44,7 +44,7 @@ journey starts here.')
             </div>
             <div class="col-md-4">
                 <div class="product-item">
-                    <a href="#"><img src="{{ asset('template/assets/images/product_01.jpg') }}" alt="Product Image"></a>
+                    <a href="#"><img src="{{ asset('assets/images/product_01.jpg') }}" alt="Product Image"></a>
                     <div class="down-content">
                         <a href="#">
                             <h4>Tittle goes here</h4>
@@ -64,7 +64,7 @@ journey starts here.')
             </div>
             <div class="col-md-4">
                 <div class="product-item">
-                    <a href="#"><img src="{{ asset('template/assets/images/product_02.jpg') }}" alt="Product Image"></a>
+                    <a href="#"><img src="{{ asset('assets/images/product_02.jpg') }}" alt="Product Image"></a>
                     <div class="down-content">
                         <a href="#">
                             <h4>Tittle goes here</h4>
@@ -84,7 +84,7 @@ journey starts here.')
             </div>
             <div class="col-md-4">
                 <div class="product-item">
-                    <a href="#"><img src="{{ asset('template/assets/images/product_03.jpg') }}" alt="Product Image"></a>
+                    <a href="#"><img src="{{ asset('assets/images/product_03.jpg') }}" alt="Product Image"></a>
                     <div class="down-content">
                         <a href="#">
                             <h4>Tittle goes here</h4>
@@ -104,7 +104,7 @@ journey starts here.')
             </div>
             <div class="col-md-4">
                 <div class="product-item">
-                    <a href="#"><img src="{{ asset('template/assets/images/product_04.jpg') }}" alt="Product Image"></a>
+                    <a href="#"><img src="{{ asset('assets/images/product_04.jpg') }}" alt="Product Image"></a>
                     <div class="down-content">
                         <a href="#">
                             <h4>Tittle goes here</h4>
@@ -124,7 +124,7 @@ journey starts here.')
             </div>
             <div class="col-md-4">
                 <div class="product-item">
-                    <a href="#"><img src="{{ asset('template/assets/images/product_05.jpg') }}" alt="Product Image"></a>
+                    <a href="#"><img src="{{ asset('assets/images/product_05.jpg') }}" alt="Product Image"></a>
                     <div class="down-content">
                         <a href="#">
                             <h4>Tittle goes here</h4>
@@ -144,7 +144,7 @@ journey starts here.')
             </div>
             <div class="col-md-4">
                 <div class="product-item">
-                    <a href="#"><img src="{{ asset('template/assets/images/product_06.jpg') }}" alt="Product Image"></a>
+                    <a href="#"><img src="{{ asset('assets/images/product_06.jpg') }}" alt="Product Image"></a>
                     <div class="down-content">
                         <a href="#">
                             <h4>Tittle goes here</h4>
@@ -193,7 +193,7 @@ journey starts here.')
             </div>
             <div class="col-md-6">
                 <div class="right-image">
-                    <img src="{{ asset('template/assets/images/feature-image.jpg') }}" alt="Feature Image">
+                    <img src="{{ asset('assets/images/feature-image.jpg') }}" alt="Feature Image">
                 </div>
             </div>
         </div>

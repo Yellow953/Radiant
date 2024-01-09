@@ -16,7 +16,7 @@ your fashion experience seamless.')
             <div class="col-md-12">
                 <div class="text-content">
                     <h4>Contact Us</h4>
-                    <h2 class="text-dark">Get In Touch</h2>
+                    <h2>Get In Touch</h2>
                 </div>
             </div>
         </div>

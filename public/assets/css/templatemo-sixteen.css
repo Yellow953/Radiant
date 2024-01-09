@@ -47,12 +47,12 @@ ul.social-icons li a {
 }
 
 ul.social-icons li a:hover {
-	background-color: #000080;
+	background-color: #20ace1;
 	color: #fff;
 }
 
 a.filled-button {
-	background-color: #000080;
+	background-color: #20ace1;
 	color: #fff;
 	font-size: 14px;
 	text-transform: capitalize;
@@ -94,7 +94,7 @@ a.filled-button:hover {
 }
 
 .page-heading .text-content h4 {
-	color: #000080;
+	color: #e80b8e;
 	font-size: 22px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -102,7 +102,7 @@ a.filled-button:hover {
 }
 
 .page-heading .text-content h2 {
-	color: #fff;
+	color: #20ace1;
 	font-size: 62px;
 	text-transform: uppercase;
 	letter-spacing: 5px;
@@ -110,7 +110,7 @@ a.filled-button:hover {
 
 #preloader {
   overflow: hidden;
-  background: #000080;
+  background: #20ace1;
   left: 0;
   right: 0;
   top: 0;
@@ -222,7 +222,7 @@ header .navbar {
 .background-header .navbar-nav .nav-link.active,
 .background-header .navbar-nav .nav-link.show,
 .background-header .navbar-nav .show>.nav-link {
-	color: #000080!important;
+	color: #20ace1!important;
 }
 .navbar .navbar-brand {
 	float: 	left;
@@ -241,7 +241,7 @@ header .navbar {
 }
 .navbar .navbar-brand h2 em {
 	font-style: normal;
-	color: #000080;
+	color: #20ace1;
 }
 #navbarResponsive {
 	z-index: 999;
@@ -268,7 +268,7 @@ header .navbar {
 .navbar .navbar-nav .show>.nav-link {
 	color: #232323;
 	padding-bottom: 25px;
-	border-bottom: 3px solid #000080;
+	border-bottom: 3px solid #20ace1;
 }
 .navbar .navbar-toggler-icon {
 	background-image: none;
@@ -285,7 +285,7 @@ header .navbar {
 }
 .navbar .navbar-toggler-icon:after {
 	content: '\f0c9';
-	color: #000080;
+	color: #20ace1;
 	font-size: 18px;
 	line-height: 26px;
 	font-family: 'FontAwesome';
@@ -320,7 +320,7 @@ header .navbar {
 }
 
 .banner .text-content h4 {
-	color: #000080;
+	color: #e80b8e;
 	font-size: 22px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -328,7 +328,7 @@ header .navbar {
 }
 
 .banner .text-content h2 {
-	color: black;
+	color: #20ace1;
 	font-size: 62px;
 	text-transform: uppercase;
 	letter-spacing: 5px;
@@ -380,12 +380,14 @@ header .navbar {
 	text-transform: uppercase;
 	font-size: 13px;
 	font-weight: 700;
-	color: #000080;
+	color: #20ace1;
 }
 
 .product-item {
 	border: 1px solid #eee;
 	margin-bottom: 30px;
+	border-radius: 20px;
+	overflow: hidden;
 }
 
 .product-item .down-content {
@@ -400,7 +402,7 @@ header .navbar {
 
 .product-item .down-content h4 {
 	font-size: 17px;
-	color: #000080;
+	color: #20ace1;
 	margin-bottom: 20px;
 }
 
@@ -421,7 +423,7 @@ header .navbar {
 }
 
 .product-item .down-content ul li i {
-	color: #000080;
+	color: #f3eb25; 
 	font-size: 14px;
 }
 
@@ -430,7 +432,7 @@ header .navbar {
 	right: 30px;
 	bottom: 30px;
 	font-size: 13px;
-	color: #000080;
+	color: #e80b8e;
 	font-weight: 500;
 }
 
@@ -469,7 +471,7 @@ header .navbar {
 
 .best-features h4 {
 	font-size: 17px;
-	color: #000080;
+	color: #20ace1;
 	margin-bottom: 20px;
 }
 
@@ -504,11 +506,11 @@ header .navbar {
 }
 
 .best-features ul.featured-list li a:hover {
-	color: #000080;
+	color: #20ace1;
 }
 
 .best-features ul.featured-list li a:hover::before {
-	background-color: #000080;
+	background-color: #20ace1;
 }
 
 .best-features .filled-button {
@@ -530,7 +532,7 @@ header .navbar {
 
 .call-to-action .inner-content h4 {
 	font-size: 17px;
-	color: #000080;
+	color: #20ace1;
 	margin-bottom: 15px;
 }
 
@@ -557,9 +559,7 @@ footer {
 }
 
 footer .inner-content {
-	border-top: 1px solid #eee;
-	margin-top: 60px;
-	padding: 60px 0px;
+	padding: 20px 0px;
 }
 
 footer .inner-content p {
@@ -567,7 +567,7 @@ footer .inner-content p {
 }
 
 footer .inner-content p a {
-	color: #000080;
+	color: #f3eb25; 
 	margin-left: 3px;
 }
 
@@ -600,7 +600,7 @@ footer .inner-content p a {
 
 .products .filters ul li.active,
 .products .filters ul li:hover {
-  color: #000080;
+  color: #20ace1;
 }
 
 .products ul.pages {
@@ -627,8 +627,8 @@ footer .inner-content p a {
 
 .products ul.pages li a:hover,
 .products ul.pages li.active a {
-	background-color: #000080;
-	border-color: #000080;
+	background-color: #20ace1;
+	border-color: #20ace1;
 	color: #fff;
 }
 
@@ -682,7 +682,7 @@ footer .inner-content p a {
 
 .team-member .thumb-container .hover-effect .hover-content ul.social-icons li a:hover {
 	background-color: #fff;
-	color: #000080;
+	color: #20ace1;
 }
 
 .team-member:hover .hover-effect {
@@ -692,14 +692,14 @@ footer .inner-content p a {
 
 .team-member .down-content h4 {
 	font-size: 17px;
-	color: #000080;
+	color: #20ace1;
 	margin-bottom: 8px;
 }
 
 .team-member .down-content span {
 	display: block;
 	font-size: 13px;
-	color: #000080;
+	color: #20ace1;
 	font-weight: 500;
 	margin-bottom: 20px;
 }
@@ -733,7 +733,7 @@ footer .inner-content p a {
 	display: inline-block;
 	text-align: center;
 	line-height: 100px;
-	background-color: #000080;
+	background-color: #20ace1;
 	color: #fff;
 	font-size: 32px;
 }
@@ -745,7 +745,7 @@ footer .inner-content p a {
 
 .services .service-item .down-content h4 {
 	font-size: 17px;
-	color: #000080;
+	color: #20ace1;
 	margin-bottom: 20px;
 }
 
@@ -795,7 +795,7 @@ footer .inner-content p a {
 
 .find-us h4 {
 	font-size: 17px;
-	color: #000080;
+	color: #20ace1;
 	margin-bottom: 20px;
 }
 
@@ -845,7 +845,7 @@ footer .inner-content p a {
 }
 
 .contact-form button.filled-button {
-	background-color: #000080;
+	background-color: #20ace1;
 	color: #fff;
 	font-size: 14px;
 	text-transform: capitalize;
@@ -871,17 +871,17 @@ footer .inner-content p a {
 .accordion a {
 	cursor: pointer;
 	font-size: 17px;
-	color: #000080!important;
+	color: #20ace1!important;
 	margin-bottom: 20px;
 	transition: all .3s;
 }
 
 .accordion a:hover {
-	color: #000080!important;
+	color: #20ace1!important;
 }
 
 .accordion a.active {
-  color: #000080!important;
+  color: #20ace1!important;
 }
 
 .accordion li .content {
@@ -1010,7 +1010,7 @@ footer .inner-content p a {
 	.navbar .navbar-nav .nav-link.active,
 	.navbar .navbar-nav .nav-link.show,
 	.navbar .navbar-nav .show>.nav-link {
-		color: #000080!important;
+		color: #20ace1!important;
 		border-bottom: none!important;
 		padding-bottom: 15px;
 	}

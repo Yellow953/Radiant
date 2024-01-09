@@ -1,10 +1,8 @@
 # Radiant
 
 # blue
-#000080
-
+    #20ace1
+# yellow
+    #f3eb25
 # pink
-$f33f3f
-
-Create Sitemap
-Spatie\Sitemap\SitemapGenerator::create('http://localhost:8000')->writeToFile('/home/yellow/Documents/Radiant/Radiant/sitemap.xml');
+    #e80b8e

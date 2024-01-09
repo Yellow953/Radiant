@@ -16,7 +16,7 @@ individual expression in fashion.')
             <div class="col-md-12">
                 <div class="text-content">
                     <h4>About Us</h4>
-                    <h2 class="text-dark">Get To Know Us</h2>
+                    <h2>Get To Know Us</h2>
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@ individual expression in fashion.')
             </div>
             <div class="col-md-6">
                 <div class="right-image">
-                    <img src="{{ asset('template/assets/images/feature-image.jpg')}}" alt="Feature Image 1">
+                    <img src="{{ asset('assets/images/feature-image.jpg')}}" alt="Feature Image 1">
                 </div>
             </div>
             <div class="col-md-6">
@@ -87,7 +87,7 @@ individual expression in fashion.')
             <div class="col-md-4">
                 <div class="team-member">
                     <div class="thumb-container">
-                        <img src="{{ asset('template/assets/images/team_01.jpg')}}" alt="Team 1">
+                        <img src="{{ asset('assets/images/team_01.jpg')}}" alt="Team 1">
                         <div class="hover-effect">
                             <div class="hover-content">
                                 <ul class="social-icons">
@@ -109,7 +109,7 @@ individual expression in fashion.')
             <div class="col-md-4">
                 <div class="team-member">
                     <div class="thumb-container">
-                        <img src="{{ asset('template/assets/images/team_02.jpg')}}" alt="Team 2">
+                        <img src="{{ asset('assets/images/team_02.jpg')}}" alt="Team 2">
                         <div class="hover-effect">
                             <div class="hover-content">
                                 <ul class="social-icons">
@@ -131,7 +131,7 @@ individual expression in fashion.')
             <div class="col-md-4">
                 <div class="team-member">
                     <div class="thumb-container">
-                        <img src="{{ asset('template/assets/images/team_03.jpg')}}" alt="Team 3">
+                        <img src="{{ asset('assets/images/team_03.jpg')}}" alt="Team 3">
                         <div class="hover-effect">
                             <div class="hover-content">
                                 <ul class="social-icons">
