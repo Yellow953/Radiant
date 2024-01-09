@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="inner-content">
-                    <p class="text-white">Copyright &copy; 2023 <a href="https://yellowtech.dev"
+                    <p class="text-white">Copyright &copy; 2024 <a href="https://yellowtech.dev"
                             target="_blank">YellowTech</a></p>
                 </div>
             </div>
