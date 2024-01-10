@@ -125,7 +125,15 @@ Route::get('/logs', [App\Http\Controllers\LogController::class, 'index'])->name(
 // logout
 Route::get('/logout', [App\Http\Controllers\HomeController::class, 'custom_logout'])->name('custom_logout');
 
-Route::post('/save-design', [App\Http\Controllers\HomeController::class, 'save_design'])->name('save-design');
-Route::get('/custom-design', [App\Http\Controllers\HomeController::class, 'custom_design'])->name('custom-design');
+// Designs
+Route::prefix('/designs')->group(function () {
+    Route::get('/{design}/edit', [App\Http\Controllers\DesignController::class, 'edit'])->name('designs.edit');
+    Route::post('/{design}/update', [App\Http\Controllers\DesignController::class, 'update'])->name('designs.update');
+    Route::get('/{design}/destroy', [App\Http\Controllers\DesignController::class, 'destroy'])->name('designs.destroy');
+    Route::get('/{design}/show', [App\Http\Controllers\DesignController::class, 'show'])->name('designs.show');
+    Route::get('/new', [App\Http\Controllers\DesignController::class, 'new'])->name('designs.new');
+    Route::post('/create', [App\Http\Controllers\DesignController::class, 'create'])->name('designs.create');
+    Route::get('/', [App\Http\Controllers\DesignController::class, 'index'])->name('designs');
+});
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

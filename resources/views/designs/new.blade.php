@@ -28,8 +28,6 @@ images, unique style, fashion statement, Radiant')
     </div>
 </div>
 
-@include('layouts._flash')
-
 <div class="container">
     <div class="row">
         <div class="col-md-9">
@@ -111,6 +109,9 @@ images, unique style, fashion statement, Radiant')
                 <button id="saveButton" class="btn btn-primary">Save Design</button>
             </div>
         </div>
+        <div class="col-md-12">
+            @include('layouts._flash')
+        </div>
     </div>
 
     <div class="row">
@@ -118,13 +119,23 @@ images, unique style, fashion statement, Radiant')
             <h3 class="my-4">My Designs</h3>
             <div class="row w-100 overflow-x-auto">
                 @forelse ($designs as $design)
-                <div class="card m-1 my-design"
-                    style="background-image: url('{{ asset($design->product->image_front) }}');">
-                    <img src="{{ asset($design->image_front) }}" alt="{{ $design->product->name }} Front Design">
-                </div>
-                <div class="card m-1 my-design"
-                    style="background-image: url('{{ asset($design->product->image_back) }}');">
-                    <img src="{{ asset($design->image_back) }}" alt="{{ $design->product->name }} Back Design">
+                <div class="card m-1 my-design" @if ($design->direction == 'front')
+                    style="background-image: url('{{ asset($design->product->image_front) }}');"
+                    @elseif($design->direction == 'back')
+                    style="background-image: url('{{ asset($design->product->image_back) }}');"
+                    @endif
+                    id="design-{{ $design->id }}">
+                    <img src="{{ asset($design->image_path) }}"
+                        alt="{{ $design->product->name }} {{ ucwords($design->direction) }} Design">
+
+                    <div class="overlay-icons">
+                        <button class="btn btn-info" onclick="viewDesign('{{ asset($design->image_path) }}')">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                        <button class="btn btn-danger delete-design-button" onclick="deleteDesign('{{ $design->id }}')">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
                 </div>
                 @empty
                 No Designs Yet
@@ -135,5 +146,58 @@ images, unique style, fashion statement, Radiant')
 </div>
 
 <script src="{{ asset('assets/js/custom-design.js') }}"></script>
+
+<script>
+    function viewDesign(imagePath) {
+    }
+
+    function deleteDesign(designId) {
+            const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+    
+            if (confirm('Are you sure you want to delete this design?')) {
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', `/designs/${designId}/destroy`, true);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.setRequestHeader('X-CSRF-TOKEN', csrfToken);
+    
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            removeDesignFromUI(designId);
+                            showAlert('success', 'Design deleted successfully!');
+                        } else {
+                            const response = JSON.parse(xhr.responseText);
+                            showAlert('error', response.error.message);
+                        }
+                    }
+                };
+    
+                xhr.send();
+            }
+        }
+    
+        function removeDesignFromUI(designId) {
+            const designElement = document.getElementById(`design-${designId}`);
+            
+            if (designElement) {
+                designElement.remove();
+            }
+        }
+
+        function showAlert(type, message) {
+            const alertContainer = document.getElementById('alert-container');
+            const alertClass = (type === 'success') ? 'alert-success' : 'alert-danger';
+    
+            const alertElement = document.createElement('div');
+            alertElement.className = `alert ${alertClass}`;
+            alertElement.innerText = message;
+    
+            alertContainer.appendChild(alertElement);
+    
+            setTimeout(() => {
+                alertElement.remove();
+            }, 5000);
+        }
+</script>
 
 @endsection

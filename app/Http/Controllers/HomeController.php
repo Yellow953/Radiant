@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use App\Models\Design;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -92,36 +91,5 @@ class HomeController extends Controller
         } else {
             return redirect()->back()->with('danger', "Passwords do not match!");
         }
-    }
-
-    public function custom_design()
-    {
-        $products = Product::select('id', 'name', 'image_front', 'image_back')->get();
-        $designs = auth()->user()->designs;
-
-        $data = compact('products', 'designs');
-        return view('custom-design', $data);
-    }
-
-    public function save_design(Request $request)
-    {
-        $designData = $request->input('design');
-        $decodedImage = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $designData));
-
-        $filename = 'design_' . time() . '.png';
-        $path = public_path('/uploads/designs/' . $filename);
-
-        file_put_contents($path, $decodedImage);
-
-        Design::create([
-            'user_id' => auth()->user()->id,
-            'product_id' => $request->input('product_id'),
-            'image_front' => '/uploads/designs/' . $filename,
-            'image_back' => '/uploads/designs/' . $filename,
-        ]);
-
-        Session::flash('success', 'Design saved successfully');
-
-        return response()->json(['message' => 'design saved successfully']);
     }
 }

@@ -294,6 +294,31 @@
   width: 100%;
   height: 100%;  
 }
+
+.my-design {
+  position: relative;
+  overflow: hidden;
+}
+
+.my-design:hover .overlay-icons {
+  display: flex;
+}
+
+.overlay-icons {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.overlay-icons button {
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  color: black;
+}
 /* end my designs */
 
 /* start auth */

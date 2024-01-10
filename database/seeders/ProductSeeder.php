@@ -18,6 +18,7 @@ class ProductSeeder extends Seeder
             'category_id' => 1,
             'image_front' => 'assets/images/white_hoodie_front.png',
             'image_back' => 'assets/images/white_hoodie_back.png',
+            'can_customize' => true,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
