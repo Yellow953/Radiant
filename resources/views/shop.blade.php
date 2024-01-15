@@ -35,7 +35,7 @@ Or create your own...')
                         </li>
                         @foreach (Helper::get_categories() as $category)
                         <li>
-                            <a href="/shop?category_id={{ $category->id }}"
+                            <a href="{{ route('shop', ['category_id' => $category->id]) }}"
                                 class="{{ request()->query('category_id') == $category->id ? 'active' : ''}}">
                                 {{ucwords($category->name)}}
                             </a>

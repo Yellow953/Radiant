@@ -22,7 +22,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             @foreach (Helper::get_categories() as $category)
-                            <a class="dropdown-item" href="/shop?category_id={{ $category->id }}">
+                            <a class="dropdown-item" href="{{ route('shop', ['category_id' => $category->id]) }}">
                                 {{ucwords($category->name)}}</a>
                             @endforeach
                         </div>

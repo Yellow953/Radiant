@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Validator;
 
 class DesignController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
     }
@@ -17,9 +22,8 @@ class DesignController extends Controller
     public function new()
     {
         $products = Product::select('id', 'name', 'image_front', 'image_back')->where('can_customize', true)->get();
-        $designs = auth()->user()->designs;
 
-        $data = compact('products', 'designs');
+        $data = compact('products');
         return view('designs.new', $data);
     }
 

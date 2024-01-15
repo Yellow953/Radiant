@@ -118,7 +118,7 @@ images, unique style, fashion statement, Radiant')
         <div class="col-md-12">
             <h3 class="my-4">My Designs</h3>
             <div class="row w-100 overflow-x-auto">
-                @forelse ($designs as $design)
+                @forelse (auth()->user()->designs as $design)
                 <div class="card m-1 my-design" @if ($design->direction == 'front')
                     style="background-image: url('{{ asset($design->product->image_front) }}');"
                     @elseif($design->direction == 'back')
