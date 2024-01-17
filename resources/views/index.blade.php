@@ -42,7 +42,7 @@ journey starts here.')
                     <a href="{{ route('shop') }}">view all products <i class="fa fa-angle-right"></i></a>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="product-item">
                     <a href="#"><img src="{{ asset('assets/images/product_01.jpg') }}" alt="Product Image"></a>
                     <div class="down-content">
@@ -62,7 +62,7 @@ journey starts here.')
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="product-item">
                     <a href="#"><img src="{{ asset('assets/images/product_02.jpg') }}" alt="Product Image"></a>
                     <div class="down-content">
@@ -82,7 +82,7 @@ journey starts here.')
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="product-item">
                     <a href="#"><img src="{{ asset('assets/images/product_03.jpg') }}" alt="Product Image"></a>
                     <div class="down-content">
@@ -102,7 +102,7 @@ journey starts here.')
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="product-item">
                     <a href="#"><img src="{{ asset('assets/images/product_04.jpg') }}" alt="Product Image"></a>
                     <div class="down-content">
@@ -119,46 +119,6 @@ journey starts here.')
                             <li><i class="fa fa-star"></i></li>
                         </ul>
                         <span>Reviews (48)</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-item">
-                    <a href="#"><img src="{{ asset('assets/images/product_05.jpg') }}" alt="Product Image"></a>
-                    <div class="down-content">
-                        <a href="#">
-                            <h4>Tittle goes here</h4>
-                        </a>
-                        <h6>$12.50</h6>
-                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                        <ul class="stars">
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                        </ul>
-                        <span>Reviews (16)</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="product-item">
-                    <a href="#"><img src="{{ asset('assets/images/product_06.jpg') }}" alt="Product Image"></a>
-                    <div class="down-content">
-                        <a href="#">
-                            <h4>Tittle goes here</h4>
-                        </a>
-                        <h6>$22.50</h6>
-                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                        <ul class="stars">
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                        </ul>
-                        <span>Reviews (32)</span>
                     </div>
                 </div>
             </div>
@@ -219,7 +179,7 @@ journey starts here.')
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <div class="item-why"> <span class="icon feature_box_col_two">
+                <div class="item-why"> <span class="icon feature_box_col_two" style="color: #e80b8e;">
                         <i class="fa-solid fa-fingerprint"></i>
                     </span>
                     <h6>Customized Designs</h6>
@@ -228,7 +188,7 @@ journey starts here.')
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <div class="item-why"> <span class="icon feature_box_col_three">
+                <div class="item-why"> <span class="icon feature_box_col_three" style="color: #f3eb25;">
                         <i class="fa-solid fa-rotate-left"></i>
                     </span>
                     <h6>Return Policy</h6>
@@ -240,25 +200,4 @@ journey starts here.')
     </div>
 </div>
 {{-- end why choose us --}}
-
-<div class="call-to-action">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="inner-content">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h4>Creative &amp; Unique <em>Radiant</em> Products</h4>
-                            <p>Explore Radiant's Unique Collection, or Customize your own aparel.</p>
-                        </div>
-                        <div class="col-md-4">
-                            <a href="{{ route('shop') }}" class="filled-button">Explore Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 @endsection
