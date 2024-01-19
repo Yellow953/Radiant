@@ -11,16 +11,17 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{-- Font --}}
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
 
     {{-- Favicon --}}
-    <link rel="shortcut icon" href="{{ asset('assets/logo/logo.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/logo/logo.png') }}" type="image/x-icon">
 
     <title>Radiant | @yield('title')</title>
     <meta name="description" content="@yield('description')">
     <meta name="keywords" content="@yield('keywords')">
-
 
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -70,5 +71,24 @@
                 t.style.color='#fff';
             }
         }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+        var header = $('header');
+        var navLinks = $('header a.nav-link');
+        var originalBackgroundColor = header.css('background-color');
+        var originalTextColor = navLinks.css('color');
+    
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 0) {
+                header.addClass('bg-white');
+                navLinks.css('color', 'black');
+            } else {
+                header.removeClass('bg-white');
+                navLinks.css('color', originalTextColor);
+            }
+        });
+    });
     </script>
 </body>

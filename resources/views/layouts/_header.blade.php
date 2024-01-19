@@ -1,5 +1,5 @@
 {{-- Start Header --}}
-<header class="">
+<header>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">

@@ -11,19 +11,19 @@ journey starts here.')
 <!-- Banner Starts Here -->
 <div class="banner header-text">
     <div class="owl-banner owl-carousel">
-        <div class="banner-item-01" style="background-image: url({{ asset('assets/images/image1.png') }});">
+        <div class="banner-item-01">
             <div class="text-content">
                 <h4>Best Offer</h4>
                 <h2>New Arrivals On Sale</h2>
             </div>
         </div>
-        <div class="banner-item-02" style="background-image: url({{ asset('assets/images/image2.png') }});">
+        <div class="banner-item-02">
             <div class="text-content">
                 <h4>Flash Deals</h4>
                 <h2>Get your best products</h2>
             </div>
         </div>
-        <div class="banner-item-03" style="background-image: url({{ asset('assets/images/img5.jpg') }});">
+        <div class="banner-item-03">
             <div class="text-content">
                 <h4>Last Minute</h4>
                 <h2>Grab last minute deals</h2>
@@ -134,7 +134,7 @@ journey starts here.')
                     <h2>About Radiant</h2>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="left-content">
                     <h4>Looking for the best products?</h4>
                     <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">This
@@ -151,9 +151,9 @@ journey starts here.')
                     <a href="about.html" class="filled-button">Read More</a>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="right-image">
-                    <img src="{{ asset('assets/images/feature-image.jpg') }}" alt="Feature Image">
+                    <img src="{{ asset('assets/images/img13.jpg') }}" alt="Feature Image">
                 </div>
             </div>
         </div>
