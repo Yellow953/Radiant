@@ -382,33 +382,35 @@ header .navbar {
 }
 
 .product-item {
-	border: 1px solid #eee;
+	border: 1px solid rgba(35, 35, 35, 0.5);
 	margin-bottom: 30px;
-	border-radius: 20px;
+	border-radius: 25px;
 	overflow: hidden;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 .product-item .down-content {
-	padding: 30px;
+	padding: 15px;
 	position: relative;
 }
 
 .product-item img {
 	width: 100%;
+	height: 200px;
 	overflow: hidden;
 }
 
 .product-item .down-content h4 {
-	font-size: 17px;
+	font-size: 15px;
 	color: #20ace1;
 	margin-bottom: 20px;
 }
 
 .product-item .down-content h6 {
 	position: absolute;
-	top: 30px;
-	right: 30px;
-	font-size: 18px;
+	top: 15px;
+	right: 15px;
+	font-size: 15px;
 	color: #121212;
 }
 
@@ -422,14 +424,14 @@ header .navbar {
 
 .product-item .down-content ul li i {
 	color: #f3eb25; 
-	font-size: 14px;
+	font-size: 12px;
 }
 
 .product-item .down-content span {
 	position: absolute;
-	right: 30px;
-	bottom: 30px;
-	font-size: 13px;
+	right: 15px;
+	bottom: 15px;
+	font-size: 12px;
 	color: #e80b8e;
 	font-weight: 500;
 }
@@ -639,7 +641,9 @@ footer .inner-content p a {
 }
 
 .team-member {
-	border: 1px solid #eee;
+	border: 1px solid #4a4a4a;
+	border-radius: 25px;
+	overflow: hidden;
 	margin-bottom: 30px;
 }
 
@@ -659,7 +663,7 @@ footer .inner-content p a {
 
 .team-member .thumb-container .hover-effect {
 	position: absolute;
-	background-color: rgba(243,63,63,0.9);
+	background-color: RGBA(243, 235, 37, 0.5);
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -697,7 +701,7 @@ footer .inner-content p a {
 .team-member .down-content span {
 	display: block;
 	font-size: 13px;
-	color: #20ace1;
+	color: #e80b8e;
 	font-weight: 500;
 	margin-bottom: 20px;
 }

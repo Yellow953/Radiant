@@ -19,8 +19,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        $products = Product::filter()->paginate(15);
-        return view('index', compact('products'));
+        $best_sellers = Product::where('can_customize', true)->get();
+        return view('index', compact('best_sellers'));
     }
 
     public function about()
@@ -36,7 +36,7 @@ class HomeController extends Controller
     public function shop()
     {
         $categories = Category::select('id', 'name')->where('active', true)->get();
-        $products = Product::where('quantity', '!=', 0)->filter()->get();
+        $products = Product::where('quantity', '!=', 0)->where('can_customize', true)->filter()->paginate(10);
 
         $data = compact('categories', 'products');
         return view('shop', $data);

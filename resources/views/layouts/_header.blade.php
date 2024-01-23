@@ -29,13 +29,20 @@
                         </div>
                     </li>
                     <li class="nav-item {{ request()->is('custom-design') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('designs.new') }}">Custom Design</a>
+                        <a class="nav-link" href="{{ route('designs.new') }}">Customize</a>
                     </li>
                     <li class="nav-item {{ request()->is('about') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('about') }}">About Us</a>
+                        <a class="nav-link" href="{{ route('about') }}">About</a>
                     </li>
                     <li class="nav-item {{ request()->is('contact') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('contact') }}">Contact Us</a>
+                        <a class="nav-link" href="{{ route('contact') }}">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item {{ request()->is('cart') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('cart') }}">
+                            Cart
+                        </a>
                     </li>
                 </ul>
             </div>

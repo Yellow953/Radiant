@@ -28,17 +28,12 @@ individual expression in fashion.')
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Our Background</h2>
+                    <h2 class="color-primary">Who we are?</h2>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="right-image">
-                    <img src="{{ asset('assets/images/feature-image.jpg')}}" alt="Feature Image 1">
-                </div>
-            </div>
-            <div class="col-md-6">
+
+            <div class="col-md-6 my-auto">
                 <div class="left-content">
-                    <h4>Who we are?</h4>
                     <p>
                         At Radiant, we believe in the power of personal expression. Fashion is more than what you wear;
                         it's a statement, a canvas for your individuality. Established with a passion for quality and
@@ -71,6 +66,11 @@ individual expression in fashion.')
                     </ul>
                 </div>
             </div>
+            <div class="col-md-6 my-auto">
+                <div class="right-image">
+                    <img src="{{ asset('assets/images/img3.jpg')}}" alt="Radiant About Us Image">
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -81,7 +81,7 @@ individual expression in fashion.')
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Our Team Members</h2>
+                    <h2 class="color-primary">Our Team Members</h2>
                 </div>
             </div>
             <div class="col-md-4">
@@ -100,9 +100,9 @@ individual expression in fashion.')
                         </div>
                     </div>
                     <div class="down-content">
-                        <h4>Johnny William</h4>
-                        <span>CO-Founder</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
+                        <h4>Rami Khalaf</h4>
+                        <span>Founder</span>
+                        <p>Passionate leader and visionary, guiding our team towards success.</p>
                     </div>
                 </div>
             </div>
@@ -122,9 +122,9 @@ individual expression in fashion.')
                         </div>
                     </div>
                     <div class="down-content">
-                        <h4>Karry Pitcher</h4>
+                        <h4>Sarah Abi-Nassif</h4>
                         <span>Product Expert</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
+                        <p>Expert in product development, ensuring top-notch quality and innovation.</p>
                     </div>
                 </div>
             </div>
@@ -144,9 +144,9 @@ individual expression in fashion.')
                         </div>
                     </div>
                     <div class="down-content">
-                        <h4>Michael Soft</h4>
+                        <h4>Nadim Farhat</h4>
                         <span>Chief Marketing</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
+                        <p>Innovative marketer, driving brand awareness and market growth.</p>
                     </div>
                 </div>
             </div>
@@ -154,66 +154,16 @@ individual expression in fashion.')
     </div>
 </div>
 
-
-<div class="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="service-item">
-                    <div class="icon">
-                        <i class="fa fa-gear"></i>
-                    </div>
-                    <div class="down-content">
-                        <h4> Elevate Your Wardrobe</h4>
-                        <p>
-                            Discover a world of style with our premium T-shirts, hoodies, and hats. Unleash your
-                            creativity or explore our curated collection for fashion that speaks volumes.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-item">
-                    <div class="icon">
-                        <i class="fa fa-gear"></i>
-                    </div>
-                    <div class="down-content">
-                        <h4>Create, Customize, Captivate</h4>
-                        <p>
-                            Be the designer of your own fashion story. Our user-friendly customization tool lets you
-                            turn your ideas into wearable art. Your style, your rules!
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-item">
-                    <div class="icon">
-                        <i class="fa fa-gear"></i>
-                    </div>
-                    <div class="down-content">
-                        <h4>Unisex Appeal</h4>
-                        <p>
-                            Fashion knows no boundaries. Our styles are designed for everyone, making a statement
-                            without saying a word. Join the movement of unapologetic self-expression.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="happy-clients">
+<div class="happy-clients bg-white">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Happy Partners</h2>
+                    <h2 class="color-primary">Happy Partners</h2>
                 </div>
             </div>
             <div class="col-md-12">
-                <div class="owl-clients owl-carousel">
+                <div class="owl-clients owl-carousel bg-white">
                     <div class="client-item">
                         <img src="{{ asset('assets/images/yellowtech.png') }}" alt="Yellow Tech Logo">
                     </div>

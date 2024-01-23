@@ -14,7 +14,7 @@ Or create your own...')
         <div class="row">
             <div class="col-md-12">
                 <div class="text-content">
-                    <h4>Hoodies, Shirts, Pants, Hats, ...</h4>
+                    <h4>Hoodies, Shirts, Pants, ...</h4>
                     <h2>Shop</h2>
                 </div>
             </div>
@@ -29,14 +29,15 @@ Or create your own...')
                 <div class="filters categories">
                     <ul>
                         <li>
-                            <a href="{{ route('shop') }}" class="{{ !request()->query('category_id') ? 'active' : ''}}">
+                            <a href="{{ route('shop') }}"
+                                class="{{ !request()->query('category_id') ? 'color-pink' : ''}}">
                                 All Products
                             </a>
                         </li>
                         @foreach (Helper::get_categories() as $category)
                         <li>
                             <a href="{{ route('shop', ['category_id' => $category->id]) }}"
-                                class="{{ request()->query('category_id') == $category->id ? 'active' : ''}}">
+                                class="{{ request()->query('category_id') == $category->id ? 'color-pink' : ''}}">
                                 {{ucwords($category->name)}}
                             </a>
                         </li>
@@ -47,142 +48,33 @@ Or create your own...')
             <div class="col-md-12">
                 <div class="filters-content">
                     <div class="row grid">
-                        <div class="col-lg-4 col-md-4 all des">
+                        @forelse ($products as $product)
+                        <div class="col-md-3 all des">
                             <div class="product-item">
                                 <a href="#"><img src="{{ asset('assets/images/product_01.jpg') }}"
                                         alt="Product Image"></a>
                                 <div class="down-content">
-                                    <a href="#">
-                                        <h4>Tittle goes here</h4>
-                                    </a>
-                                    <h6>${{ number_format(18.25, 2) }}</h6>
-                                    <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla
-                                        aspernatur.</p>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    <h4 class="text-center">{{ ucwords($product->name) }}</h4>
+                                    <p>{{ Str::limit($product->description, 100) }}</p>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="text-success">${{ number_format($product->price, 2) }}</div>
+                                        <div class="text-danger" style="text-decoration: line-through;">${{
+                                            number_format(($product->price +
+                                            $product->price * 0.2), 2) }}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 all dev">
-                            <div class="product-item">
-                                <a href="#"><img src="{{ asset('assets/images/product_02.jpg') }}"
-                                        alt="Product Image"></a>
-                                <div class="down-content">
-                                    <a href="#">
-                                        <h4>Tittle goes here</h4>
-                                    </a>
-                                    <h6>$16.75</h6>
-                                    <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla
-                                        aspernatur.</p>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                    <span>Reviews (24)</span>
-                                </div>
-                            </div>
+                        @empty
+                        <div class="col-md-12 all des">
+                            <p class="text-center mb-5">No Available Products at this moment...</p>
                         </div>
-                        <div class="col-lg-4 col-md-4 all gra">
-                            <div class="product-item">
-                                <a href="#"><img src="{{ asset('assets/images/product_03.jpg') }}"
-                                        alt="Product Image"></a>
-                                <div class="down-content">
-                                    <a href="#">
-                                        <h4>Tittle goes here</h4>
-                                    </a>
-                                    <h6>$32.50</h6>
-                                    <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla
-                                        aspernatur.</p>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                    <span>Reviews (36)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 all gra">
-                            <div class="product-item">
-                                <a href="#"><img src="{{ asset('assets/images/product_04.jpg') }}"
-                                        alt="Product Image"></a>
-                                <div class="down-content">
-                                    <a href="#">
-                                        <h4>Tittle goes here</h4>
-                                    </a>
-                                    <h6>$24.60</h6>
-                                    <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla
-                                        aspernatur.</p>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                    <span>Reviews (48)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 all dev">
-                            <div class="product-item">
-                                <a href="#"><img src="{{ asset('assets/images/product_05.jpg') }}"
-                                        alt="Product Image"></a>
-                                <div class="down-content">
-                                    <a href="#">
-                                        <h4>Tittle goes here</h4>
-                                    </a>
-                                    <h6>$18.75</h6>
-                                    <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla
-                                        aspernatur.</p>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                    <span>Reviews (60)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 all des">
-                            <div class="product-item">
-                                <a href="#"><img src="{{ asset('assets/images/product_06.jpg') }}"
-                                        alt="Product Image"></a>
-                                <div class="down-content">
-                                    <a href="#">
-                                        <h4>Tittle goes here</h4>
-                                    </a>
-                                    <h6>$12.50</h6>
-                                    <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla
-                                        aspernatur.</p>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
-                                    <span>Reviews (72)</span>
-                                </div>
-                            </div>
-                        </div>
+                        @endforelse
                     </div>
                 </div>
             </div>
             <div class="col-md-12">
-                {{-- {{ $products->links() }} --}}
+                {{ $products->links() }}
             </div>
         </div>
     </div>

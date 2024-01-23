@@ -13,7 +13,7 @@
                         <a href="{{ route('shop') }}" class="nav-link">Collections</a>
                     </li>
                     <li>
-                        <a href="{{ route('designs.new') }}" class="nav-link">Custom-designs</a>
+                        <a href="{{ route('designs.new') }}" class="nav-link">Customize</a>
                     </li>
                     <li>
                         <a href="{{ route('about') }}" class="nav-link">About</a>
