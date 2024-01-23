@@ -35,7 +35,7 @@ header {
 }
 
 header a.nav-link{
-  color: black;
+  color: white!important;
 }
 
 .logo-header{
@@ -294,10 +294,17 @@ header a.nav-link{
   cursor: crosshair;
   background: transparent;
 }
+/* end whiteboard */
 
+/* start products */
+.products-list{
+  width: 175px;
+  max-height: 500px;
+  overflow: auto;
+}
 .product-custom-img {
-  width: 100px !important;
-  height: 100px !important;
+  width: 150px !important;
+  height: 150px !important;
   cursor: pointer;
 }
 
@@ -305,7 +312,16 @@ header a.nav-link{
   width: 100% !important;
   height: 100% !important;
 }
-/* end whiteboard */
+/* end products */
+
+/* start controls */
+.controls{
+  max-height: 550px;
+}
+.controls button, .controls label{
+  margin: 5px auto;
+}
+  /* end controls */
 
 /* start my designs */
 .my-design {

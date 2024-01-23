@@ -30,19 +30,37 @@ images, unique style, fashion statement, Radiant')
 
 <div class="container">
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-3">
+            <div class="products mt-0 w-100" id="products">
+                <h3 class="mb-3 mt-5">Products</h3>
+                <div class="products-list d-flex d-md-block flex-row">
+                    @forelse ($products as $product)
+                    <div class="card m-1 product-custom-img" data-product-id="{{ $product->id }}"
+                        data-direction="front">
+                        <img src="{{ asset($product->image_front) }}" alt="{{ $product->name }}">
+                    </div>
+                    <div class="card m-1 product-custom-img" data-product-id="{{ $product->id }}" data-direction="back">
+                        <img src="{{ asset($product->image_back) }}" alt="{{ $product->name }}">
+                    </div>
+                    @empty
+                    No Products Yet...
+                    @endforelse
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
             <h3 class="mb-3 mt-5">Whiteboard: </h3>
             <div id="zoom-container" style="width: 550px; height: 550px; overflow: auto;">
                 <div id="whiteboard-container" class="d-flex justify-content-center"
-                    style="background: url({{ asset('assets/images/white_hoodie_back.png')}}); background-position: center; background-size: contain; background-repeat: no-repeat;">
+                    style="background: url({{ asset('assets/images/no_img.png')}}); background-position: center; background-size: contain; background-repeat: no-repeat;">
                     <canvas id="whiteboard" width="500" height="500"></canvas>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
             <h3 class="mb-3 mt-5">Controls: </h3>
-            <div class="controls"
-                style="height: 80%; display: flex; flex-direction: column; align-items: center; justify-content: space-between;">
+            <div
+                class="controls d-flex flex-wrap flex-row flex-md-column align-items-center justify-content-between w-100">
                 <input type="range" id="strokeWidth" min="1" max="20" value="5">
 
                 <input type="color" id="colorPicker" value="#000000">
@@ -86,24 +104,6 @@ images, unique style, fashion statement, Radiant')
                 </button>
             </div>
         </div>
-        <div class="col-md-12 mb-3">
-            <div class="products mt-0 w-100" id="products">
-                <h4 class="my-3">Products</h4>
-                <div class="row w-100 overflow-x-auto">
-                    @forelse ($products as $product)
-                    <div class="card m-1 product-custom-img" data-product-id="{{ $product->id }}"
-                        data-direction="front">
-                        <img src="{{ asset($product->image_front) }}" alt="">
-                    </div>
-                    <div class="card m-1 product-custom-img" data-product-id="{{ $product->id }}" data-direction="back">
-                        <img src="{{ asset($product->image_back) }}" alt="">
-                    </div>
-                    @empty
-                    No Products Yet...
-                    @endforelse
-                </div>
-            </div>
-        </div>
         <div class="col-md-12">
             <div class="d-flex justify-content-md-end">
                 <button id="saveButton" class="btn btn-primary">Save Design</button>
@@ -138,7 +138,9 @@ images, unique style, fashion statement, Radiant')
                     </div>
                 </div>
                 @empty
-                No Designs Yet
+                <div class="m-5">
+                    No Designs Yet
+                </div>
                 @endforelse
             </div>
         </div>

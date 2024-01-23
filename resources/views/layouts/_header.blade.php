@@ -6,8 +6,9 @@
                 <img src="{{ asset('assets/logo/logo.png') }}" alt="Radiant Logo" class="logo-header">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+                style="background: transparent; border: none;">
+                <span class="navbar-toggler-icon" style="font-size: 30px"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
