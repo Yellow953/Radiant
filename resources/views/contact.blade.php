@@ -28,7 +28,7 @@ your fashion experience seamless.')
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Our Location on Maps</h2>
+                    <h2 class="color-primary">Our Location on Maps</h2>
                 </div>
             </div>
             <div class="col-md-8">
@@ -41,7 +41,7 @@ your fashion experience seamless.')
             </div>
             <div class="col-md-4">
                 <div class="left-content">
-                    <h4>Get In Touch</h4>
+                    <h3 class="color-pink mb-4">Get In Touch</h3>
                     <p>
                         Have questions, ideas, or just want to say hello? We're all ears! Reach out to us through the
                         following channels:
@@ -77,41 +77,42 @@ your fashion experience seamless.')
     </div>
 </div>
 
-
 <div class="send-message">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Send us a Message</h2>
+                    <h2 class="color-primary">Submit Your Idea</h2>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 mb-5">
                 <div class="contact-form">
-                    <form id="contact" action="" method="post">
+                    <form id="contact-form" action="{{ route('contact.submit') }}" method="POST"
+                        enctype="multipart/form-data">
+                        @csrf
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <fieldset>
                                     <input name="name" type="text" class="form-control" id="name"
-                                        placeholder="Full Name" required="">
+                                        placeholder="Full Name *" required>
                                 </fieldset>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <fieldset>
                                     <input name="email" type="text" class="form-control" id="email"
-                                        placeholder="E-Mail Address" required="">
+                                        placeholder="E-Mail Address *" required>
                                 </fieldset>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <fieldset>
-                                    <input name="subject" type="text" class="form-control" id="subject"
-                                        placeholder="Subject" required="">
+                                    <input name="idea" type="text" class="form-control" id="idea" placeholder="Idea *"
+                                        required>
                                 </fieldset>
                             </div>
-                            <div class="col-lg-12">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
                                 <fieldset>
-                                    <textarea name="message" rows="6" class="form-control" id="message"
-                                        placeholder="Your Message" required=""></textarea>
+                                    <label for="image">Image</label>
+                                    <input name="image" type="file" class="form-control" id="image">
                                 </fieldset>
                             </div>
                             <div class="col-lg-12">
@@ -120,45 +121,45 @@ your fashion experience seamless.')
                                 </fieldset>
                             </div>
                         </div>
+
+                        <div class="col-lg-12" id="success-message" style="display: none;">
+                            <p class="text-success">Thank you for your submission! We will get back to you soon.</p>
+                        </div>
                     </form>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mb-5">
                 <ul class="accordion">
                     <li>
-                        <a>Accordion Title One</a>
+                        <a class="color-pink" href="/contact">How to Submit a Design Idea for Review</a>
                         <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed voluptate nihil eumester
-                                consectetur similiqu consectetur.<br><br>Lorem ipsum dolor sit amet, consectetur
-                                adipisic elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti elite.
-                            </p>
+                            <p>If you want to submit your design idea for review, visit our 'contact' page and complete
+                                the form with your creative vision. Our team will thoroughly review your submission and
+                                reach out if it aligns with our brand and values.</p>
                         </div>
                     </li>
                     <li>
-                        <a>Second Title Here</a>
+                        <a class="color-pink" href="/contact">What Happens After I Submit My Design?</a>
                         <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed voluptate nihil eumester
-                                consectetur similiqu consectetur.<br><br>Lorem ipsum dolor sit amet, consectetur
-                                adipisic elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti elite.
-                            </p>
+                            <p>Once you've submitted your design, our team will carefully review it. If your idea
+                                complements our brand and style, we'll contact you to discuss the details and
+                                potentially bring your design to life on our apparel.</p>
                         </div>
                     </li>
                     <li>
-                        <a>Accordion Title Three</a>
+                        <a class="color-pink" href="/contact">Notification Process for Chosen Designs</a>
                         <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed voluptate nihil eumester
-                                consectetur similiqu consectetur.<br><br>Lorem ipsum dolor sit amet, consectetur
-                                adipisic elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti elite.
-                            </p>
+                            <p>If your design is selected, we'll notify you through the contact information provided
+                                during the submission. Keep an eye on your email and be prepared to collaborate with us
+                                to turn your creative vision into reality!</p>
                         </div>
                     </li>
                     <li>
-                        <a>Fourth Accordion Title</a>
+                        <a class="color-pink" href="/contact">Submitting Multiple Design Ideas</a>
                         <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed voluptate nihil eumester
-                                consectetur similiqu consectetur.<br><br>Lorem ipsum dolor sit amet, consectetur
-                                adipisic elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti elite.
-                            </p>
+                            <p>Yes, you can submit multiple design ideas! We encourage you to share as many creative
+                                concepts as you'd like. Each idea will undergo a thorough review, and if selected, we'll
+                                collaborate with you to showcase your unique creativity on our apparel.</p>
                         </div>
                     </li>
                 </ul>
@@ -166,4 +167,28 @@ your fashion experience seamless.')
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $('#contact-form').submit(function (e) {
+            e.preventDefault(); 
+            // Perform AJAX request
+            $.ajax({
+                url: $(this).attr('action'),
+                type: 'POST',
+                data: new FormData(this),
+                processData: false,
+                contentType: false,
+                success: function (response) {
+                    $('#contact-form').hide();
+                    $('#success-message').show();
+                },
+                error: function (error) {
+                    console.error('Error submitting the form:', error);
+                }
+            });
+        });
+    });
+</script>
+
 @endsection

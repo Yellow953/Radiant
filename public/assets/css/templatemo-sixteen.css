@@ -869,17 +869,12 @@ footer .inner-content p a {
 .accordion a {
 	cursor: pointer;
 	font-size: 17px;
-	color: #20ace1!important;
 	margin-bottom: 20px;
 	transition: all .3s;
 }
 
 .accordion a:hover {
-	color: #20ace1!important;
-}
-
-.accordion a.active {
-  color: #20ace1!important;
+	color: #f3eb25!important;
 }
 
 .accordion li .content {
