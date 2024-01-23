@@ -15,12 +15,13 @@
     <div class="container-fluid h-custom">
         <form method="POST" action="{{ route('register') }}">
             @csrf
-            <div class="row d-flex justify-content-center align-items-center h-100 mx-5">
+            <div class="row d-flex justify-content-center align-items-center h-100 mx-2 mx-md-5 py-4">
                 <div class="col-md-6">
                     <img src="{{ asset('assets/logo/logo.png') }}" class="img-fluid" alt="Radiant Logo">
                 </div>
                 <div class="col-md-6">
                     <div class="row mt-2 mt-md-5">
+                        <h1 class="text-white">@yield('title')</h1>
                         <div class="col-md-6">
                             <!-- Name input -->
                             <div class="form-outline mb-4">
@@ -120,7 +121,7 @@
                             <button type="submit" class="btn btn-primary btn-lg"
                                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
 
-                            <p class="small fw-bold mt-2 pt-1 mb-0">Already have an account? <a
+                            <p class="small fw-bold mt-2 pt-1 mb-0 text-white">Already have an account? <a
                                     href="{{ route('login') }}" class="link-danger"
                                     style="color: #e80b8e!important; text-decoration: none;">Login</a>
                             </p>

@@ -5,13 +5,14 @@
 @section('content')
 <section class="vh-100">
     <div class="container-fluid h-custom">
-        <div class="row d-flex justify-content-center align-items-center h-100 mx-5">
-            <div class="col-md-6">
+        <div class="row d-flex justify-content-center align-items-center h-100 mx-2 mx-md-5">
+            <div class="col-md-6 my-auto">
                 <img src="{{ asset('assets/logo/logo.png') }}" class="img-fluid" alt="Radiant Logo">
             </div>
             <div class="col-md-6">
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
+                    <h1 class="text-white">@yield('title')</h1>
 
                     <!-- Email input -->
                     <div class="form-outline mb-4">
@@ -40,7 +41,7 @@
                         @enderror
                     </div>
 
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center text-white">
                         <!-- Checkbox -->
                         <div class="form-check mb-0">
                             <input class="form-check-input me-2" type="checkbox" id="remember" name="remember" {{
@@ -58,8 +59,8 @@
                         <button type="submit" class="btn btn-primary btn-lg"
                             style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
 
-                        <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="{{ route('register') }}"
-                                class="link-danger"
+                        <p class="small fw-bold mt-2 pt-1 mb-0 text-white">Don't have an account? <a
+                                href="{{ route('register') }}" class="link-danger"
                                 style="color: #e80b8e!important; text-decoration: none;">Register</a></p>
                     </div>
                 </form>

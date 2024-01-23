@@ -299,14 +299,14 @@ header .navbar {
 }
 
 .banner-item-01, .banner-item-02, .banner-item-03 {
-	padding: 300px 0px;
+	padding: 50px 0px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
 }
 
 .banner .banner-item {
-	max-height: 600px;
+	max-height: 500px;
 }
 
 .banner .text-content {
@@ -319,15 +319,15 @@ header .navbar {
 
 .banner .text-content h4 {
 	color: #e80b8e;
-	font-size: 22px;
+	font-size: 40px;
 	text-transform: uppercase;
 	font-weight: 700;
-	margin-bottom: 15px;
+	padding-top: 30px;
 }
 
 .banner .text-content h2 {
 	color: #20ace1;
-	font-size: 62px;
+	font-size: 60px;
 	text-transform: uppercase;
 	letter-spacing: 5px;
 }

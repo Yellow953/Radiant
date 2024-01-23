@@ -73,7 +73,7 @@
         }
     </script>
 
-    <script>
+    {{-- <script>
         $(document).ready(function() {
         var header = $('header');
         var navLinks = $('header a.nav-link');
@@ -90,5 +90,5 @@
             }
         });
     });
-    </script>
+    </script> --}}
 </body>

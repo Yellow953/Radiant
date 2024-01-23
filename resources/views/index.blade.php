@@ -12,21 +12,42 @@ journey starts here.')
 <div class="banner header-text">
     <div class="owl-banner owl-carousel">
         <div class="banner-item-01">
-            <div class="text-content">
-                <h4>Best Offer</h4>
-                <h2>New Arrivals On Sale</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-content">
+                        <h2>Cozy Comfort</h2>
+                        <h4>Explore Our Latest Hoodie Collection</h4>
+                    </div>
+                </div>
+                <div class="offset-md-1 col-md-4">
+                    <img src="{{ asset('assets/images/hoodies.png') }}" alt="Hoodies">
+                </div>
             </div>
         </div>
         <div class="banner-item-02">
-            <div class="text-content">
-                <h4>Flash Deals</h4>
-                <h2>Get your best products</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-content">
+                        <h2>Classic Style</h2>
+                        <h4>Discover New Shirts for Every Occasion</h4>
+                    </div>
+                </div>
+                <div class="offset-md-1 col-md-4">
+                    <img src="{{ asset('assets/images/shirts.png') }}" alt="Shirts">
+                </div>
             </div>
         </div>
         <div class="banner-item-03">
-            <div class="text-content">
-                <h4>Last Minute</h4>
-                <h2>Grab last minute deals</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-content">
+                        <h2>Elevate Your Look</h2>
+                        <h4>Shop Trendy Pants for Every Style</h4>
+                    </div>
+                </div>
+                <div class="offset-md-1 col-md-4">
+                    <img src="{{ asset('assets/images/pants.png') }}" alt="Pants">
+                </div>
             </div>
         </div>
     </div>
