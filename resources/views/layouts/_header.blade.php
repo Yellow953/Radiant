@@ -8,40 +8,45 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
                 style="background: transparent; border: none;">
-                <span class="navbar-toggler-icon" style="font-size: 30px"></span>
+                <span class="navbar-toggler-icon" style="font-size:30px"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('home') }}">Home
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ route('home') }}">Home
                         </a>
                     </li>
-                    <li class="nav-item dropdown {{ request()->is('shop') ? 'active' : '' }}">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle {{ request()->is('shop') ? 'active' : '' }}" href="#"
+                            id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
                             Collections
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             @foreach (Helper::get_categories() as $category)
-                            <a class="dropdown-item" href="{{ route('shop', ['category_id' => $category->id]) }}">
+                            <a class="dropdown-item text-center"
+                                href="{{ route('shop', ['category_id' => $category->id]) }}">
                                 {{ucwords($category->name)}}</a>
                             @endforeach
                         </div>
                     </li>
-                    <li class="nav-item {{ request()->is('custom-design') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('designs.new') }}">Customize</a>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('customize') ? 'active' : '' }}"
+                            href="{{ route('designs.new') }}">Customize</a>
                     </li>
-                    <li class="nav-item {{ request()->is('about') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('about') }}">About</a>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('about') ? 'active' : '' }}"
+                            href="{{ route('about') }}">About</a>
                     </li>
-                    <li class="nav-item {{ request()->is('contact') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('contact') }}">
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}"
+                            href="{{ route('contact') }}">
                             Contact
                         </a>
                     </li>
-                    <li class="nav-item {{ request()->is('cart') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('cart') }}">
-                            Cart(<span id="cartCount">0</span>)
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('cart') ? 'active' : '' }}" href="{{ route('cart') }}">
+                            Cart(<span id="cartCount">{{ Helper::cart_count() }}</span>)
                         </a>
                     </li>
                 </ul>

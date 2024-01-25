@@ -29,7 +29,7 @@ class CartController extends Controller
         if ($cart_items != []) {
             foreach ($cart_items as $productID => $cart_item) {
                 $item = Product::find($productID);
-                $sub_total += $item->sell_price * $cart_item['quantity'];
+                $sub_total += $item->price * $cart_item['quantity'];
             }
         }
 
@@ -52,7 +52,7 @@ class CartController extends Controller
         if ($cart_items != []) {
             foreach ($cart_items as $productID => $cart_item) {
                 $item = Product::find($productID);
-                $sub_total += $item->sell_price * $cart_item['quantity'];
+                $sub_total += $item->price * $cart_item['quantity'];
             }
         }
 
@@ -93,10 +93,11 @@ class CartController extends Controller
             }
 
             $order->products()->attach($product, [
-                'quantity' => $cart_item['quantity']
+                'quantity' => $cart_item['quantity'],
+                'size' => $cart_item['size'],
             ]);
 
-            $total_price += $product->sell_price * $cart_item['quantity'];
+            $total_price += $product->price * $cart_item['quantity'];
 
             $product->update([
                 'quantity' => $product->quantity - $cart_item['quantity'],

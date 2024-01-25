@@ -55,7 +55,7 @@ journey starts here.')
 <!-- Banner Ends Here -->
 
 <div class="col-md-12 m-md-5">
-    <h2 class="color-primary mb-5">Top Selling Products</h2>
+    <h2 class="color-primary my-5">Top Selling Products</h2>
     <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner px-5">
             @php

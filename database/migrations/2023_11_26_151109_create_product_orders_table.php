@@ -12,6 +12,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('product_id')->unsigned();
             $table->bigInteger('order_id')->unsigned();
+            $table->string('size')->default('M');
             $table->double('quantity')->default(1);
             $table->timestamps();
 

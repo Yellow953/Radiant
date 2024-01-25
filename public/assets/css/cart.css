@@ -1,0 +1,104 @@
+#cart {
+    max-width: 1440px;
+    padding-top: 10px;
+    margin: auto;
+}
+.form div {
+    margin-bottom: 0.4em;
+}
+.cartItem {
+    --bs-gutter-x: 1.5rem;
+}
+.cartItemQuantity,
+.proceed {
+    background: #f4f4f4;
+}
+.items {
+    padding-right: 30px;
+}
+#btn-checkout {
+    min-width: 100%;
+}
+
+.shopnow {
+    background-color: #000;
+    padding: 10px 20px;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+    cursor: pointer;
+    border-radius: 25px;
+}
+.shopnow:hover {
+    text-decoration: none;
+    color: white;
+    background-color: #46a3a6;
+}
+
+.shopnow span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: all 0.5s;
+}
+.shopnow span:after {
+    content: url("https://badux.co/smc/codepen/caticon.png");
+    position: absolute;
+    font-size: 30px;
+    opacity: 0;
+    top: 2px;
+    right: -6px;
+    transition: all 0.5s;
+}
+.shopnow:hover span {
+    padding-right: 25px;
+}
+.shopnow:hover span:after {
+    opacity: 1;
+    top: 2px;
+    right: -6px;
+}
+.ma {
+    margin: auto;
+}
+.price {
+    color: slategrey;
+    font-size: 2em;
+}
+#mycart {
+    min-width: 90px;
+}
+#cartItems {
+    font-size: 17px;
+}
+#product .container .row .pr4 {
+    padding-right: 15px;
+}
+#product .container .row .pl4 {
+    padding-left: 15px;
+}
+.logo_cart {
+    width: 125px;
+    height: 125px;
+    margin: 0;
+}
+
+.border-b-0 {
+    border-bottom: none;
+}
+
+#promo {
+    background: white;
+    border-radius: 5px;
+    border: lightgray 1px solid;
+}
+
+.w-90 {
+    width: 88%;
+}
+
+.btn-rounded {
+    border-radius: 10px;
+}

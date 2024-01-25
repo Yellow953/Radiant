@@ -48,6 +48,14 @@ header a.nav-link {
 .categories ul li a.active {
     color: #20ace1 !important;
 }
+
+.nav-link.active{
+  color: #e80b8e !important;
+}
+
+a.nav-link:hover{
+  color: #20ace1 !important;
+}
 /* end header */
 
 /* start heading */
@@ -73,7 +81,7 @@ header a.nav-link {
     position: relative;
     padding: 0;
     color: #20ace1;
-    line-height: 1;
+    line-height: 2.5rem;
     letter-spacing: 0.3px;
     font-size: 34px;
     font-weight: 700;
@@ -440,9 +448,8 @@ footer ul li a span {
   }
 
   .img-modal {
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
+    width: 100%;
+    margin-left:0%;
     height: auto;
   }
 

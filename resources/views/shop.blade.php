@@ -22,12 +22,12 @@ Or create your own...')
     </div>
 </div>
 
-<div class="products">
+<div class="products my-5">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="filters categories">
-                    <ul>
+                    <ul class="p-0 m-0">
                         <li>
                             <a href="{{ route('shop') }}"
                                 class="{{ !request()->query('category_id') ? 'color-pink' : ''}}">
