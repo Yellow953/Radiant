@@ -12,8 +12,8 @@ class ProductSeeder extends Seeder
     {
         DB::table('products')->insert([
             'name' => 'Black Hoodie',
-            'price' => 10,
-            'quantity' => 10,
+            'price' => 20,
+            'quantity' => 100,
             'description' => 'Black Hoodie',
             'category_id' => 1,
             'image_front' => 'uploads/products/black_hoodie_front.png',
@@ -25,10 +25,10 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'Black Shirt',
-            'price' => 10,
-            'quantity' => 10,
+            'price' => 20,
+            'quantity' => 100,
             'description' => 'Black Shirt',
-            'category_id' => 1,
+            'category_id' => 2,
             'image_front' => 'uploads/products/black_shirt_front.png',
             'image_back' => 'uploads/products/black_shirt_back.png',
             'can_customize' => true,
@@ -38,10 +38,10 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'Black Short Sleeve Shirt',
-            'price' => 10,
-            'quantity' => 10,
+            'price' => 20,
+            'quantity' => 100,
             'description' => 'Black Short Sleeve Shirt',
-            'category_id' => 1,
+            'category_id' => 2,
             'image_front' => 'uploads/products/black_ss_front.png',
             'image_back' => 'uploads/products/black_ss_back.png',
             'can_customize' => true,
@@ -51,8 +51,8 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'White Hoodie',
-            'price' => 10,
-            'quantity' => 10,
+            'price' => 20,
+            'quantity' => 100,
             'description' => 'White Hoodie',
             'category_id' => 1,
             'image_front' => 'uploads/products/white_hoodie_front.png',
@@ -64,10 +64,10 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'White Shirt',
-            'price' => 10,
-            'quantity' => 10,
+            'price' => 20,
+            'quantity' => 100,
             'description' => 'White Shirt',
-            'category_id' => 1,
+            'category_id' => 2,
             'image_front' => 'uploads/products/white_shirt_front.png',
             'image_back' => 'uploads/products/white_shirt_back.png',
             'can_customize' => true,
@@ -77,10 +77,10 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'White Short Sleeve Shirt',
-            'price' => 10,
-            'quantity' => 10,
+            'price' => 20,
+            'quantity' => 100,
             'description' => 'White Short Sleeve Shirt',
-            'category_id' => 1,
+            'category_id' => 2,
             'image_front' => 'uploads/products/white_ss_front.png',
             'image_back' => 'uploads/products/white_ss_back.png',
             'can_customize' => true,

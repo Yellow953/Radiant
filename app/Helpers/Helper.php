@@ -10,4 +10,10 @@ class Helper
     {
         return Category::select('id', 'name')->orderBy('id', 'ASC')->get();
     }
+
+    public static function get_sizes()
+    {
+        $sizes  = ['S', 'M', 'L'];
+        return $sizes;
+    }
 }

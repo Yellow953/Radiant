@@ -41,7 +41,7 @@
                     </li>
                     <li class="nav-item {{ request()->is('cart') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('cart') }}">
-                            Cart
+                            Cart(<span id="cartCount">0</span>)
                         </a>
                     </li>
                 </ul>
