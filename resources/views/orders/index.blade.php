@@ -42,11 +42,7 @@
                                         {{ucwords($order->user->name)}} <br>
                                     </td>
                                     <td>
-                                        @if (Helper::is_active('LBP'))
-                                        {{number_format(Helper::price_to_lbp($order->total_price))}} LBP
-                                        @else
                                         {{number_format($order->total_price, 2)}} $
-                                        @endif
                                     </td>
                                     <td>
                                         <div class="d-flex justify-content-center">

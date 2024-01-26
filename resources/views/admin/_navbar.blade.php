@@ -2,8 +2,8 @@
 <div class="sidebar-menu">
     <div class="sidebar-header py-1">
         <div class="logo">
-            <a href="/app">
-                <h1 class="my-3 mx-auto text-dark">ZSpecial</h1>
+            <a href="{{ route('home') }}">
+                <h1 class="my-3 mx-auto text-dark">Radiant</h1>
             </a>
         </div>
     </div>
@@ -11,7 +11,7 @@
         <div class="menu-inner">
             <nav>
                 <ul class="metismenu" id="menu">
-                    <li><a href="/app" class="d-flex w-100 ">
+                    <li><a href="{{ route('home') }}" class="d-flex w-100 ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-speedometer my-auto" viewBox="0 0 16 16">
                                 <path
@@ -21,7 +21,7 @@
                             </svg>
                             <span class="my-auto">Dashboard</span></a></li>
 
-                    <li><a href="/categories" class="d-flex w-100 ">
+                    <li><a href="{{ route('categories') }}" class="d-flex w-100 ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-stack my-auto" viewBox="0 0 16 16">
                                 <path
@@ -31,7 +31,7 @@
                             </svg>
                             <span class="my-auto">Categories</span></a></li>
 
-                    <li><a href="/products" class="d-flex w-100 ">
+                    <li><a href="{{ route('products') }}" class="d-flex w-100 ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-tools my-auto" viewBox="0 0 16 16">
                                 <path
@@ -40,7 +40,7 @@
                             <span class="my-auto">Products</span></a></li>
 
                     <li class="d-flex justify-content-between">
-                        <a href="/orders" class="d-flex justify-content-between w-100 ">
+                        <a href="{{ route('orders') }}" class="d-flex justify-content-between w-100 ">
                             <div class="d-flex">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-clipboard2-check-fill my-auto" viewBox="0 0 16 16">
@@ -51,14 +51,10 @@
                                 </svg>
                                 <span class="my-auto">Orders</span>
                             </div>
-                            @if (Helper::count_new_orders() > 0)
-                            <span class="bg-danger text-white rounded-full px-2 py-1">{{ Helper::count_new_orders()
-                                }}</span>
-                            @endif
                         </a>
                     </li>
 
-                    <li><a href="/users" class="d-flex w-100 ">
+                    <li><a href="{{ route('users') }}" class="d-flex w-100 ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-person-circle my-auto" viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -67,7 +63,7 @@
                             </svg>
                             <span class="my-auto">Users</span></a></li>
 
-                    <li><a href="/promos" class="d-flex w-100 ">
+                    <li><a href="{{ route('promos') }}" class="d-flex w-100 ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-percent my-auto" viewBox="0 0 16 16">
                                 <path
@@ -75,23 +71,7 @@
                             </svg>
                             <span class="my-auto">Promos</span></a></li>
 
-                    <li><a href="https://app.ayrshare.com/" target="_blank" class="d-flex w-100 ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-google my-auto" viewBox="0 0 16 16">
-                                <path
-                                    d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z" />
-                            </svg>
-                            <span class="my-auto">Social Media</span></a></li>
-
-                    <li><a href="/notifications" class="d-flex w-100 ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-bell-fill my-auto" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
-                            </svg>
-                            <span class="my-auto">Notifications</span></a></li>
-
-                    <li><a href="/logs" class="d-flex w-100 ">
+                    <li><a href="{{ route('logs') }}" class="d-flex w-100 ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-receipt my-auto" viewBox="0 0 16 16">
                                 <path
@@ -100,28 +80,6 @@
                                     d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z" />
                             </svg>
                             <span class="my-auto">Logs</span></a></li>
-
-                    <li><a href="/backup" class="d-flex w-100 ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-database-fill my-auto" viewBox="0 0 16 16">
-                                <path
-                                    d="M3.904 1.777C4.978 1.289 6.427 1 8 1s3.022.289 4.096.777C13.125 2.245 14 2.993 14 4s-.875 1.755-1.904 2.223C11.022 6.711 9.573 7 8 7s-3.022-.289-4.096-.777C2.875 5.755 2 5.007 2 4s.875-1.755 1.904-2.223Z" />
-                                <path
-                                    d="M2 6.161V7c0 1.007.875 1.755 1.904 2.223C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777C13.125 8.755 14 8.007 14 7v-.839c-.457.432-1.004.751-1.49.972C11.278 7.693 9.682 8 8 8s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z" />
-                                <path
-                                    d="M2 9.161V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13s3.022-.289 4.096-.777C13.125 11.755 14 11.007 14 10v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z" />
-                                <path
-                                    d="M2 12.161V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z" />
-                            </svg>
-                            <span class="my-auto">Backup</span></a></li>
-
-                    <li><a href="/variables" class="d-flex w-100 ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-braces-asterisk my-auto" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6ZM14.886 7.9v.164c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456v-1.3c-1.114 0-1.49-.362-1.49-1.456V4.352C14.51 2.759 13.75 2 12.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6ZM7.5 11.5V9.207l-1.621 1.621-.707-.707L6.792 8.5H4.5v-1h2.293L5.172 5.879l.707-.707L7.5 6.792V4.5h1v2.293l1.621-1.621.707.707L9.208 7.5H11.5v1H9.207l1.621 1.621-.707.707L8.5 9.208V11.5h-1Z" />
-                            </svg>
-                            <span class="my-auto">Variables</span></a></li>
                 </ul>
             </nav>
         </div>

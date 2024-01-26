@@ -38,16 +38,14 @@
                                 @forelse( $products as $product )
                                 <tr>
                                     <td class="d-flex">
-                                        <img class="img-responsive profile-table" src="{{asset($product->image)}}">
+                                        <img class="img-responsive profile-table"
+                                            src="{{asset($product->image_front)}}">
+                                        <img class="img-responsive profile-table" src="{{asset($product->image_back)}}">
                                         <span class="my-auto ml-3">{{ucwords($product->name)}}</span>
                                     </td>
                                     <td>{{ number_format($product->quantity, 2) }}</td>
                                     <td>
-                                        Buy Price: {{ number_format($product->buy_price, 2) }}$ <br>
-
-                                        Sell Price: {{ number_format($product->sell_price, 2) }}$ <br>
-
-                                        Profit: {{ $product->profit() }}% <br>
+                                        Price: {{ number_format($product->price, 2) }}$
                                     </td>
                                     <td>
                                         <div class="d-flex justify-content-center">

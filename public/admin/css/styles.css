@@ -108,7 +108,7 @@
   height: 100vh;
   width: 280px;
   overflow: hidden;
-  background: #46a3a6;
+  background: #20ace1;
   box-shadow: 2px 0 32px rgba(0, 0, 0, 0.05);
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -138,7 +138,7 @@
 
 .sidebar-header {
   padding: 19px 32px 20px;
-  background: #46a3a6;
+  background: #20ace1;
 }
 .sidebar-menu .logo {
   text-align: center;
@@ -205,7 +205,7 @@
 .metismenu > li:hover > a,
 .metismenu > li.active > a {
   color: #fff;
-  background: #46a3a6;
+  background: #20ace1;
 }
 
 .metismenu li:hover > a,
@@ -710,7 +710,7 @@ ul.breadcrumbs {
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  background: #46a3a6;
+  background: #20ace1;
   padding: 17px 38px;
   position: relative;
 }
@@ -2312,7 +2312,7 @@ table.dataTable thead td {
 
 .login-form-head {
   text-align: center;
-  background: #46a3a6;
+  background: #20ace1;
   padding: 50px;
 }
 
@@ -2621,11 +2621,11 @@ table.dataTable thead td {
 .error-content h2 {
   font-size: 98px;
   font-weight: 800;
-  color: #46a3a6;
+  color: #20ace1;
   margin-bottom: 28px;
   text-shadow: -3px -3px 0 #ffffff, 3px -3px 0 #ffffff, -3px 3px 0 #ffffff,
-    3px 3px 0 #ffffff, 4px 4px 0 #46a3a6, 5px 5px 0 #46a3a6, 6px 6px 0 #46a3a6,
-    7px 7px 0 #46a3a6;
+    3px 3px 0 #ffffff, 4px 4px 0 #20ace1, 5px 5px 0 #20ace1, 6px 6px 0 #20ace1,
+    7px 7px 0 #20ace1;
   font-family: "lato", sans-serif;
 }
 
@@ -2635,14 +2635,14 @@ table.dataTable thead td {
 
 .error-content p {
   font-size: 17px;
-  color: #46a3a6;
+  color: #20ace1;
   font-weight: 600;
 }
 
 .error-content a {
   display: inline-block;
   margin-top: 40px;
-  background: #46a3a6;
+  background: #20ace1;
   color: #fff;
   padding: 16px 26px;
   border-radius: 3px;

@@ -9,9 +9,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'ZSpecial Admin') }}</title>
+    <title>{{ config('app.name', 'Radiant Admin') }}</title>
 
-    <link rel="shortcut icon" href="{{asset('assets/images/logo.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('assets/logo/logo.png')}}" type="image/x-icon">
 
     {{-- Template --}}
     <link rel="stylesheet" href="{{ asset('/admin/css/bootstrap.min.css') }}">

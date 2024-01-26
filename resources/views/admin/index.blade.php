@@ -3,14 +3,14 @@
 @section('content')
 <div class="container-fluid px-2 px-md-4">
     <div class="page-header border-rounded mt-4"
-        style="background-image: url({{asset('assets/images/bg.png')}}); height: 300px; width: 100%; background-repeat: no-repeat; background-size: 100%; background-position: center;">
+        style="background-image: url({{asset('assets/images/img5.jpg')}}); height: 300px; width: 100%; background-repeat: no-repeat; background-size: 100%; background-position: center; border-radius: 50px;">
     </div>
 
     <div class="card card-body m-3 mx-md-4 mt-n6">
-        <h1 class="text-center">ZSpecial</h1>
+        <h1 class="text-center">Radiant</h1>
         <div class="row my-3">
             <div class="col-md-3">
-                <img src="{{asset('/assets/images/logo.png')}}" alt="" class="rounded img-responsive w-100 h-auto">
+                <img src="{{asset('/assets/logo/logo.png')}}" alt="" class="rounded img-responsive w-100 h-auto">
             </div>
             <div class="col-md-9 my-auto">
                 <p>

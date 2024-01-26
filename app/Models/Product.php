@@ -32,11 +32,6 @@ class Product extends Model
         return $this->hasMany(SecondaryImage::class);
     }
 
-    public function profit()
-    {
-        return round((($this->sell_price - $this->buy_price) * 100 / $this->buy_price), 2);
-    }
-
     // Filter
     public function scopeFilter($q)
     {
