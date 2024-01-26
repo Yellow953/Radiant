@@ -184,7 +184,7 @@
                                 <span class="my-auto">$</span>
                             </div>
 
-                            <button class="btn btn-primary btn-block" id="form-btn">Save</button>
+                            <button class="btn bg-blue btn-block" id="form-btn">Save</button>
 
                         </form><!-- end of form -->
 

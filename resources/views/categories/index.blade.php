@@ -6,7 +6,7 @@
         <div class="col-12 mt-3">
             <div class="d-flex justify-content-between">
                 <h4 class="header-title my-auto">Categories</h4>
-                <a href="/categories/new" class="btn btn-primary px-3 py-2 btn-custom text-dark">
+                <a href="/categories/new" class="btn btn-primary bg-blue px-3 py-2 btn-custom text-dark">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-plus-lg mr-1" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"

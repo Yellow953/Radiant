@@ -53,16 +53,21 @@ Or create your own...')
                             <a type="button" class="w-100 nav-link" data-toggle="modal"
                                 data-target="#exampleModal{{$product->id}}">
                                 <div class="product-item">
+                                    <div class="w-100 d-flex justify-content-between">
+                                        <span class="icon mx-4 mt-3 feature_box_col_one" style="color: #e80b8e"
+                                            data-toggle="tooltip" data-placement="top"
+                                            title="Product Quality Guaranteed and can be returned...">
+                                            <i class="fa-solid fa-ranking-star"></i>
+                                        </span>
+                                        <span class="icon mx-4 mt-3 feature_box_col_three" style="color: #f3eb25;"
+                                            data-toggle="tooltip" data-placement="top"
+                                            title="Product Quality Guaranteed and can be returned...">
+                                            <i class="fa-solid fa-rotate-left"></i>
+                                        </span>
+                                    </div>
                                     <img src="{{ asset($product->image_front) }}" alt="Product Image">
                                     <div class="down-content">
                                         <h4 class="text-center">{{ ucwords($product->name) }}</h4>
-                                        {{-- <p>{{ Str::limit($product->description, 100) }}</p>
-                                        <div class="d-flex justify-content-between">
-                                            <div class="text-success">${{ number_format($product->price, 2) }}</div>
-                                            <div class="text-danger" style="text-decoration: line-through;">${{
-                                                number_format(($product->price +
-                                                $product->price * 0.2), 2) }}</div>
-                                        </div> --}}
                                     </div>
                                 </div>
                             </a>
@@ -74,19 +79,31 @@ Or create your own...')
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h3>{{ucwords($product->name)}}</h3>
+                                            <h3 class="color-primary">{{ucwords($product->name)}}</h3>
 
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body py-0 px-4">
+                                            <div class="w-100 d-flex justify-content-between">
+                                                <span class="icon mx-4 mt-3 feature_box_col_one" style="color: #e80b8e"
+                                                    data-toggle="tooltip" data-placement="top"
+                                                    title="Product Quality Guaranteed and can be returned...">
+                                                    <i class="fa-solid fa-ranking-star"></i>
+                                                </span>
+                                                <span class="icon mx-4 mt-3 feature_box_col_three"
+                                                    style="color: #f3eb25;" data-toggle="tooltip" data-placement="top"
+                                                    title="Product Quality Guaranteed and can be returned...">
+                                                    <i class="fa-solid fa-rotate-left"></i>
+                                                </span>
+                                            </div>
                                             <div id="productImageCarousel{{$product->id}}" class="carousel slide"
                                                 data-ride="carousel">
                                                 <div class="carousel-inner">
                                                     <div class="carousel-item active" style="justify-content: center;">
                                                         <img src="{{asset($product->image_front)}}"
-                                                            class="img-modal rounded shadow" alt="Product Front Image">
+                                                            class="img-modal rounded" alt="Product Front Image">
                                                     </div>
                                                     {{-- @foreach ($product->secondary_images as $secondary_image)
                                                     <div class="carousel-item">
@@ -143,7 +160,7 @@ Or create your own...')
 
                                                         <button type="button"
                                                             onclick="addToCart({{$product->id}}, this.form)"
-                                                            class="btn btn-info mx-2 rounded d-flex align-items-center">
+                                                            class="btn bg-blue mx-2 rounded d-flex align-items-center">
                                                             <span class="fa fa-plus mr-1"></span>
                                                             Cart
                                                         </button>

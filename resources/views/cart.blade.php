@@ -98,8 +98,6 @@
     </div>
 </div>
 
-@include('layouts._footer')
-
 <script>
     function deleteCartItem(productId) {
         var cartItemElement = document.getElementById('cartItem' + productId);

@@ -165,7 +165,7 @@
                                 <span class="my-auto">$</span>
                             </div>
 
-                            <button class="btn btn-primary btn-block disabled my-3" id="add-order-form-btn"><i
+                            <button class="btn bg-blue btn-block disabled my-3" id="add-order-form-btn"><i
                                     class="fa fa-plus"></i> Add Order</button>
 
                         </form>

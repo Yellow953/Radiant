@@ -54,44 +54,22 @@ journey starts here.')
 </div>
 <!-- Banner Ends Here -->
 
-<div class="col-md-12 m-md-5">
-    <h2 class="color-primary my-5">Top Selling Products</h2>
-    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner px-5">
-            @php
-            $chunkedBestSellers = $best_sellers->chunk(4);
-            @endphp
+<div class="col-md-12 my-5">
+    <h2 class="text-center text-md-start color-primary m-5">Top Selling Products</h2>
 
-            @forelse ($chunkedBestSellers as $index => $products)
-            <div class="carousel-item{{ $index === 0 ? ' active' : '' }}">
-                <div class="row">
-                    @foreach ($products as $product)
-                    <div class="col-md-3">
-                        <div class="product-item">
-                            <a href="#"><img src="{{ asset($product->image_front) }}" alt="Product Image"></a>
-                            <div class="down-content">
-                                <h4 class="text-center">{{ ucwords($product->name) }}</h4>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
+    <div class="best-sellers">
+        <div class="owl-clients owl-carousel bg-white">
+            @foreach ($best_sellers as $item)
+            <a href="{{ route('shop') }}">
+                <div class="client-item" style="width: 70%; margin-left: 15%;">
+                    <img src="{{ asset($item->image_front) }}" alt="{{ ucwords($item->name) }}"
+                        class="bestseller-image">
+
+                    <h4 class="text-center color-pink">{{ ucwords($item->name) }}</h4>
                 </div>
-            </div>
-            @empty
-            <div>
-                <p>No Items Right Now</p>
-            </div>
-            @endforelse
+            </a>
+            @endforeach
         </div>
-
-        <a class="carousel-control-prev" href="#productCarousel" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#productCarousel" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </a>
     </div>
 </div>
 

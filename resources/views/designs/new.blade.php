@@ -65,48 +65,48 @@ images, unique style, fashion statement, Radiant')
 
                 <input type="color" id="colorPicker" value="#000000">
 
-                <button id="resetButton" class="btn btn-primary">
+                <button id="resetButton" class="btn bg-blue">
                     <i class="fa-solid fa-rotate-right"></i>
                 </button>
 
-                <button id="deleteTool" class="btn btn-primary">
+                <button id="deleteTool" class="btn bg-blue">
                     <i class="fa-solid fa-trash"></i>
                 </button>
 
-                <label class="btn btn-primary" id="eraserToggle">
+                <label class="btn bg-blue" id="eraserToggle">
                     <input type="checkbox" id="eraserCheckbox" style="display: none;">
                     <i class="fa-solid fa-eraser"></i>
                 </label>
 
-                <label class="btn btn-primary" for="imageUpload" id="imageUploadButton">
+                <label class="btn bg-blue" for="imageUpload" id="imageUploadButton">
                     <input type="file" id="imageUpload" accept="image/*" style="display: none;">
                     <i class="fa-solid fa-image"></i>
                 </label>
 
-                <button id="penTool" class="btn btn-primary">
+                <button id="penTool" class="btn bg-blue">
                     <i class="fa-solid fa-pen"></i>
                 </button>
 
-                <button id="imageTool" class="btn btn-primary">
+                <button id="imageTool" class="btn bg-blue">
                     <i class="fa-solid fa-arrow-pointer"></i>
                 </button>
 
-                <button id="textTool" class="btn btn-primary">
+                <button id="textTool" class="btn bg-blue">
                     <i class="fa-solid fa-font"></i>
                 </button>
 
-                <button id="zoomIn" class="btn btn-primary">
+                <button id="zoomIn" class="btn bg-blue">
                     <i class="fa-solid fa-magnifying-glass-plus"></i>
                 </button>
 
-                <button id="zoomOut" class="btn btn-primary">
+                <button id="zoomOut" class="btn bg-blue">
                     <i class="fa-solid fa-magnifying-glass-minus"></i>
                 </button>
             </div>
         </div>
         <div class="col-md-12">
             <div class="d-flex justify-content-md-end">
-                <button id="saveButton" class="btn btn-primary">Save Design</button>
+                <button id="saveButton" class="btn bg-blue">Save Design</button>
             </div>
         </div>
         <div class="col-md-12">

@@ -25,6 +25,10 @@
     color: #232323 !important;
 }
 
+.bg-blue {
+    background-color: #20ace1 !important;
+}
+
 h1,
 h2,
 h3 {
@@ -49,12 +53,12 @@ header a.nav-link {
     color: #20ace1 !important;
 }
 
-.nav-link.active{
-  color: #e80b8e !important;
+.nav-link.active {
+    color: #e80b8e !important;
 }
 
-a.nav-link:hover{
-  color: #20ace1 !important;
+a.nav-link:hover {
+    color: #20ace1 !important;
 }
 /* end header */
 
@@ -414,47 +418,67 @@ footer ul li a span {
 
 /* start modal */
 .rounded-20 {
-  border-radius: 20px !important;
+    border-radius: 20px !important;
 }
 
 .modal-dialog {
-  margin-top: 25px;
+    margin-top: 25px;
 }
 .modal-content {
-  width: fit-content;
-  height: auto;
+    width: fit-content;
+    height: auto;
 }
 .img-modal {
-  width: 80%;
-  margin-left: 10%;
-  height: 300px;
+    width: 80%;
+    margin-left: 10%;
+    height: 300px;
 }
 
 .custom-field {
-  width: 100px !important;
+    width: 100px !important;
 }
 
 /* small screens */
 @media only screen and (max-width: 553px) {
-  .modal-dialog {
-    margin-right: 25px;
-    margin-left: 25px;
-    margin-top: 10vh;
-  }
+    .modal-dialog {
+        margin-right: 25px;
+        margin-left: 25px;
+        margin-top: 10vh;
+    }
 
-  .modal-content {
-    width: 90vw;
-    height: auto;
-  }
+    .modal-content {
+        width: 90vw;
+        height: auto;
+    }
 
-  .img-modal {
-    width: 100%;
-    margin-left:0%;
-    height: auto;
-  }
+    .img-modal {
+        width: 100%;
+        margin-left: 0%;
+        height: auto;
+    }
 
-  .quantity-field {
-    width: 75px !important;
-  }
+    .quantity-field {
+        width: 75px !important;
+    }
 }
 /* end modal */
+
+/* start login */
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+.h-custom {
+    height: calc(100% - 73px);
+}
+
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
+}
+/* end login */
