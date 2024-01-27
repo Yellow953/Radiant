@@ -11,7 +11,6 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string("name")->unique();
-            $table->double('quantity')->default(0);
             $table->double('price')->unsigned()->default(0);
             $table->text('description')->nullable();
             $table->string('image_front')->default('assets/images/no_img.png');

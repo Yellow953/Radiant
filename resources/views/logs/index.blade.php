@@ -13,7 +13,7 @@
         </nav>
         <div class="ms-md-auto pe-md-3 flex align-items-center">
             <div class="input-group input-group-outline">
-                <form action="/logs" method="get">
+                <form action="{{ route('logs') }}" method="get">
                     <div class="input-group input-group-outline">
                         <label for="start_date" class="m-1 py-2">From:</label>
                         <input type="date" class="form-control mx-1" name="start_date"

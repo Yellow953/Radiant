@@ -6,7 +6,7 @@
         <div class="col-12 mt-3">
             <div class="d-flex justify-content-between">
                 <h4 class="header-title my-auto">Orders</h4>
-                <a href="/orders/new" class="btn btn-info px-3 py-2 btn-custom text-dark">
+                <a href="{{ route('orders.new') }}" class="btn btn-info px-3 py-2 btn-custom text-dark">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-plus-lg mr-1" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
@@ -47,7 +47,7 @@
                                     <td>
                                         <div class="d-flex justify-content-center">
                                             @if ($order->status != 'completed')
-                                            <a href="/orders/{{$order->id}}/complete"
+                                            <a href="{{ route('orders.complete', $order->id) }}"
                                                 class="btn btn-success btn-custom text-dark p-2 m-1"><svg
                                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
@@ -55,7 +55,7 @@
                                                         d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
                                                 </svg></a>
                                             @endif
-                                            <a href="/orders/{{$order->id}}/show"
+                                            <a href="{{ route('orders.show', $order->id) }}"
                                                 class="btn btn-info btn-custom text-dark p-2 m-1"><svg
                                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
@@ -63,14 +63,14 @@
                                                     <path
                                                         d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                                                 </svg></a>
-                                            <a href="/orders/{{$order->id}}/edit"
+                                            <a href="{{ route('orders.edit', $order->id) }}"
                                                 class="btn btn-warning btn-custom p-2 m-1"><svg
                                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
                                                     <path
                                                         d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
                                                 </svg></a>
-                                            <form method="GET" action="/orders/{{$order->id}}/destroy">
+                                            <form method="GET" action="{{ route('orders.destroy', $order->id) }}">
                                                 @csrf
                                                 <button type="submit"
                                                     class="btn btn-danger btn-custom p-2 show_confirm m-1 text-dark"

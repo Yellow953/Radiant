@@ -32,7 +32,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('customize') ? 'active' : '' }}"
-                            href="{{ route('designs.new') }}">Customize</a>
+                            href="{{ route('customize') }}">Customize</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('about') ? 'active' : '' }}"

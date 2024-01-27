@@ -15,7 +15,7 @@
 
     <section class="content-header mb-3 d-flex justify-content-between my-3">
 
-        <a href="/orders" class="btn text-secondary">
+        <a href="{{ route('orders') }}" class="btn text-secondary">
             <h3>
                 < back</h3>
         </a>
@@ -120,7 +120,7 @@
 
                     <div class="box-body">
 
-                        <form action="/orders/create" method="post">
+                        <form action="{{ route('orders.create', $order->id) }}" method="post">
 
                             {{ csrf_field() }}
                             {{ method_field('post') }}

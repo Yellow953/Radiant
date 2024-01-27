@@ -15,7 +15,7 @@
 
     <section class="content-header d-flex justify-content-between my-3">
 
-        <a href="/orders" class="btn text-secondary">
+        <a href="{{ route('orders') }}" class="btn text-secondary">
             <h3>
                 < back</h3>
         </a>
@@ -121,7 +121,7 @@
 
                     <div class="box-body">
 
-                        <form action="/orders/{{$order->id}}/update" method="post">
+                        <form action="{{ route('orders.update', $order->id) }}" method="post">
 
                             {{ csrf_field() }}
                             <div class="row my-4">

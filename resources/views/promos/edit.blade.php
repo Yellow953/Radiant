@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <a href="/promos" class="btn text-secondary">
+    <a href="{{ route('promos') }}" class="btn text-secondary">
         <h3>
             < back</h3>
     </a>
@@ -14,7 +14,7 @@
                     <h2 class="font-weight-bolder text-center my-4">Edit Promo</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="/promos/{{$promo->id}}/update" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('promos.update', $promo->id) }}" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="name" class="col-form-label">Name *</label>

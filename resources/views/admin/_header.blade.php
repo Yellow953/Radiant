@@ -20,7 +20,7 @@
                     <a href="/profile" class="dropdown-item">{{ ucwords(Auth::user()->name) }}
                         ({{ucwords(Auth::user()->role)}})</a>
                     <a class="dropdown-item" href="/password/edit">Change Password</a>
-                    <a class="dropdown-item" href="/logout"> {{
+                    <a class="dropdown-item" href="{{ route('custom_logout') }}"> {{
                         __('Logout') }}
                     </a>
                 </div>

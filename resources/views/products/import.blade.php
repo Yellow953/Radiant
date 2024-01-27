@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <a href="/products" class="btn text-secondary">
+    <a href="{{route('products')}}" class="btn text-secondary">
         <h3>
             < back</h3>
     </a>
@@ -14,7 +14,7 @@
                     <h2 class="font-weight-bolder text-center my-4">Import</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="/products/{{$product->id}}/save" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('products.save') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="quantity" class="col-form-label">Quantity *</label>

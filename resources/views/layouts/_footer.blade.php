@@ -7,19 +7,23 @@
 
                 <ul>
                     <li>
-                        <a href="{{ route('home') }}" class="nav-link">Home</a>
+                        <a href="{{ route('home') }}" class="nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a>
                     </li>
                     <li>
-                        <a href="{{ route('shop') }}" class="nav-link">Collections</a>
+                        <a href="{{ route('shop') }}"
+                            class="nav-link {{ request()->is('shop') ? 'active' : '' }}">Collections</a>
                     </li>
                     <li>
-                        <a href="{{ route('designs.new') }}" class="nav-link">Customize</a>
+                        <a href="{{ route('customize') }}"
+                            class="nav-link {{ request()->is('customize') ? 'active' : '' }}">Customize</a>
                     </li>
                     <li>
-                        <a href="{{ route('about') }}" class="nav-link">About</a>
+                        <a href="{{ route('about') }}"
+                            class="nav-link {{ request()->is('about') ? 'active' : '' }}">About</a>
                     </li>
                     <li>
-                        <a href="{{ route('contact') }}" class="nav-link">Contact</a>
+                        <a href="{{ route('contact') }}"
+                            class="nav-link {{ request()->is('contact') ? 'active' : '' }}">Contact</a>
                     </li>
                 </ul>
             </div>

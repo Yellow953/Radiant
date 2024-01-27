@@ -77,23 +77,4 @@
             }
         }
     </script>
-
-    {{-- <script>
-        $(document).ready(function() {
-        var header = $('header');
-        var navLinks = $('header a.nav-link');
-        var originalBackgroundColor = header.css('background-color');
-        var originalTextColor = navLinks.css('color');
-    
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 0) {
-                header.addClass('bg-white');
-                navLinks.css('color', 'black');
-            } else {
-                header.removeClass('bg-white');
-                navLinks.css('color', originalTextColor);
-            }
-        });
-    });
-    </script> --}}
 </body>

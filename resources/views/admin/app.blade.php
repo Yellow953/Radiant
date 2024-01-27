@@ -14,12 +14,12 @@
     <link rel="shortcut icon" href="{{asset('assets/logo/logo.png')}}" type="image/x-icon">
 
     {{-- Template --}}
-    <link rel="stylesheet" href="{{ asset('/admin/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/admin/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/admin/css/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('/admin/css/metisMenu.css') }}">
-    <link rel="stylesheet" href="{{ asset('/admin/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/admin/css/slicknav.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/metisMenu.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/slicknav.min.css') }}">
 
     <!-- amcharts css -->
     <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css"
@@ -34,23 +34,25 @@
         href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.jqueryui.min.css">
 
     <!-- style css -->
-    <link rel="stylesheet" href="{{ asset('/admin/css/typography.css') }}">
-    <link rel="stylesheet" href="{{ asset('/admin/css/default-css.css') }}">
-    <link rel="stylesheet" href="{{ asset('/admin/css/styles.css') }}">
-    <link rel="stylesheet" href="{{ asset('/admin/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/typography.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/default-css.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/responsive.css') }}">
 
     <!-- modernizr css -->
-    <script src="{{ asset('/admin/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+    <script src="{{ asset('admin/js/vendor/modernizr-2.8.3.min.js') }}"></script>
 
     {{-- Switch --}}
-    <link rel="stylesheet" href="{{asset('/assets/css/switch.min.css')}}">
-    <script src="{{asset('/assets/js/switch.min.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('admin/css/switch.min.css')}}">
+    <script src="{{asset('admin/js/switch.min.js')}}"></script>
 
     {{-- Sweet Alert --}}
-    <script src="{{asset('/assets/js/sweetalert.min.js')}}"></script>
+    <script src="{{asset('admin/js/sweetalert.min.js')}}"></script>
 
     {{-- JQuery --}}
-    <script src="{{asset('/admin/js/jquery.min.js')}}"></script>
+    <script src="{{asset('admin/js/jquery.min.js')}}"></script>
+
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
 </head>
 
 <body>
@@ -72,18 +74,18 @@
             @include('admin._footer')
         </div>
         <!-- page container area end -->
-
     </div>
 
     <!-- jquery latest version -->
-    <script src="{{ asset('/admin/js/vendor/jquery-2.2.4.min.js') }}"></script>
+    <script src="{{ asset('admin/js/vendor/jquery-2.2.4.min.js') }}"></script>
+
     <!-- bootstrap 4 js -->
-    <script src="{{ asset('/admin/js/popper.min.js') }}"></script>
-    <script src="{{ asset('/admin/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('/admin/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('/admin/js/metisMenu.min.js') }}"></script>
-    <script src="{{ asset('/admin/js/jquery.slimscroll.min.js') }}"></script>
-    <script src="{{ asset('/admin/js/jquery.slicknav.min.js') }}"></script>
+    <script src="{{ asset('admin/js/popper.min.js') }}"></script>
+    <script src="{{ asset('admin/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('admin/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('admin/js/metisMenu.min.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.slimscroll.min.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.slicknav.min.js') }}"></script>
 
     <!-- Start datatable js -->
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
@@ -92,11 +94,11 @@
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
     <!-- others plugins -->
-    <script src="{{ asset('/admin/js/plugins.js') }}"></script>
-    <script src="{{ asset('/admin/js/scripts.js') }}"></script>
+    <script src="{{ asset('admin/js/plugins.js') }}"></script>
+    <script src="{{ asset('admin/js/scripts.js') }}"></script>
 
     {{-- Sweet Alert --}}
-    <script src="{{asset('/assets/js/sweetalert.min.js')}}">
+    <script src="{{asset('admin/js/sweetalert.min.js')}}">
     </script>
 
     {{-- Delete Confirmation --}}

@@ -88,14 +88,9 @@ Route::prefix('/products')->group(function () {
     Route::post('/create', [ProductController::class, 'create'])->name('products.create');
     Route::get('/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
     Route::post('/{product}/update', [ProductController::class, 'update'])->name('products.update');
-    Route::get('/{product}/import', [ProductController::class, 'import'])->name('products.import');
-    Route::post('/{product}/save', [ProductController::class, 'save'])->name('products.save');
     Route::get('/{product}/destroy', [ProductController::class, 'destroy'])->name('products.destroy');
-    Route::get('/{product}/secondary_images', [ProductController::class, 'secondary_images_index'])->name('secondary_images');
     Route::get('/', [ProductController::class, 'index'])->name('products');
 });
-Route::post('/secondary_image/create', [ProductController::class, 'secondary_images_create'])->name('secondary_images.create');
-Route::get('/secondary_image/{secondary_image}/destroy', [ProductController::class, 'secondary_images_destroy'])->name('secondary_images.destroy');
 
 // Orders
 Route::prefix('/orders')->group(function () {
@@ -133,13 +128,11 @@ Route::get('/logout', [HomeController::class, 'custom_logout'])->name('custom_lo
 
 // Designs
 Route::prefix('/designs')->group(function () {
-    Route::get('/{design}/edit', [DesignController::class, 'edit'])->name('designs.edit');
-    Route::post('/{design}/update', [DesignController::class, 'update'])->name('designs.update');
     Route::get('/{design}/destroy', [DesignController::class, 'destroy'])->name('designs.destroy');
     Route::get('/{design}/show', [DesignController::class, 'show'])->name('designs.show');
-    Route::get('/new', [DesignController::class, 'new'])->name('designs.new');
     Route::post('/create', [DesignController::class, 'create'])->name('designs.create');
     Route::get('/', [DesignController::class, 'index'])->name('designs');
 });
+Route::get('/customize', [DesignController::class, 'new'])->name('customize');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');

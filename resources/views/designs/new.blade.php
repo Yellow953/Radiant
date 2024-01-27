@@ -114,35 +114,33 @@ images, unique style, fashion statement, Radiant')
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="my-4">My Designs</h3>
-            <div class="row w-100 overflow-x-auto">
-                @forelse (auth()->user()->designs as $design)
-                <div class="card m-1 my-design" @if ($design->direction == 'front')
-                    style="background-image: url('{{ asset($design->product->image_front) }}');"
-                    @elseif($design->direction == 'back')
-                    style="background-image: url('{{ asset($design->product->image_back) }}');"
-                    @endif
-                    id="design-{{ $design->id }}">
-                    <img src="{{ asset($design->image_path) }}"
-                        alt="{{ $design->product->name }} {{ ucwords($design->direction) }} Design">
+    <div class="container mb-5">
+        <h3 class="my-4">My Designs</h3>
+        <div class="row w-100 overflow-x-auto">
+            @forelse (auth()->user()->designs as $design)
+            <div class="col-md-3 card m-1 my-design" @if ($design->direction == 'front')
+                style="background-image: url('{{ asset($design->product->image_front) }}');"
+                @elseif($design->direction == 'back')
+                style="background-image: url('{{ asset($design->product->image_back) }}');"
+                @endif
+                id="design-{{ $design->id }}">
+                <img src="{{ asset($design->image_path) }}"
+                    alt="{{ $design->product->name }} {{ ucwords($design->direction) }} Design">
 
-                    <div class="overlay-icons">
-                        <button class="btn btn-info" onclick="viewDesign('{{ asset($design->image_path) }}')">
-                            <i class="fa-solid fa-eye"></i>
-                        </button>
-                        <button class="btn btn-danger delete-design-button" onclick="deleteDesign('{{ $design->id }}')">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
+                <div class="overlay-icons">
+                    <button class="btn btn-info" onclick="viewDesign('{{ asset($design->image_path) }}')">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                    <button class="btn btn-danger delete-design-button" onclick="deleteDesign('{{ $design->id }}')">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
                 </div>
-                @empty
-                <div class="m-5">
-                    No Designs Yet
-                </div>
-                @endforelse
             </div>
+            @empty
+            <div class="m-5">
+                No Designs Yet
+            </div>
+            @endforelse
         </div>
     </div>
 </div>
@@ -201,5 +199,4 @@ images, unique style, fashion statement, Radiant')
             }, 5000);
         }
 </script>
-
 @endsection

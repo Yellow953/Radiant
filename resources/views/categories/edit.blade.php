@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <a href="/categories" class="btn text-secondary">
+    <a href="{{ route('categories') }}" class="btn text-secondary">
         <h3>
             < back</h3>
     </a>
@@ -14,7 +14,8 @@
                     <h2 class="font-weight-bolder text-center my-4">Edit Category</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="/categories/{{$category->id}}/update" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('categories.update', $category->id) }}"
+                        enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="name" class="col-form-label">Name *</label>

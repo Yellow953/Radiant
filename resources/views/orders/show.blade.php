@@ -2,7 +2,7 @@
 
 @section('content')
 
-<a href="/orders" class="btn text-secondary m-3">
+<a href="{{ route('orders') }}" class="btn text-secondary m-3">
     <h3>
         < Back</h3>
 </a>
