@@ -12,8 +12,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="text-content">
-                    <h4>Add to your Cart</h4>
-                    <h2>Cart</h2>
+                    <h4>Checkout your Order</h4>
+                    <h2>Checkout</h2>
                 </div>
             </div>
         </div>

@@ -20,11 +20,11 @@
                 <div class="col-sm-6">
                     <h6 class="mb-3">From:</h6>
                     <div>
-                        <strong>ZSpecial</strong>
+                        <strong>Radiant</strong>
                     </div>
                     <div>Lebanon, Beirut</div>
-                    <div>Email: z.special2022@gmail.com</div>
-                    <div>Phone: +961 81 495 312</div>
+                    <div>Email: radiantserviceslb@gmail.com</div>
+                    <div>Phone: +961 79 308 778</div>
                 </div>
 
                 <div class="col-sm-6">
@@ -54,9 +54,9 @@
                         <tr>
                             <td class="center">{{ $index }}</td>
                             <td class="left strong">{{ ucwords($product->name) }}</td>
-                            <td class="right">${{ number_format($product->sell_price, 2) }}</td>
+                            <td class="right">${{ number_format($product->price, 2) }}</td>
                             <td class="center">{{ $product->pivot->quantity }}</td>
-                            <td class="right">${{ number_format($product->sell_price * $product->pivot->quantity, 2) }}
+                            <td class="right">${{ number_format($product->price * $product->pivot->quantity, 2) }}
                             </td>
                         </tr>
                         @endforeach

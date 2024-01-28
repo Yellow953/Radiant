@@ -88,20 +88,12 @@ class CartController extends Controller
         foreach ($cart_items as $productID => $cart_item) {
             $product = Product::find($productID);
 
-            if ($product->quantity  == 0) {
-                return redirect()->back()->with('danger', 'Product not available...');
-            }
-
             $order->products()->attach($product, [
                 'quantity' => $cart_item['quantity'],
                 'size' => $cart_item['size'],
             ]);
 
             $total_price += $product->price * $cart_item['quantity'];
-
-            $product->update([
-                'quantity' => $product->quantity - $cart_item['quantity'],
-            ]);
         }
 
         $total_price += $shipping;

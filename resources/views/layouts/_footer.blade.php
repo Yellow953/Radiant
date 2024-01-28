@@ -32,38 +32,39 @@
 
                 <ul>
                     <li>
-                        <a href="mailto:test@test.com" class="nav-link">
+                        <a href="mailto:radiantserviceslb@gmail.com" class="nav-link" target="_blank">
                             <span><i class="fa-solid fa-envelope"></i></span>
-                            test@test.com</a>
+                            radiantserviceslb@gmail.com</a>
                     </li>
                     <li>
-                        <a href="tel:96170285659" class="nav-link">
+                        <a href="tel:96179308778" class="nav-link" target="_blank">
                             <span><i class="fa-solid fa-phone"></i></span>
-                            +96170285659</a>
+                            +96179308778</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">
+                        <a href="https://wa.me/96179308778/?text=Hello!%20I%20would%20like%20to%20order."
+                            class="nav-link" target="_blank">
                             <span><i class="fa-brands fa-whatsapp"></i></span>
                             Whatsapp</a>
                     </li>
                 </ul>
             </div>
             <div class="col-md-4">
-                <h3>Social Medias</h3>
+                <h3>Social Media</h3>
 
                 <ul>
                     <li>
-                        <a href="#" class="nav-link">
+                        <a href="https://www.facebook.com/pod.radiant" class="nav-link" target="_blank">
                             <span><i class="fa-brands fa-facebook-f"></i></span>
                             Facebook</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">
+                        <a href="https://www.instagram.com/radiant.pod" class="nav-link" target="_blank">
                             <span><i class="fa-brands fa-instagram"></i></span>
                             Instagram</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">
+                        <a href="https://www.tiktok.com/@radiant.pod" class="nav-link" target="_blank">
                             <span><i class="fa-brands fa-tiktok"></i></span>
                             TikTok</a>
                     </li>

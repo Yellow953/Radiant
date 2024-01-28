@@ -36,7 +36,7 @@ class HomeController extends Controller
     public function shop()
     {
         $categories = Category::select('id', 'name')->where('active', true)->get();
-        $products = Product::where('quantity', '!=', 0)->where('can_customize', true)->filter()->paginate(10);
+        $products = Product::where('can_customize', true)->filter()->paginate(10);
 
         $data = compact('categories', 'products');
         return view('shop', $data);

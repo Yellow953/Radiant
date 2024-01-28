@@ -34,7 +34,7 @@ your fashion experience seamless.')
             <div class="col-md-8">
                 <div id="map">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18909.99594604942!2d15.077738008294068!3d37.49470688812859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1313e2dd761525b5%3A0x58fe876151c83cf0!2sCatania%2C%20Metropolitan%20city%20of%20Catania%2C%20Italy!5e0!3m2!1sen!2sde!4v1701029679371!5m2!1sen!2sde"
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3311.117241332163!2d35.582645!3d33.912382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDU0JzQ0LjYiTiAzNcKwMzQnNTcuNSJF!5e0!3m2!1sen!2sde!4v1706458937603!5m2!1sen!2sde"
                         width="100%" height="350" style="border:0;" allowfullscreen loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
@@ -47,10 +47,11 @@ your fashion experience seamless.')
                         following channels:
                     </p>
                     <ul class="social-icons">
-                        <li><a href="#" target="blank"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://www.instagram.com/radiant.pod/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
-                                target="blank"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://www.tiktok.com/@radiant.pod" target="blank">
+                        <li><a href="https://www.facebook.com/pod.radiant" target="_blank"><i
+                                    class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/radiant.pod" target="_blank"><i
+                                    class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@radiant.pod" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-tiktok" viewBox="0 0 16 16">
                                     <path
@@ -58,11 +59,11 @@ your fashion experience seamless.')
                                 </svg>
                             </a>
                         </li>
-                        <li><a href="mailto:radiantserviceslb@gmail.com" target="blank"><i
+                        <li><a href="mailto:radiantserviceslb@gmail.com" target="_blank"><i
                                     class="fa fa-envelope"></i></a></li>
                         <li>
-                            <a href="https://api.whatsapp.com/send/?phone=%2B96179308778&text&type=phone_number&app_absent=0"
-                                target="blank">
+                            <a href="https://wa.me/96179308778/?text=Hello!%20I%20would%20like%20to%20order."
+                                target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-whatsapp" viewBox="0 0 16 16">
                                     <path

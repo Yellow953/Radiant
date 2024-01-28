@@ -98,7 +98,6 @@ class BackupController extends Controller
 
         $sheet->setCellValue('A1', 'ID');
         $sheet->setCellValue('B1', 'Name');
-        $sheet->setCellValue('C1', 'Quantity');
         $sheet->setCellValue('D1', 'Buy Price');
         $sheet->setCellValue('E1', 'Sell Price');
         $sheet->setCellValue('F1', 'Category ID');
@@ -109,9 +108,8 @@ class BackupController extends Controller
         foreach ($data as $d) {
             $sheet->setCellValue('A' . $rows, $d->id);
             $sheet->setCellValue('B' . $rows, $d->name);
-            $sheet->setCellValue('C' . $rows, $d->quantity);
             $sheet->setCellValue('D' . $rows, $d->buy_price);
-            $sheet->setCellValue('E' . $rows, $d->sell_price);
+            $sheet->setCellValue('E' . $rows, $d->price);
             $sheet->setCellValue('F' . $rows, $d->category_id);
             $sheet->setCellValue('G' . $rows, $d->description ?? '');
             $sheet->setCellValue('H' . $rows, $d->created_at);
@@ -271,9 +269,8 @@ class BackupController extends Controller
             $product = new Product();
             $product->id = $sheet->getCell('A' . $row)->getValue();
             $product->name = $sheet->getCell('B' . $row)->getValue();
-            $product->quantity = $sheet->getCell('C' . $row)->getValue();
             $product->buy_price = $sheet->getCell('D' . $row)->getValue();
-            $product->sell_price = $sheet->getCell('E' . $row)->getValue();
+            $product->price = $sheet->getCell('E' . $row)->getValue();
             $product->category_id = $sheet->getCell('F' . $row)->getValue();
             $product->description = $sheet->getCell('G' . $row)->getValue() ?? '';
             $product->created_at = Carbon::parse($sheet->getCell('H' . $row)->getValue()) ??

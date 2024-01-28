@@ -63,7 +63,6 @@
                                         <table class="table table-hover">
                                             <tr>
                                                 <th>Name</th>
-                                                <th>Quantity</th>
                                                 <th class="min-width-1">Price</th>
                                                 <th>Add</th>
                                             </tr>
@@ -73,12 +72,12 @@
                                                 <td class="word-break">{{ ucfirst($product->name) }}</td>
                                                 <td>{{ number_format($product->quantity) }}</td>
                                                 <td class="min-width-1">
-                                                    {{number_format($product->sell_price, 2)}} $
+                                                    {{number_format($product->price, 2)}} $
                                                 </td>
                                                 <td>
                                                     <a href="" id="product-{{ $product->id }}"
                                                         data-name="{{ $product->name }}" data-id="{{ $product->id }}"
-                                                        data-price="{{ $product->sell_price }}"
+                                                        data-price="{{ $product->price }}"
                                                         data-rent-price="{{ $product->rent_price }}"
                                                         class="btn btn-success btn-sm add-product-btn">
                                                         <i class="fa fa-plus"></i>
@@ -153,11 +152,11 @@
                                     <tr>
                                         <td>{{ ucfirst($product->name) }}</td>
                                         <td><input type="number" name="products[{{ $product->id }}][quantity]"
-                                                data-price="{{ number_format($product->sell_price, 2) }}"
+                                                data-price="{{ number_format($product->price, 2) }}"
                                                 class="form-control" min="1" value="{{ $product->pivot->quantity }}">
                                         </td>
                                         <td class="product-price">
-                                            {{number_format($product->sell_price * $product->pivot->quantity, 2)}} $
+                                            {{number_format($product->price * $product->pivot->quantity, 2)}} $
                                         </td>
                                         <td>
                                             <button class="btn btn-danger btn-sm remove-product-btn"

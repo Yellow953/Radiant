@@ -40,10 +40,11 @@ individual expression in fashion.')
                         creativity, we bring you a collection that blends comfort with style.
                     </p>
                     <ul class="social-icons">
-                        <li><a href="#" target="blank"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://www.instagram.com/radiant.pod/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
-                                target="blank"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://www.tiktok.com/@radiant.pod" target="blank">
+                        <li><a href="https://www.facebook.com/pod.radiant" target="_blank"><i
+                                    class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/radiant.pod" target="_blank"><i
+                                    class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@radiant.pod" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-tiktok" viewBox="0 0 16 16">
                                     <path
@@ -51,11 +52,12 @@ individual expression in fashion.')
                                 </svg>
                             </a>
                         </li>
-                        <li><a href="mailto:radiantserviceslb@gmail.com" target="blank"><i
-                                    class="fa fa-envelope"></i></a></li>
+                        <li><a href="mailto:radiantserviceslb@gmail.com" target="_blank"><i
+                                    class="fa fa-envelope"></i></a>
+                        </li>
                         <li>
-                            <a href="https://api.whatsapp.com/send/?phone=%2B96179308778&text&type=phone_number&app_absent=0"
-                                target="blank">
+                            <a href="https://wa.me/96179308778/?text=Hello!%20I%20would%20like%20to%20order."
+                                target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-whatsapp" viewBox="0 0 16 16">
                                     <path
@@ -167,21 +169,17 @@ individual expression in fashion.')
                     <div class="client-item">
                         <img src="{{ asset('assets/images/yellowtech.png') }}" alt="Yellow Tech Logo">
                     </div>
-
+                    <div class="client-item">
+                        <img src="{{ asset('assets/images/physicstimeline.png') }}" alt="Physics Timeline Logo">
+                    </div>
+                    <div class="client-item">
+                        <img src="{{ asset('assets/images/aloeveranaturale.png') }}" alt="Aloe Vera Naturale Logo">
+                    </div>
                     <div class="client-item">
                         <img src="{{ asset('assets/images/radiant.png') }}" alt="Radiant Logo">
                     </div>
-
-                    <div class="client-item">
-                        <img src="{{ asset('assets/images/athletics.png') }}" alt="Athletics Performance Logo">
-                    </div>
-
                     <div class="client-item">
                         <img src="{{ asset('assets/images/canada.png') }}" alt="Match Me With Canada Logo">
-                    </div>
-
-                    <div class="client-item">
-                        <img src="{{ asset('assets/images/mecanix.png') }}" alt="Mecanix Logo">
                     </div>
                 </div>
             </div>

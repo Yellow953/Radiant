@@ -63,7 +63,6 @@
                                         <table class="table table-hover">
                                             <tr>
                                                 <th>Name</th>
-                                                <th>Quantity</th>
                                                 <th class="min-width-1">Price</th>
                                                 <th>Add</th>
                                             </tr>
@@ -71,14 +70,13 @@
                                             @foreach ($category->products as $product)
                                             <tr>
                                                 <td class="word-break">{{ ucfirst($product->name) }}</td>
-                                                <td>{{ number_format($product->quantity) }}</td>
                                                 <td class="min-width-1">
-                                                    {{number_format($product->sell_price, 2)}} $
+                                                    {{number_format($product->price, 2)}} $
                                                 </td>
                                                 <td>
                                                     <a href="" id="product-{{ $product->id }}"
                                                         data-name="{{ $product->name }}" data-id="{{ $product->id }}"
-                                                        data-price="{{ $product->sell_price }}"
+                                                        data-price="{{ $product->price }}"
                                                         class="btn btn-success btn-sm add-product-btn">
                                                         <i class="fa fa-plus"></i>
                                                     </a>
@@ -120,7 +118,7 @@
 
                     <div class="box-body">
 
-                        <form action="{{ route('orders.create', $order->id) }}" method="post">
+                        <form action="{{ route('orders.create') }}" method="post">
 
                             {{ csrf_field() }}
                             {{ method_field('post') }}

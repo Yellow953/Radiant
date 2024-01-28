@@ -105,12 +105,6 @@ Or create your own...')
                                                         <img src="{{asset($product->image_front)}}"
                                                             class="img-modal rounded" alt="Product Front Image">
                                                     </div>
-                                                    {{-- @foreach ($product->secondary_images as $secondary_image)
-                                                    <div class="carousel-item">
-                                                        <img src="{{asset($secondary_image->image)}}" class="img-modal"
-                                                            alt="Secondary Image">
-                                                    </div>
-                                                    @endforeach --}}
                                                     <div class="carousel-item">
                                                         <img src="{{asset($product->image_back)}}" class="img-modal"
                                                             alt="Product Back Image">

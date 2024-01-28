@@ -57,7 +57,7 @@ class OrderController extends Controller
             'total_price' => ['required', 'numeric', 'min:0']
         ]);
 
-        $this->detach_order($order);
+        $order->delete();
 
         $this->attach_order($request);
 
@@ -69,7 +69,7 @@ class OrderController extends Controller
         $sub_total = 0;
 
         foreach ($order->products as $product) {
-            $sub_total += ($product->pivot->quantity * $product->sell_price);
+            $sub_total += ($product->pivot->quantity * $product->price);
         }
 
         $data = compact('order', 'sub_total');
@@ -107,15 +107,11 @@ class OrderController extends Controller
             $product = Product::FindOrFail($id);
             $text .= $product->name . " : " . $item['quantity'] . " , ";
 
-            $total_price += $product->sell_price * $item['quantity'];
+            $total_price += $product->price * $item['quantity'];
             $order->products()->attach([
                 $id => [
                     'quantity' => $item['quantity'],
                 ]
-            ]);
-
-            $product->update([
-                'quantity' => $product->quantity - $item['quantity']
             ]);
         } //end of foreach
 
@@ -128,16 +124,4 @@ class OrderController extends Controller
         $text .= ", datetime: " . now();
         Log::create(['text' => $text]);
     } //end of attach order
-
-    private function detach_order($order)
-    {
-        foreach ($order->products as $product) {
-
-            $product->update([
-                'quantity' => $product->quantity + $product->pivot->quantity
-            ]);
-        } //end of for each
-
-        $order->delete();
-    } //end of detach order
 }
