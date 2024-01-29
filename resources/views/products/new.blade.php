@@ -50,13 +50,23 @@
                         </div>
 
                         <div class="row mb-3">
-                            <div class="col-md-12">
+                            <div class="col-md-4">
                                 <div class="mx-4 d-flex">
                                     <input class="form-check-input border" type="checkbox" name="can_customize"
                                         id="can_customize" {{ old('can_customize') ? 'checked' : '' }}>
 
                                     <label class="form-check-label mx-3" for="can_customize">
                                         {{ __('Can Customize') }}
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mx-4 d-flex">
+                                    <input class="form-check-input border" type="checkbox" name="best_seller"
+                                        id="best_seller" {{ old('best_seller') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label mx-3" for="best_seller">
+                                        {{ __('Best Seller') }}
                                     </label>
                                 </div>
                             </div>

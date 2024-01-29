@@ -7,9 +7,9 @@ use App\Models\Product;
 
 class Helper
 {
-    public static function get_categories()
+    public static function get_active_categories()
     {
-        return Category::select('id', 'name')->orderBy('id', 'ASC')->get();
+        return Category::select('id', 'name')->where('active', true)->get();
     }
 
     public static function get_sizes()

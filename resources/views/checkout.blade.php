@@ -36,10 +36,17 @@
                 <div class="col-2 my-auto">
                     <img class="w-100 cart_image rounded" src="{{ asset($product->image_front) }}" alt="Image">
                 </div>
-                <div class="col-3 my-auto">
+                <div class="col-2 my-auto">
                     <h6>{{ ucwords($product->name) }}</h6>
                 </div>
-                <div class="col-3 my-auto">
+                <div class="col-2 my-auto">
+                    @if ( isset($cart_item['designId']) )
+                    Customized
+                    @else
+                    Standard
+                    @endif
+                </div>
+                <div class="col-2 my-auto">
                     {{ ucwords($cart_item['size']) }}
                 </div>
                 <div class="col-2 my-auto">

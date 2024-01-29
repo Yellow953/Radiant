@@ -91,6 +91,7 @@ class CartController extends Controller
             $order->products()->attach($product, [
                 'quantity' => $cart_item['quantity'],
                 'size' => $cart_item['size'],
+                'design_id' => $cart_item['designId'] ?? null,
             ]);
 
             $total_price += $product->price * $cart_item['quantity'];

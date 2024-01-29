@@ -18,6 +18,7 @@ class ProductSeeder extends Seeder
             'image_front' => 'uploads/products/black_hoodie_front.png',
             'image_back' => 'uploads/products/black_hoodie_back.png',
             'can_customize' => true,
+            'best_seller' => false,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
@@ -30,6 +31,7 @@ class ProductSeeder extends Seeder
             'image_front' => 'uploads/products/black_shirt_front.png',
             'image_back' => 'uploads/products/black_shirt_back.png',
             'can_customize' => true,
+            'best_seller' => false,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
@@ -42,6 +44,7 @@ class ProductSeeder extends Seeder
             'image_front' => 'uploads/products/black_ss_front.png',
             'image_back' => 'uploads/products/black_ss_back.png',
             'can_customize' => true,
+            'best_seller' => false,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
@@ -54,6 +57,7 @@ class ProductSeeder extends Seeder
             'image_front' => 'uploads/products/white_hoodie_front.png',
             'image_back' => 'uploads/products/white_hoodie_back.png',
             'can_customize' => true,
+            'best_seller' => false,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
@@ -66,6 +70,7 @@ class ProductSeeder extends Seeder
             'image_front' => 'uploads/products/white_shirt_front.png',
             'image_back' => 'uploads/products/white_shirt_back.png',
             'can_customize' => true,
+            'best_seller' => false,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
@@ -78,6 +83,7 @@ class ProductSeeder extends Seeder
             'image_front' => 'uploads/products/white_ss_front.png',
             'image_back' => 'uploads/products/white_ss_back.png',
             'can_customize' => true,
+            'best_seller' => false,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);

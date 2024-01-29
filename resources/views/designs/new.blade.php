@@ -124,16 +124,96 @@ images, unique style, fashion statement, Radiant')
                 style="background-image: url('{{ asset($design->product->image_back) }}');"
                 @endif
                 id="design-{{ $design->id }}">
+
                 <img src="{{ asset($design->image_path) }}"
                     alt="{{ $design->product->name }} {{ ucwords($design->direction) }} Design">
 
                 <div class="overlay-icons">
-                    <button class="btn btn-info" onclick="viewDesign('{{ asset($design->image_path) }}')">
+                    <button type="button" class="btn btn-info" data-toggle="modal"
+                        data-target="#designModal{{ $design->id }}">
                         <i class="fa-solid fa-eye"></i>
                     </button>
                     <button class="btn btn-danger delete-design-button" onclick="deleteDesign('{{ $design->id }}')">
                         <i class="fa-solid fa-trash"></i>
                     </button>
+                </div>
+
+                <!-- Design Modal -->
+                <div class="modal fade" id="designModal{{ $design->id }}" tabindex="-1" role="dialog"
+                    aria-labelledby="designModalLabel{{ $design->id }}" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="color-primary">{{ ucwords($design->product->name) }} - {{
+                                    ucwords($design->direction) }}</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body py-0 px-4">
+                                <div class="alert alert-warning fade show mt-4" role="alert">
+                                    <div class="row">
+                                        <div class="col-1 my-auto">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-exclamation-triangle-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                                            </svg>
+                                        </div>
+                                        <div class="col-11 my-auto">
+                                            Dont worry if the design isn't displayed exactly as you wanted, our
+                                            designers will fix it
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    style="background-image: url('@if ($design->direction == 'front'){{ asset($design->product->image_front) }}@else{{ asset($design->product->image_back) }}@endif'); background-size:contain; background-repeat: no-repeat; background-position: center;">
+                                    <img src="{{ asset($design->image_path) }}"
+                                        alt="{{ $design->product->name }} {{ ucwords($design->direction) }} Design">
+                                </div>
+
+                                <div class="my-3 mx-auto">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="text-success">${{ number_format($design->product->price, 2) }}
+                                        </div>
+                                        <div class="text-danger" style="text-decoration: line-through;">${{
+                                            number_format(($design->product->price +
+                                            $design->product->price * 0.2), 2) }}</div>
+                                    </div>
+
+                                    @if($design->product->description)
+                                    <p class="my-3 text-center">
+                                        {{$design->product->description}}
+                                    </p>
+                                    @endif
+
+                                    <form action="#" method="post" enctype="multipart/form-data" class="w-100 my-2">
+                                        <div class="w-md-100 d-flex justify-content-center">
+                                            <input type="number" name="quantity" id="quantity"
+                                                class="form-control custom-field mx-1" value="1" step="1">
+                                            <select name="size" id="size" class="form-select custom-field mx-1">
+                                                @foreach (Helper::get_sizes() as $size)
+                                                <option value="{{ $size }}" {{ $size=='M' ? 'selected' : '' }}>{{ $size
+                                                    }}</option>
+                                                @endforeach
+                                            </select>
+
+                                            <button type="button"
+                                                onclick="addToCart({{$design->product->id}}, {{ $design->id }}, this.form)"
+                                                class="btn bg-blue mx-2 rounded d-flex align-items-center">
+                                                <span class="fa fa-plus mr-1"></span>
+                                                Cart
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             @empty
@@ -148,9 +228,6 @@ images, unique style, fashion statement, Radiant')
 <script src="{{ asset('assets/js/custom-design.js') }}"></script>
 
 <script>
-    function viewDesign(imagePath) {
-    }
-
     function deleteDesign(designId) {
             const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
     
@@ -198,5 +275,41 @@ images, unique style, fashion statement, Radiant')
                 alertElement.remove();
             }, 5000);
         }
+</script>
+
+<script>
+    function addToCart(productId, designId, form) {
+        var quantity = parseInt(form.querySelector('#quantity').value) || 1;
+        var size = form.querySelector('#size').value || 'M';
+
+        try {
+            var cart = JSON.parse(getCookie('cart'));
+        } catch (error) {
+            var cart = {};
+        }
+
+        if (cart[productId]) {
+            cart[productId].quantity += quantity;
+        } else {
+            cart[productId] = {
+                quantity: quantity,
+                size: size,
+                designId: designId,
+            };
+        }
+
+        document.cookie = 'cart=' + JSON.stringify(cart) + ';path=/';
+
+        var currentCount = parseInt(document.getElementById('cartCount').innerText) || 0;
+        var newCount = currentCount + 1;
+        document.getElementById('cartCount').innerText = newCount;
+
+        alert('Item added to cart!');
+    }
+
+    function getCookie(name) {
+        var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        if (match) return match[2];
+    }
 </script>
 @endsection

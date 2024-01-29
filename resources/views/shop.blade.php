@@ -34,7 +34,7 @@ Or create your own...')
                                 All Products
                             </a>
                         </li>
-                        @foreach (Helper::get_categories() as $category)
+                        @foreach (Helper::get_active_categories() as $category)
                         <li>
                             <a href="{{ route('shop', ['category_id' => $category->id]) }}"
                                 class="{{ request()->query('category_id') == $category->id ? 'color-pink' : ''}}">

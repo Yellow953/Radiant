@@ -23,7 +23,8 @@
                             Collections
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            @foreach (Helper::get_categories() as $category)
+                            <a class="dropdown-item text-center" href="{{ route('shop') }}">All</a>
+                            @foreach (Helper::get_active_categories() as $category)
                             <a class="dropdown-item text-center"
                                 href="{{ route('shop', ['category_id' => $category->id]) }}">
                                 {{ucwords($category->name)}}</a>

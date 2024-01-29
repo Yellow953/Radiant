@@ -59,7 +59,7 @@ journey starts here.')
 
     <div class="best-sellers">
         <div class="owl-clients owl-carousel bg-white">
-            @foreach ($best_sellers as $item)
+            @forelse ($best_sellers as $item)
             <a href="{{ route('shop') }}">
                 <div class="client-item" style="width: 70%; margin-left: 15%;">
                     <img src="{{ asset($item->image_front) }}" alt="{{ ucwords($item->name) }}"
@@ -68,7 +68,11 @@ journey starts here.')
                     <h4 class="text-center color-pink">{{ ucwords($item->name) }}</h4>
                 </div>
             </a>
-            @endforeach
+            @empty
+            <div class="w-100 text-center my-5">
+                No Best Sellers Yet...
+            </div>
+            @endforelse
         </div>
     </div>
 </div>

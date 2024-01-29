@@ -31,7 +31,10 @@
                 <div class="col-4 my-auto">
                     <h6 class="text-center">{{ ucwords('product') }}</h6>
                 </div>
-                <div class="col-2 my-auto">
+                <div class="col-1 my-auto">
+                    <h6>{{ ucwords('design') }}</h6>
+                </div>
+                <div class="col-1 my-auto">
                     <h6>{{ ucwords('size') }}</h6>
                 </div>
                 <div class="col-2 my-auto">
@@ -57,7 +60,14 @@
                 <div class="col-2 my-auto">
                     {{ ucwords($product->name) }}
                 </div>
-                <div class="col-2 my-auto">
+                <div class="col-1 my-auto">
+                    @if ( isset($cart_item['designId']) )
+                    Yes
+                    @else
+                    No
+                    @endif
+                </div>
+                <div class="col-1 my-auto">
                     {{ ucwords($cart_item['size']) }}
                 </div>
                 <div class="col-2 my-auto">
@@ -81,7 +91,9 @@
             </div>
             <hr>
             @empty
-            No Items Yet
+            <div class="text-center">
+                No Items Yet
+            </div>
             @endforelse
             <div class="row my-3 text-center">
                 <div class="offset-md-6 col-6 col-md-3">

@@ -72,6 +72,7 @@ class ProductController extends Controller
             'image_front' => $path1,
             'image_back' => $path2,
             'can_customize' => $request->boolean('can_customize'),
+            'best_seller' => $request->boolean('best_seller'),
         ]);
 
         $text = "Product " . $request->name . " created, datetime: " . now();
@@ -131,6 +132,7 @@ class ProductController extends Controller
             'image_front' => $path1,
             'image_back' => $path2,
             'can_customize' => $request->boolean('can_customize'),
+            'best_seller' => $request->boolean('best_seller'),
         ]);
 
         $text = "Product " . $product->name . " updated, datetime: " . now();
@@ -143,8 +145,12 @@ class ProductController extends Controller
     {
         $text = "Product " . $product->name . " deleted, datetime: " . now();
 
-        if ($product->image != '/assets/images/no_img.png') {
-            $path = public_path($product->image);
+        if ($product->image_back != '/assets/images/no_img.png') {
+            $path = public_path($product->image_back);
+            File::delete($path);
+        }
+        if ($product->image_back != '/assets/images/no_img.png') {
+            $path = public_path($product->image_back);
             File::delete($path);
         }
 
