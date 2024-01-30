@@ -23,6 +23,7 @@ class DesignController extends Controller
 
     public function show(Design $design)
     {
+        return view('designs.show', compact('design'));
     }
 
     public function new()

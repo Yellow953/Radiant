@@ -11,7 +11,7 @@
     <div class="card border">
         <div class="card-header">
             Order: {{ $order->id }} <br />
-            <strong>Date: {{ $order->created_at->format('d/m/Y') }}</strong>
+            <strong>Date: {{ $order->created_at->format('d/m/Y h:m') }}</strong>
             <span class="float-right"> <strong>Status:</strong> {{ ucwords($order->status) }}</span>
 
         </div>
@@ -44,6 +44,7 @@
                         <tr>
                             <th>#</th>
                             <th>Item</th>
+                            <th>Design</th>
                             <th>Unit Cost</th>
                             <th>Quantity</th>
                             <th>Total</th>
@@ -52,11 +53,18 @@
                     <tbody>
                         @foreach ($order->products as $index => $product)
                         <tr>
-                            <td class="center">{{ $index }}</td>
-                            <td class="left strong">{{ ucwords($product->name) }}</td>
-                            <td class="right">${{ number_format($product->price, 2) }}</td>
-                            <td class="center">{{ $product->pivot->quantity }}</td>
-                            <td class="right">${{ number_format($product->price * $product->pivot->quantity, 2) }}
+                            <td>{{ $index }}</td>
+                            <td>{{ ucwords($product->name) }}</td>
+                            <td>
+                                @if ($product->pivot->design_id == null)
+                                Standard
+                                @else
+                                <a href="{{ route('designs.show', $product->pivot->design_id) }}">Customized</a>
+                                @endif
+                            </td>
+                            <td>${{ number_format($product->price, 2) }}</td>
+                            <td>{{ $product->pivot->quantity }}</td>
+                            <td>${{ number_format($product->price * $product->pivot->quantity, 2) }}
                             </td>
                         </tr>
                         @endforeach

@@ -27,33 +27,42 @@
                         <table id="dataTable3" class="text-center">
                             <thead class="text-capitalize">
                                 <tr>
+                                    <th>User</th>
                                     <th>Design</th>
                                     <th>Actions</th>
-                                    <th>Description</th>
+                                    <th>Date</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @forelse( $designs as $design )
-                                {{-- <tr>
-                                    <td class="d-flex">
-                                        <img class="img-responsive profile-table"
-                                            src="{{asset($product->image_front)}}">
-                                        <img class="img-responsive profile-table" src="{{asset($product->image_back)}}">
-                                        <span class="my-auto ml-3">{{ucwords($product->name)}}</span>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <div class="my-design" @if ($design->direction == 'front')
+                                            style="background-image: url('{{ asset($design->product->image_front) }}');"
+                                            @elseif($design->direction == 'back')
+                                            style="background-image: url('{{ asset($design->product->image_back) }}');"
+                                            @endif
+                                            >
+
+                                            <img src="{{ asset($design->image_path) }}"
+                                                alt="{{ $design->product->name }} {{ ucwords($design->direction) }} Design">
+                                        </div>
                                     </td>
-                                    <td>
-                                        Price: {{ number_format($product->price, 2) }}$
+                                    <td class="col-md-4">
+                                        {{ ucwords($design->user->name) }} <br>
+                                        {{ $design->user->email }}
                                     </td>
-                                    <td>
+                                    <td class="col-md-4">
                                         <div class="d-flex justify-content-center">
-                                            <a href="{{ route('products.edit', $product->id) }}"
-                                                class="btn btn-warning btn-custom p-2 m-1"><svg
+                                            <a href="{{ route('designs.show', $design->id) }}"
+                                                class="btn btn-info btn-custom text-dark p-2 m-1"><svg
                                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
+                                                    fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                                                     <path
-                                                        d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z" />
+                                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                                                 </svg></a>
-                                            <form method="GET" action="{{ route('products.destroy', $product->id) }}">
+                                            <form method="GET" action="{{ route('designs.destroy', $design->id) }}">
                                                 @csrf
                                                 <button type="submit"
                                                     class="btn btn-danger btn-custom p-2 show_confirm m-1 text-dark"
@@ -68,17 +77,9 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="d-flex flex-row justify-content-between">
-                                            <div class="mx-3">
-                                                Category: {{ucwords($product->category->name)}}
-                                            </div>
-                                            <div class="mx-3">
-                                                Description: {{Str::limit($product->description ?? 'No description
-                                                yet...', 50, '...')}}
-                                            </div>
-                                        </div>
+                                        {{ $design->created_at->format('d/m/Y h:m') }}
                                     </td>
-                                </tr> --}}
+                                </tr>
                                 @empty
                                 <tr>
                                     <td colspan="3">
