@@ -11,6 +11,10 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->unsigned();
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
             $table->string('status')->default('new');
             $table->double('shipping')->default(0);
             $table->double('total_price')->unsigned()->nullable();

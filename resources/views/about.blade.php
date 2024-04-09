@@ -5,7 +5,11 @@
 @section('description', 'Discover Radiant where passion meets quality. Uncover our commitment to creativity and
 individual expression in fashion.')
 
-@section('keywords', 'about us, Radiant, fashion, quality, creativity, individual expression')
+@section('keywords', 'Radiant.pod about us, Radiant.pod about us lebanon, Radiant, Radiant.pod, Radiant.pod lebanon,
+Radiant custom apparel Lebanon, High-quality print on demand by Radiant, Radiant clothing customization in Lebanon,
+Design your own clothes with Radiant in Lebanon, Custom apparel Lebanon, High-quality print on demand Lebanon,Custom
+clothing Lebanon, Clothing customization Lebanon, Design your own clothes Lebanon, Apparel printing Lebanon, Custom
+wardrobe Lebanon, Print on demand services Lebanon')
 
 @section('content')
 <!-- Page Content -->

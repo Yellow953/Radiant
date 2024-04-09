@@ -116,6 +116,10 @@ class OrderController extends Controller
         } //end of foreach
 
         $order->update([
+            'name' => $user->name,
+            'email' => $user->email,
+            'phone' => $user->phone,
+            'address' => $user->address,
             'shipping' => $request->shipping_cost,
             'total_price' => $request->total_price + $request->shipping,
         ]);

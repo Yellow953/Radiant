@@ -7,6 +7,7 @@ use App\Mail\OrderMailer;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Promo;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -78,12 +79,15 @@ class CartController extends Controller
             $discount = $promo->value / 100;
         }
 
-        $order = new Order();
-        $order->user_id = auth()->user()->id;
-        $order->status = 'new';
-        $order->created_at = now();
-        $order->updated_at = now();
-        $order->save();
+        $order = Order::create([
+            'user_id' => auth()->user()->id,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'status' => 'new',
+            'total_price' => 0,
+        ]);
 
         foreach ($cart_items as $productID => $cart_item) {
             $product = Product::find($productID);
@@ -104,9 +108,10 @@ class CartController extends Controller
             $total_price -= ($total_price * $discount);
         }
 
-        $order->total_price = $total_price;
+        $order->update([
+            'total_price' => $total_price
+        ]);
 
-        $order->save();
         $cookie = cookie()->forget('cart');
 
         Mail::to(env('MAIL_USERNAME'))->send(new OrderMailer($order));

@@ -39,7 +39,10 @@
                                         {{$order->id }} <br>
                                     </td>
                                     <td>
-                                        {{ucwords($order->user->name)}} <br>
+                                        {{ucwords($order->name)}} <br>
+                                        {{$order->email}} <br>
+                                        {{$order->phone}}
+                                        {{$order->address}}
                                     </td>
                                     <td>
                                         {{number_format($order->total_price, 2)}} $

@@ -30,11 +30,11 @@
                 <div class="col-sm-6">
                     <h6 class="mb-3">To:</h6>
                     <div>
-                        <strong>{{ ucwords($order->user->name) }}</strong>
+                        <strong>{{ ucwords($order->name) }}</strong>
                     </div>
-                    <div>{{ $order->user->address }}</div>
-                    <div>Email: {{ $order->user->email }}</div>
-                    <div>Phone: {{ $order->user->phone }}</div>
+                    <div>{{ $order->address }}</div>
+                    <div>Email: {{ $order->email }}</div>
+                    <div>Phone: {{ $order->phone }}</div>
                 </div>
             </div>
 

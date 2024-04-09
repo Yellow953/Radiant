@@ -5,7 +5,12 @@
 @section('description', 'Explore Radiant collections. Elevate your wardrobe with stunning T-shirts, hoodies, and hats.
 Or create your own...')
 
-@section('keywords', 'shop, categories, T-shirts, hoodies, pants, hats, fashion, style, Radiant')
+@section('keywords', 'Radiant, Radiant.pod, Radiant.pod lebanon, Radiant custom apparel Lebanon, High-quality print on
+demand by Radiant, Radiant clothing customization in Lebanon, Design your own clothes with Radiant in Lebanon, Custom
+apparel Lebanon, High-quality print on demand Lebanon,Custom clothing Lebanon, Clothing customization Lebanon, Design
+your own clothes Lebanon, Apparel printing Lebanon, Custom wardrobe Lebanon, Print on demand services Lebanon, Customize
+hoodies lebanon, customize
+tshirts lebanon, customize hats lebanon')
 
 @section('content')
 <!-- Page Content -->

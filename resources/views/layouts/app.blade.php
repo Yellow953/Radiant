@@ -44,6 +44,8 @@
     <main>
         @include('layouts._preloader')
 
+        @include('layouts._preheader')
+
         @include('layouts._header')
 
         @yield('content')

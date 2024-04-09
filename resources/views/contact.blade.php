@@ -5,7 +5,11 @@
 @section('description', 'Connect with Radiant. Questions or ideas? Reach out through email or phone. We re here to make
 your fashion experience seamless.')
 
-@section('keywords', 'contact us, get in touch, Radiant, fashion, customer service')
+@section('keywords', 'radiant.pod contact us, radiant.pod contact us lebanon, radiant.pod get in touch, Radiant,
+Radiant.pod, Radiant.pod lebanon, Radiant custom apparel Lebanon, High-quality print on demand by Radiant, Radiant
+clothing customization in Lebanon, Design your own clothes with Radiant in Lebanon, Custom apparel Lebanon, High-quality
+print on demand Lebanon,Custom clothing Lebanon, Clothing customization Lebanon, Design your own clothes Lebanon,
+Apparel printing Lebanon, Custom wardrobe Lebanon, Print on demand services Lebanon')
 
 @section('content')
 <!-- Page Content -->
@@ -132,7 +136,7 @@ your fashion experience seamless.')
             <div class="col-md-4 mb-5">
                 <ul class="accordion">
                     <li>
-                        <a class="color-pink" href="/contact">How to Submit a Design Idea for Review</a>
+                        <a class="color-pink" href="#">How to Submit a Design Idea for Review</a>
                         <div class="content">
                             <p>If you want to submit your design idea for review, visit our 'contact' page and complete
                                 the form with your creative vision. Our team will thoroughly review your submission and
@@ -140,7 +144,7 @@ your fashion experience seamless.')
                         </div>
                     </li>
                     <li>
-                        <a class="color-pink" href="/contact">What Happens After I Submit My Design?</a>
+                        <a class="color-pink" href="#">What Happens After I Submit My Design?</a>
                         <div class="content">
                             <p>Once you've submitted your design, our team will carefully review it. If your idea
                                 complements our brand and style, we'll contact you to discuss the details and
@@ -148,7 +152,7 @@ your fashion experience seamless.')
                         </div>
                     </li>
                     <li>
-                        <a class="color-pink" href="/contact">Notification Process for Chosen Designs</a>
+                        <a class="color-pink" href="#">Notification Process for Chosen Designs</a>
                         <div class="content">
                             <p>If your design is selected, we'll notify you through the contact information provided
                                 during the submission. Keep an eye on your email and be prepared to collaborate with us
@@ -156,7 +160,7 @@ your fashion experience seamless.')
                         </div>
                     </li>
                     <li>
-                        <a class="color-pink" href="/contact">Submitting Multiple Design Ideas</a>
+                        <a class="color-pink" href="#">Submitting Multiple Design Ideas</a>
                         <div class="content">
                             <p>Yes, you can submit multiple design ideas! We encourage you to share as many creative
                                 concepts as you'd like. Each idea will undergo a thorough review, and if selected, we'll

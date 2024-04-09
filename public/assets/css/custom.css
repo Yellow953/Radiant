@@ -67,7 +67,7 @@ a.nav-link:hover {
     content: "";
     display: block;
     position: absolute;
-    top: 0;
+    top: 50px;
     left: 0;
     width: 100%;
     height: 455px;
@@ -460,6 +460,10 @@ footer ul li a span {
     .quantity-field {
         width: 75px !important;
     }
+
+    .page-heading::before {
+        top: 0;
+    }
 }
 /* end modal */
 
@@ -482,3 +486,39 @@ footer ul li a span {
     }
 }
 /* end login */
+
+/* start announcement bar */
+.announcement-container {
+    height: 50px;
+    overflow: hidden;
+    line-height: 50px;
+}
+
+.announcement-container .announcement {
+    top: 0;
+    left: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    animation: announcement 30s linear infinite;
+    margin: 1px 0;
+}
+
+.announcement-container .announcement i{
+    margin: 0 5px;
+}
+
+.announcement-container .announcement2 {
+    animation-delay: 15s;
+}
+
+@keyframes announcement {
+    0% {
+        left: 100%;
+   }
+    100% {
+        left: -100%;
+   }
+}
+/* end announcement bar */

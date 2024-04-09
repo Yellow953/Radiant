@@ -35,6 +35,6 @@ class Helper
 
     public static function get_shipping_cost()
     {
-        return 3;
+        return 0;
     }
 }

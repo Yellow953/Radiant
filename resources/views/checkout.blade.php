@@ -24,47 +24,47 @@
 
 {{-- Cart --}}
 <div class="container my-5">
-    <div class="row align-items-center">
-        <div class="col-md-10 offset-md-1 items">
-            <h2 class="mb-5 text-center">Items</h2>
-            @forelse ($cart_items as $productID => $cart_item)
-            <div class="cartItem row align-items-start">
-                @php
-                $product = Helper::get_product($productID);
-                @endphp
+    <form action="{{ route('checkout.order') }}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="row align-items-center">
+            <div class="col-md-8 p-md-4 mb-auto items">
+                <h2 class="mb-5 text-center">Items</h2>
+                @forelse ($cart_items as $productID => $cart_item)
+                <div class="cartItem row align-items-start">
+                    @php
+                    $product = Helper::get_product($productID);
+                    @endphp
 
-                <div class="col-2 my-auto">
-                    <img class="w-100 cart_image rounded" src="{{ asset($product->image_front) }}" alt="Image">
+                    <div class="col-2 my-auto">
+                        <img class="w-100 cart_image rounded" src="{{ asset($product->image_front) }}" alt="Image">
+                    </div>
+                    <div class="col-2 my-auto">
+                        <h6>{{ ucwords($product->name) }}</h6>
+                    </div>
+                    <div class="col-3 my-auto text-center">
+                        @if ( isset($cart_item['designId']) )
+                        Customized
+                        @else
+                        Standard
+                        @endif
+                    </div>
+                    <div class="col-1 my-auto">
+                        {{ ucwords($cart_item['size']) }}
+                    </div>
+                    <div class="col-2 my-auto">
+                        <span id="cartItemQuantity">{{ $cart_item['quantity'] }}</span> pc(s)
+                    </div>
+                    <div class="col-2 my-auto">
+                        <span id="cartItem{{ $productID }}Price">
+                            ${{ number_format($product->price *
+                            $cart_item['quantity'], 2) }}
+                        </span>
+                    </div>
                 </div>
-                <div class="col-2 my-auto">
-                    <h6>{{ ucwords($product->name) }}</h6>
-                </div>
-                <div class="col-2 my-auto">
-                    @if ( isset($cart_item['designId']) )
-                    Customized
-                    @else
-                    Standard
-                    @endif
-                </div>
-                <div class="col-2 my-auto">
-                    {{ ucwords($cart_item['size']) }}
-                </div>
-                <div class="col-2 my-auto">
-                    <span id="cartItemQuantity">{{ $cart_item['quantity'] }}</span>pcs
-                </div>
-                <div class="col-2 my-auto">
-                    <span id="cartItem{{ $productID }}Price">
-                        ${{ number_format($product->price *
-                        $cart_item['quantity'], 2) }}
-                    </span>
-                </div>
-            </div>
-            <hr>
-            @empty
-            <div class="my-3">No Items Yet</div>
-            @endforelse
-            <form action="/checkout" method="POST" enctype="multipart/form-data">
-                @csrf
+                <hr>
+                @empty
+                <div class="my-3">No Items Yet</div>
+                @endforelse
                 <div class="row my-3 text-center">
                     <div class="offset-md-6 col-6 col-md-3">
                         Sub Total:
@@ -103,9 +103,37 @@
                     <button type="submit" class="btn btn-info w-100 btn-rounded"
                         style="background-color: #20ace1;">Order</button>
                 </div>
-            </form>
+                <br><br>
+            </div>
+            <div class="col-md-4 p-md-4 mb-auto user">
+                <h2 class="mb-5 text-center">User Information</h2>
+                <div class="card p-2">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="name">Name *: </label>
+                            <input type="text" name="name" id="name" value="{{ ucwords(auth()->user()->name) }}"
+                                class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email">Email *: </label>
+                            <input type="email" name="email" id="email" value="{{ auth()->user()->email }}"
+                                class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone">Phone Number *: </label>
+                            <input type="tel" name="phone" id="phone" value="{{ auth()->user()->phone }}"
+                                class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address">Address *: </label>
+                            <input type="text" name="address" id="address" value="{{ auth()->user()->address }}"
+                                class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </form>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

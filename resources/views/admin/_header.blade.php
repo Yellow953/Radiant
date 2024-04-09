@@ -17,9 +17,9 @@
                 <h4 class="user-name dropdown-toggle text-dark" data-toggle="dropdown">{{ ucwords(Auth::user()->name)
                     }}<i class="fa fa-angle-down"></i></h4>
                 <div class="dropdown-menu">
-                    <a href="/profile" class="dropdown-item">{{ ucwords(Auth::user()->name) }}
+                    <a href="{{ route('profile') }}" class="dropdown-item">{{ ucwords(Auth::user()->name) }}
                         ({{ucwords(Auth::user()->role)}})</a>
-                    <a class="dropdown-item" href="/password/edit">Change Password</a>
+                    <a class="dropdown-item" href="{{ route('password_edit') }}">Change Password</a>
                     <a class="dropdown-item" href="{{ route('custom_logout') }}"> {{
                         __('Logout') }}
                     </a>

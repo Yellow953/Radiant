@@ -104,7 +104,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <a href="/checkout" class="btn btn-info w-100 btn-rounded">Checkout</a>
+                <a href="{{ route('checkout') }}" class="btn btn-info w-100 btn-rounded">Checkout</a>
             </div>
         </div>
     </div>

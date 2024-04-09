@@ -32,7 +32,7 @@ Route::get('/checkout', [App\Http\Controllers\CartController::class, 'checkout']
 Route::post('/checkout', [App\Http\Controllers\CartController::class, 'order'])->name('checkout.order');
 
 // Profile
-Route::get('/profile', [HomeController::class, 'profile']);
+Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
 Route::post('/profile/save', [HomeController::class, 'save_profile'])->name('profile.save');
 Route::get('/password/edit', [HomeController::class, 'edit_password'])->name('password_edit');
 Route::post('/password/update', [HomeController::class, 'update_password'])->name('password_update');
@@ -53,20 +53,20 @@ Route::prefix('/backup')->group(function () {
 
     // Export
     Route::prefix('/export')->group(function () {
-        Route::get('/categories', [BackupController::class, 'ExportCategories']);
-        Route::get('/products', [BackupController::class, 'ExportProducts']);
-        Route::get('/users', [BackupController::class, 'ExportUsers']);
-        Route::get('/logs', [BackupController::class, 'ExportLogs']);
-        Route::get('/orders', [BackupController::class, 'ExportOrders']);
+        Route::get('/categories', [BackupController::class, 'ExportCategories'])->name('export.categories');
+        Route::get('/products', [BackupController::class, 'ExportProducts'])->name('export.products');
+        Route::get('/users', [BackupController::class, 'ExportUsers'])->name('export.users');
+        Route::get('/logs', [BackupController::class, 'ExportLogs'])->name('export.logs');
+        Route::get('/orders', [BackupController::class, 'ExportOrders'])->name('export.orders');
     });
 
     // Import
     Route::prefix('/import')->group(function () {
-        Route::post('/categories', [BackupController::class, 'ImportCategories']);
-        Route::post('/products', [BackupController::class, 'ImportProducts']);
-        Route::post('/users', [BackupController::class, 'ImportUsers']);
-        Route::post('/logs', [BackupController::class, 'ImportLogs']);
-        Route::post('/orders', [BackupController::class, 'ImportOrders']);
+        Route::post('/categories', [BackupController::class, 'ImportCategories'])->name('import.categories');
+        Route::post('/products', [BackupController::class, 'ImportProducts'])->name('import.products');
+        Route::post('/users', [BackupController::class, 'ImportUsers'])->name('import.users');
+        Route::post('/logs', [BackupController::class, 'ImportLogs'])->name('import.logs');
+        Route::post('/orders', [BackupController::class, 'ImportOrders'])->name('import.orders');
     });
 });
 
