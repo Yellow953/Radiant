@@ -13,15 +13,20 @@
 
 <div class="content-wrapper m-3">
 
-    <section class="content-header d-flex justify-content-between my-3">
+    <section class="navbar-header mt-2">
+        <div class="navigation">
+            <a href="{{ url()->previous() }}" class="text-decoration-none  btn btn-secondary px-3 py-2 text-uppercase">
+                <i class="fa fa-arrow-left"></i>
+                back
+            </a>
 
-        <a href="{{ route('orders') }}" class="btn text-secondary">
-            <h3>
-                < back</h3>
-        </a>
-
-        <h1>Edit Order</h1>
-
+            <div class="breadcrumb">
+                <span><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></span> /
+                <span><a href="{{ route('orders') }}">Orders</a>
+                </span> /
+                <span>Edit</span>
+            </div>
+        </div>
     </section>
 
     <section class="content">

@@ -2882,3 +2882,13 @@ table.dataTable thead td {
 .rounded-full{
   border-radius: 50%;
 }
+
+.navigation{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.breadcrumb span{
+  padding: 0 5px;
+}

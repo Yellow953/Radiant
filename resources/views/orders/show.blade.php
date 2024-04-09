@@ -2,10 +2,21 @@
 
 @section('content')
 
-<a href="{{ route('orders') }}" class="btn text-secondary m-3">
-    <h3>
-        < Back</h3>
-</a>
+<section class="navbar-header mt-2">
+    <div class="navigation">
+        <a href="{{ url()->previous() }}" class="text-decoration-none  btn btn-secondary px-3 py-2 text-uppercase">
+            <i class="fa fa-arrow-left"></i>
+            back
+        </a>
+
+        <div class="breadcrumb">
+            <span><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></span> /
+            <span><a href="{{ route('orders') }}">Orders</a>
+            </span> /
+            <span>Show</span>
+        </div>
+    </div>
+</section>
 
 <div class="container">
     <div class="card border">

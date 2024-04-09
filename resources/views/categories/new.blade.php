@@ -2,10 +2,21 @@
 
 @section('content')
 <div class="container">
-    <a href="{{ route('categories') }}" class="btn text-secondary">
-        <h3>
-            < back</h3>
-    </a>
+    <section class="navbar-header mt-2">
+        <div class="navigation">
+            <a href="{{ url()->previous() }}" class="text-decoration-none  btn btn-secondary px-3 py-2 text-uppercase">
+                <i class="fa fa-arrow-left"></i>
+                back
+            </a>
+
+            <div class="breadcrumb">
+                <span><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i> Dashboard</a></span> /
+                <span><a href="{{ route('categories') }}">Categories</a>
+                </span> /
+                <span>New</span>
+            </div>
+        </div>
+    </section>
 
     <div class="row mt-3">
         <div class="offset-md-2 col-md-8">

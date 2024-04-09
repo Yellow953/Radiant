@@ -2,7 +2,7 @@
 <div class="sidebar-menu">
     <div class="sidebar-header py-1">
         <div class="logo">
-            <a href="{{ route('home') }}">
+            <a href="{{ route('dashboard') }}">
                 <h1 class="my-3 mx-auto text-dark">Radiant</h1>
             </a>
         </div>
@@ -11,7 +11,7 @@
         <div class="menu-inner">
             <nav>
                 <ul class="metismenu" id="menu">
-                    <li><a href="{{ route('home') }}" class="d-flex w-100 ">
+                    <li><a href="{{ route('dashboard') }}" class="d-flex w-100 ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-speedometer my-auto" viewBox="0 0 16 16">
                                 <path

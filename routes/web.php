@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -32,10 +33,12 @@ Route::get('/checkout', [App\Http\Controllers\CartController::class, 'checkout']
 Route::post('/checkout', [App\Http\Controllers\CartController::class, 'order'])->name('checkout.order');
 
 // Profile
-Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
-Route::post('/profile/save', [HomeController::class, 'save_profile'])->name('profile.save');
-Route::get('/password/edit', [HomeController::class, 'edit_password'])->name('password_edit');
-Route::post('/password/update', [HomeController::class, 'update_password'])->name('password_update');
+Route::prefix('/profile')->group(function () {
+    Route::get('/', [ProfileController::class, 'index'])->name('profile');
+    Route::post('/save', [ProfileController::class, 'save'])->name('profile.save');
+    Route::get('/password/edit', [ProfileController::class, 'edit_password'])->name('password_edit');
+    Route::post('/password/update', [ProfileController::class, 'update_password'])->name('password_update');
+});
 
 // Users
 Route::prefix('/users')->group(function () {
@@ -118,7 +121,7 @@ Route::prefix('/promos')->group(function () {
 });
 
 // Admin CRM
-Route::get('/app', [AdminController::class, 'index'])->name('app');
+Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
 
 // Logs
 Route::get('/logs', [LogController::class, 'index'])->name('logs');
