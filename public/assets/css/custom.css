@@ -28,6 +28,12 @@
 .bg-blue {
     background-color: #20ace1 !important;
 }
+.bg-yellow {
+    background-color: #f3eb25 !important;
+}
+.bg-pink {
+    background-color: #e80b8e !important;
+}
 
 h1,
 h2,
@@ -437,34 +443,6 @@ footer ul li a span {
 .custom-field {
     width: 100px !important;
 }
-
-/* small screens */
-@media only screen and (max-width: 553px) {
-    .modal-dialog {
-        margin-right: 25px;
-        margin-left: 25px;
-        margin-top: 10vh;
-    }
-
-    .modal-content {
-        width: 90vw;
-        height: auto;
-    }
-
-    .img-modal {
-        width: 100%;
-        margin-left: 0%;
-        height: auto;
-    }
-
-    .quantity-field {
-        width: 75px !important;
-    }
-
-    .page-heading::before {
-        top: 0;
-    }
-}
 /* end modal */
 
 /* start login */
@@ -478,12 +456,6 @@ footer ul li a span {
 
 .h-custom {
     height: calc(100% - 73px);
-}
-
-@media (max-width: 450px) {
-    .h-custom {
-        height: 100%;
-    }
 }
 /* end login */
 
@@ -522,3 +494,103 @@ footer ul li a span {
    }
 }
 /* end announcement bar */
+
+.banner-image-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+/* start agency section */
+.agency_section{
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.agency_section .agency_container {
+    margin: 0;
+    padding: 90px 75px;
+  }
+  
+  .agency_section .agency_container .box {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 100px 80px;
+    border-radius: 10px;
+  }
+  
+  .agency_section .agency_container .box .detail-box .heading_container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+  }
+  
+  .agency_section .agency_container .box .detail-box p {
+    margin-top: 35px;
+    font-size: large;
+    color: #fff;
+  }
+  
+  .agency_section .agency_container .box .detail-box a {
+    display: inline-block;
+    padding: 10px 45px;
+    color: #000000;
+    border-radius: 5px;
+    margin-top: 25px;
+  }
+  
+.agency_section .agency_container .box .detail-box a:hover {
+    color: #ffffff;
+}
+/* end agency section */
+
+/* small screens */
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 553px) {
+    .modal-dialog {
+        margin-right: 25px;
+        margin-left: 25px;
+        margin-top: 10vh;
+    }
+
+    .modal-content {
+        width: 90vw;
+        height: auto;
+    }
+
+    .img-modal {
+        width: 100%;
+        margin-left: 0%;
+        height: auto;
+    }
+
+    .quantity-field {
+        width: 75px !important;
+    }
+
+    .page-heading::before {
+        top: 0;
+    }
+
+    .agency_section .agency_container .box {
+        padding: 50px 40px;
+    }
+    
+    .agency_section .agency_container {
+        padding: 45px 35px;
+    }
+
+    .agency_section .agency_container .box .detail-box a {
+        width: 100%;
+        text-align: center;
+    }
+}

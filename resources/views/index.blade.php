@@ -22,8 +22,8 @@ your own clothes Lebanon, Apparel printing Lebanon, Custom wardrobe Lebanon, Pri
                         <h4>Explore Our Latest Hoodie Collection</h4>
                     </div>
                 </div>
-                <div class="offset-md-1 col-md-4">
-                    <img src="{{ asset('assets/images/hoodies.png') }}" alt="Hoodies">
+                <div class="offset-md-1 col-md-4 banner-image-section">
+                    <img src="{{ asset('assets/images/pod2.png') }}" alt="POD 2 banner image">
                 </div>
             </div>
         </div>
@@ -35,8 +35,8 @@ your own clothes Lebanon, Apparel printing Lebanon, Custom wardrobe Lebanon, Pri
                         <h4>Discover New Shirts for Every Occasion</h4>
                     </div>
                 </div>
-                <div class="offset-md-1 col-md-4">
-                    <img src="{{ asset('assets/images/shirts.png') }}" alt="Shirts">
+                <div class="offset-md-1 col-md-4 banner-image-section">
+                    <img src="{{ asset('assets/images/pod1.png') }}" alt="POD 1 banner image">
                 </div>
             </div>
         </div>
@@ -48,8 +48,8 @@ your own clothes Lebanon, Apparel printing Lebanon, Custom wardrobe Lebanon, Pri
                         <h4>Shop Trendy Pants for Every Style</h4>
                     </div>
                 </div>
-                <div class="offset-md-1 col-md-4">
-                    <img src="{{ asset('assets/images/pants.png') }}" alt="Pants">
+                <div class="offset-md-1 col-md-4 banner-image-section">
+                    <img src="{{ asset('assets/images/pod1.png') }}" alt="">
                 </div>
             </div>
         </div>
@@ -79,6 +79,30 @@ your own clothes Lebanon, Apparel printing Lebanon, Custom wardrobe Lebanon, Pri
         </div>
     </div>
 </div>
+
+<!-- agency section -->
+<section class="agency_section my-5" style="background-image: url({{ asset('assets/images/pod_banner.png') }})">
+    <div class="agency_container">
+        <div class="box offset-lg-6 col-lg-6">
+            <div class="detail-box">
+                <div class="heading_container">
+                    <h2 class="color-yellow">
+                        About Radiant.POD
+                    </h2>
+                </div>
+                <p>
+                    At Radiant, we believe in the power of personal expression. Fashion is more than what you wear;
+                    it's a statement, a canvas for your individuality. Established with a passion for quality and
+                    creativity, we bring you a collection that blends comfort with style.
+                </p>
+                <a href="{{ route('about') }}" class="bg-pink">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end agency section -->
 
 {{-- start why choose us --}}
 <div class="feat bg-gray pt-5 pb-5">
