@@ -12,7 +12,7 @@ class ProductSeeder extends Seeder
     {
         DB::table('products')->insert([
             'name' => 'Black Hoodie',
-            'price' => 20,
+            'price' => 19.99,
             'description' => 'Black Hoodie',
             'category_id' => 1,
             'image_front' => 'uploads/products/black_hoodie_front.png',
@@ -25,7 +25,7 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'Black Shirt',
-            'price' => 20,
+            'price' => 19.99,
             'description' => 'Black Shirt',
             'category_id' => 2,
             'image_front' => 'uploads/products/black_shirt_front.png',
@@ -38,7 +38,7 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'Black Short Sleeve Shirt',
-            'price' => 20,
+            'price' => 19.99,
             'description' => 'Black Short Sleeve Shirt',
             'category_id' => 2,
             'image_front' => 'uploads/products/black_ss_front.png',
@@ -51,7 +51,7 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'White Hoodie',
-            'price' => 20,
+            'price' => 19.99,
             'description' => 'White Hoodie',
             'category_id' => 1,
             'image_front' => 'uploads/products/white_hoodie_front.png',
@@ -64,7 +64,7 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'White Shirt',
-            'price' => 20,
+            'price' => 19.99,
             'description' => 'White Shirt',
             'category_id' => 2,
             'image_front' => 'uploads/products/white_shirt_front.png',
@@ -77,7 +77,7 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'White Short Sleeve Shirt',
-            'price' => 20,
+            'price' => 19.99,
             'description' => 'White Short Sleeve Shirt',
             'category_id' => 2,
             'image_front' => 'uploads/products/white_ss_front.png',

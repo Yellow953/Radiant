@@ -18,8 +18,8 @@ your own clothes Lebanon, Apparel printing Lebanon, Custom wardrobe Lebanon, Pri
             <div class="row">
                 <div class="col-md-6">
                     <div class="text-content">
-                        <h2>Cozy Comfort</h2>
-                        <h4>Explore Our Latest Hoodie Collection</h4>
+                        <h2>Customize, Create, Radiate</h2>
+                        <h4>Elevate Your Wardrobe with Radiant</h4>
                     </div>
                 </div>
                 <div class="offset-md-1 col-md-4 banner-image-section">
@@ -31,12 +31,12 @@ your own clothes Lebanon, Apparel printing Lebanon, Custom wardrobe Lebanon, Pri
             <div class="row">
                 <div class="col-md-6">
                     <div class="text-content">
-                        <h2>Classic Style</h2>
-                        <h4>Discover New Shirts for Every Occasion</h4>
+                        <h2>Design Your Story, Wear Your Passion</h2>
+                        <h4>Every Design Tells a Story, What's Yours?</h4>
                     </div>
                 </div>
                 <div class="offset-md-1 col-md-4 banner-image-section">
-                    <img src="{{ asset('assets/images/pod1.png') }}" alt="POD 1 banner image">
+                    <img src="{{ asset('assets/images/pod5.png') }}" alt="POD 1 banner image">
                 </div>
             </div>
         </div>
@@ -44,12 +44,12 @@ your own clothes Lebanon, Apparel printing Lebanon, Custom wardrobe Lebanon, Pri
             <div class="row">
                 <div class="col-md-6">
                     <div class="text-content">
-                        <h2>Elevate Your Look</h2>
-                        <h4>Shop Trendy Pants for Every Style</h4>
+                        <h2>Your Style, Your Rules</h2>
+                        <h4>Custom Fashion, Tailored for You</h4>
                     </div>
                 </div>
                 <div class="offset-md-1 col-md-4 banner-image-section">
-                    <img src="{{ asset('assets/images/pod1.png') }}" alt="">
+                    <img src="{{ asset('assets/images/pod6.png') }}" alt="">
                 </div>
             </div>
         </div>

@@ -910,7 +910,8 @@ footer .inner-content p a {
 	.banner-item-01,
 	.banner-item-02,
 	.banner-item-03 {
-		padding: 180px 0px;
+		padding-top: 180px;
+		padding-bottom: 10px;
 	}
 	.page-heading .text-content h4 {
 		font-size: 22px;
