@@ -2,13 +2,9 @@
 
 @section('title', 'Privacy Policy')
 
-@section('description', 'Elevate your style with Radiant. Unleash your creativity and make a statement. Your fashion
-journey starts here.')
+@section('description', 'Radiant POD Privacy Policy')
 
-@section('keywords', 'Radiant, Radiant.pod, Radiant.pod lebanon, Radiant custom apparel Lebanon, High-quality print on
-demand by Radiant, Radiant clothing customization in Lebanon, Design your own clothes with Radiant in Lebanon, Custom
-apparel Lebanon, High-quality print on demand Lebanon,Custom clothing Lebanon, Clothing customization Lebanon, Design
-your own clothes Lebanon, Apparel printing Lebanon, Custom wardrobe Lebanon, Print on demand services Lebanon')
+@section('keywords', 'Radiant Privacy Policy, Radiant.pod Privacy Policy, Radiant.pod lebanon Privacy Policy')
 
 @section('content')
 
