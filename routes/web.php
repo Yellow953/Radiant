@@ -8,6 +8,7 @@ use App\Http\Controllers\DesignController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PoliciesController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PromoController;
@@ -137,5 +138,13 @@ Route::prefix('/designs')->group(function () {
     Route::get('/', [DesignController::class, 'index'])->name('designs');
 });
 Route::get('/customize', [DesignController::class, 'new'])->name('customize');
+
+// Policies
+Route::prefix('/policies')->group(function () {
+    Route::get('/return-policy', [PoliciesController::class, 'return_policy'])->name('policies.return_policy');
+    Route::get('/privacy-policy', [PoliciesController::class, 'privacy_policy'])->name('policies.privacy_policy');
+    Route::get('/shipping-policy', [PoliciesController::class, 'shipping_policy'])->name('policies.shipping_policy');
+    Route::get('/terms-of-service', [PoliciesController::class, 'terms_of_service'])->name('policies.terms_of_service');
+});
 
 Route::get('/', [HomeController::class, 'index'])->name('home');

@@ -548,6 +548,13 @@ footer ul li a span {
 }
 /* end agency section */
 
+.header-overlay{
+    height: 100px;
+    background-color: #2D2B2B;
+    margin-bottom: 50px;
+}
+
+
 /* small screens */
 @media (max-width: 450px) {
     .h-custom {

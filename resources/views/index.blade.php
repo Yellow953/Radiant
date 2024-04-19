@@ -117,8 +117,9 @@ your own clothes Lebanon, Apparel printing Lebanon, Custom wardrobe Lebanon, Pri
                     </span>
                     <h6>Quality Guaranteed</h6>
                     <p>
-                        Our seasoned professionals excel in diverse technologies, ensuring cutting-edge solutions for
-                        your unique requirements.
+                        At Radiant.pod, quality is our promise. From design to delivery, we ensure top-notch
+                        craftsmanship and materials, backed by our satisfaction guarantee. Experience excellence with
+                        every order.
                     </p>
                 </div>
             </div>
@@ -127,8 +128,9 @@ your own clothes Lebanon, Apparel printing Lebanon, Custom wardrobe Lebanon, Pri
                         <i class="fa-solid fa-fingerprint"></i>
                     </span>
                     <h6>Customized Designs</h6>
-                    <p>We don't believe in one-size-fits-all. Every project receives a bespoke touch, aligning perfectly
-                        with your business goals.</p>
+                    <p>Discover endless possibilities with our customized designs. From bold statements to subtle
+                        elegance, tailor your style with Radiant.pod. Let your imagination soar, and wear your
+                        uniqueness proudly.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
@@ -136,8 +138,9 @@ your own clothes Lebanon, Apparel printing Lebanon, Custom wardrobe Lebanon, Pri
                         <i class="fa-solid fa-rotate-left"></i>
                     </span>
                     <h6>Return Policy</h6>
-                    <p>Beyond delivery, our commitment extends to continuous support, updates, and maintenance, ensuring
-                        your systems run seamlessly</p>
+                    <p>Our return policy ensures your satisfaction. If your purchase doesn't meet expectations, we've
+                        got you covered. With our easy returns, shop confidently and experience peace of mind
+                        with Radiant.pod.</p>
                 </div>
             </div>
         </div>

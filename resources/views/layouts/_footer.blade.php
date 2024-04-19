@@ -2,7 +2,7 @@
 <footer>
     <div class="container">
         <div class="row py-5">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h3>Browse</h3>
 
                 <ul>
@@ -27,7 +27,29 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
+                <h3>Policies</h3>
+
+                <ul>
+                    <li>
+                        <a href="{{ route('policies.terms_of_service') }}" class="nav-link">
+                            Terms Of Service</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('policies.privacy_policy') }}" class="nav-link">
+                            Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('policies.shipping_policy') }}" class="nav-link">
+                            Shipping Policy</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('policies.return_policy') }}" class="nav-link">
+                            Return Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
                 <h3>Contact</h3>
 
                 <ul>
@@ -49,7 +71,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h3>Social Media</h3>
 
                 <ul>
