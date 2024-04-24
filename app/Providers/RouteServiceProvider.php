@@ -13,6 +13,8 @@ class RouteServiceProvider extends ServiceProvider
     public const HOME = '/';
     public const SHOP = '/shop';
 
+    public const DASHBOARD = '/dashboard';
+
     public function boot(): void
     {
         RateLimiter::for('api', function (Request $request) {

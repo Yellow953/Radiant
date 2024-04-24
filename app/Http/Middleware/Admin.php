@@ -18,7 +18,7 @@ class Admin
                 return redirect()->back()->with('danger', 'You are not allowed to access this page!');
             }
         } else {
-            return redirect('/login')->with('danger', 'You are not logged in!');
+            return redirect()->route('dashboard')->with('danger', 'You are not logged in!');
         }
     }
 }

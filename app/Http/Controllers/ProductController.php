@@ -72,7 +72,7 @@ class ProductController extends Controller
             'image_front' => $path1,
             'image_back' => $path2,
             'can_customize' => $request->boolean('can_customize'),
-            'best_seller' => $request->boolean('best_seller'),
+            'best_seller' => $request->best_seller,
         ]);
 
         $text = "Product " . $request->name . " created, datetime: " . now();
@@ -132,7 +132,7 @@ class ProductController extends Controller
             'image_front' => $path1,
             'image_back' => $path2,
             'can_customize' => $request->boolean('can_customize'),
-            'best_seller' => $request->boolean('best_seller'),
+            'best_seller' => $request->best_seller,
         ]);
 
         $text = "Product " . $product->name . " updated, datetime: " . now();

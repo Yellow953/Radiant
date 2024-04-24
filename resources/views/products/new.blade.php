@@ -60,6 +60,15 @@
                             <textarea name="description" class="form-control" rows="7">{{old('description')}}</textarea>
                         </div>
 
+                        <div class="form-group">
+                            <label for="best_seller" class="col-form-label">Bestseller</label>
+                            <select class="form-control" name="best_seller">
+                                <option value=""></option>
+                                <option value="front" {{ old('best_seller')=='front' ? 'selected' : '' }}>Front</option>
+                                <option value="back" {{ old('best_seller')=='back' ? 'selected' : '' }}>Back</option>
+                            </select>
+                        </div>
+
                         <div class="row mb-3">
                             <div class="col-md-4">
                                 <div class="mx-4 d-flex">
@@ -68,16 +77,6 @@
 
                                     <label class="form-check-label mx-3" for="can_customize">
                                         {{ __('Can Customize') }}
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="mx-4 d-flex">
-                                    <input class="form-check-input border" type="checkbox" name="best_seller"
-                                        id="best_seller" {{ old('best_seller') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label mx-3" for="best_seller">
-                                        {{ __('Best Seller') }}
                                     </label>
                                 </div>
                             </div>

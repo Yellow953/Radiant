@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('image_front')->default('assets/images/no_img.png');
             $table->string('image_back')->default('assets/images/no_img.png');
             $table->boolean('can_customize')->default(false);
-            $table->boolean('best_seller')->default(false);
+            $table->string('best_seller')->nullable();
 
             $table->bigInteger("category_id")->unsigned();
             $table->timestamps();

@@ -65,8 +65,8 @@ your own clothes Lebanon, Apparel printing Lebanon, Custom wardrobe Lebanon, Pri
             @forelse ($best_sellers as $item)
             <a href="{{ route('shop') }}">
                 <div class="client-item" style="width: 70%; margin-left: 15%;">
-                    <img src="{{ asset($item->image_front) }}" alt="{{ ucwords($item->name) }}"
-                        class="bestseller-image">
+                    <img src="{{ asset($item->best_seller == 'front' ? $item->image_front : $item->image_back) }}"
+                        alt="{{ ucwords($item->name) }}" class="bestseller-image">
 
                     <h4 class="text-center color-pink">{{ ucwords($item->name) }}</h4>
                 </div>
