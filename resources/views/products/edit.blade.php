@@ -48,28 +48,38 @@
                             <input class="form-control" name="price" required type="number" step="0.01"
                                 value="{{$product->price}}">
                         </div>
-                        <div class="form-group">
-                            <label for="image_front" class="col-form-label">Image Front</label>
-                            <input class="form-control image" name="image_front" type="file">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="direction" class="col-form-label">Direction</label>
+                                    <select class="form-control" name="direction">
+                                        <option value="front" {{ $product->direction == 'front' ? 'selected' : ''
+                                            }}>Front
+                                        </option>
+                                        <option value="back" {{ $product->direction == 'back' ? 'selected' : '' }}>Back
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="image_front" class="col-form-label">Image Front</label>
+                                    <input class="form-control image" name="image_front" type="file">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="image_back" class="col-form-label">Image Back</label>
+                                    <input class="form-control image" name="image_back" type="file">
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="image_back" class="col-form-label">Image Back</label>
-                            <input class="form-control image" name="image_back" type="file">
-                        </div>
+
                         <div class="form-group">
                             <label for="description" class="col-form-label">Description</label>
                             <textarea name="description" class="form-control"
                                 rows="7">{{$product->description}}</textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="best_seller" class="col-form-label">Bestseller</label>
-                            <select class="form-control" name="best_seller">
-                                <option value=""></option>
-                                <option value="front" {{ $product->best_seller=='front' ? 'selected' : '' }}>Front
-                                </option>
-                                <option value="back" {{ $product->best_seller=='back' ? 'selected' : '' }}>Back</option>
-                            </select>
                         </div>
 
                         <div class="row mb-3">
@@ -80,6 +90,16 @@
 
                                     <label class="form-check-label mx-3" for="can_customize">
                                         {{ __('Can Customize') }}
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mx-4 d-flex">
+                                    <input class="form-check-input border" type="checkbox" name="bestseller"
+                                        id="bestseller" {{ $product->bestseller ? 'checked' : '' }}>
+
+                                    <label class="form-check-label mx-3" for="bestseller">
+                                        {{ __('Bestseller') }}
                                     </label>
                                 </div>
                             </div>

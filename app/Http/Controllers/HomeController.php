@@ -16,8 +16,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        $best_sellers = Product::whereIn('best_seller', ['back', 'front'])->get();
-        return view('index', compact('best_sellers'));
+        $bestsellers = Product::where('bestseller', true)->get();
+        return view('index', compact('bestsellers'));
     }
 
     public function about()

@@ -70,7 +70,8 @@ tshirts lebanon, customize hats lebanon')
                                             <i class="fa-solid fa-rotate-left"></i>
                                         </span>
                                     </div>
-                                    <img src="{{ asset($product->image_front) }}" alt="Product Image">
+                                    <img src="{{ asset($product->direction == 'front' ? $product->image_front : $product->image_back) }}"
+                                        alt="Product Image">
                                     <div class="down-content">
                                         <h4 class="text-center">{{ ucwords($product->name) }}</h4>
                                     </div>
@@ -107,12 +108,12 @@ tshirts lebanon, customize hats lebanon')
                                                 data-ride="carousel">
                                                 <div class="carousel-inner">
                                                     <div class="carousel-item active" style="justify-content: center;">
-                                                        <img src="{{asset($product->image_front)}}"
+                                                        <img src="{{ asset($product->direction == 'front' ? $product->image_front : $product->image_back) }}"
                                                             class="img-modal rounded" alt="Product Front Image">
                                                     </div>
                                                     <div class="carousel-item">
-                                                        <img src="{{asset($product->image_back)}}" class="img-modal"
-                                                            alt="Product Back Image">
+                                                        <img src="{{ asset($product->direction == 'front' ? $product->image_back : $product->image_front) }}"
+                                                            class="img-modal" alt="Product Back Image">
                                                     </div>
                                                 </div>
                                                 <a class="carousel-control-prev"

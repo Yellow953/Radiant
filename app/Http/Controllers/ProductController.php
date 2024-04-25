@@ -35,6 +35,8 @@ class ProductController extends Controller
             'name' => ['required', 'max:255'],
             'price' => ['required', 'numeric', 'min:0'],
             'category_id' => ['required', 'numeric', 'min:0'],
+            'image_front' => 'required',
+            'image_back' => 'required',
         ]);
 
         if ($request->hasFile('image_front')) {
@@ -69,10 +71,11 @@ class ProductController extends Controller
             'price' => $request->price,
             'description' => $request->description,
             'category_id' => $request->category_id,
+            'direction' => $request->direction ?? 'front',
             'image_front' => $path1,
             'image_back' => $path2,
             'can_customize' => $request->boolean('can_customize'),
-            'best_seller' => $request->best_seller,
+            'bestseller' => $request->boolean('bestseller'),
         ]);
 
         $text = "Product " . $request->name . " created, datetime: " . now();
@@ -129,10 +132,11 @@ class ProductController extends Controller
             'price' => $request->price,
             'description' => $request->description,
             'category_id' => $request->category_id,
+            'direction' => $request->direction,
             'image_front' => $path1,
             'image_back' => $path2,
             'can_customize' => $request->boolean('can_customize'),
-            'best_seller' => $request->best_seller,
+            'bestseller' => $request->boolean('bestseller'),
         ]);
 
         $text = "Product " . $product->name . " updated, datetime: " . now();

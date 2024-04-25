@@ -61,18 +61,20 @@ your own clothes Lebanon, Apparel printing Lebanon, Custom wardrobe Lebanon, Pri
     <h2 class="text-center text-md-start color-primary m-5">Top Selling Products</h2>
 
     <div class="best-sellers">
-        <div class="owl-clients owl-carousel bg-white">
-            @forelse ($best_sellers as $item)
-            <a href="{{ route('shop') }}">
-                <div class="client-item" style="width: 70%; margin-left: 15%;">
-                    <img src="{{ asset($item->best_seller == 'front' ? $item->image_front : $item->image_back) }}"
-                        alt="{{ ucwords($item->name) }}" class="bestseller-image">
+        <div class="row">
+            @forelse ($bestsellers as $item)
+            <div class="col-6 col-md-3">
+                <a href="{{ route('shop') }}">
+                    <div class="client-item">
+                        <img src="{{ asset($item->direction == 'front' ? $item->image_front : $item->image_back) }}"
+                            alt="{{ ucwords($item->name) }}" class="img-fluid">
 
-                    <h4 class="text-center color-pink">{{ ucwords($item->name) }}</h4>
-                </div>
-            </a>
+                        <h4 class="text-center color-pink">{{ ucwords($item->name) }}</h4>
+                    </div>
+                </a>
+            </div>
             @empty
-            <div class="w-100 text-center my-5">
+            <div class="col-md-12 w-100 text-center my-5">
                 No Best Sellers Yet...
             </div>
             @endforelse

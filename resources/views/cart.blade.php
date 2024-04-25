@@ -55,7 +55,9 @@
                 @endphp
 
                 <div class="col-2 my-auto">
-                    <img class="w-100 cart_image rounded" src="{{ asset($product->image_front) }}" alt="Image">
+                    <img class="w-100 cart_image rounded"
+                        src="{{ asset($product->direction == 'front' ? $product->image_front : $product->image_back) }}"
+                        alt="Image">
                 </div>
                 <div class="col-2 my-auto">
                     {{ ucwords($product->name) }}

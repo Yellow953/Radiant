@@ -437,7 +437,7 @@ footer ul li a span {
 .img-modal {
     width: 80%;
     margin-left: 10%;
-    height: 400px;
+    height: auto;
 }
 
 .custom-field {
